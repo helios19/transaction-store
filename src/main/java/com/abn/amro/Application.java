@@ -8,8 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.util.ResourceUtils;
 
 import java.io.BufferedReader;
@@ -26,7 +27,9 @@ import static com.abn.amro.common.utils.ClassUtils.toDate;
  * Main Spring Boot Application class. Note that a {@link CommandLineRunner} is created
  * to initialize the Mongo database with a set of transactions.
  */
-@EnableMongoRepositories(basePackages = "com.abn.amro.transaction.repository")
+//@EnableMongoRepositories(basePackages = "com.abn.amro.transaction.repository")
+@EntityScan("com.abn.amro.transaction.model")
+@EnableJpaRepositories("com.abn.amro.transaction.repository")
 @SpringBootApplication
 public class Application {
     private static final Logger LOG = LoggerFactory.getLogger(Application.class);
@@ -47,7 +50,7 @@ public class Application {
         LOG.info("start initializing mongodb...");
 
         try {
-            return (evt) -> transactionRepository.saveOrUpdate(
+            return (evt) -> transactionRepository.saveAll(
 
                     new BufferedReader(
                             new InputStreamReader(ResourceUtils.getURL("classpath:Input.txt").openStream()))
@@ -97,7 +100,7 @@ public class Application {
 //                                    .description(s[3])
 //                                    .build()
                             )
-                            .collect(Collectors.toList()).toArray(new Transaction[]{})
+                            .collect(Collectors.toList())//.toArray(new Transaction[]{})
             );
         } finally {
             LOG.info("end of mongodb initialization...");

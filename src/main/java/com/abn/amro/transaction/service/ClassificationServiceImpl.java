@@ -1,17 +1,13 @@
 package com.abn.amro.transaction.service;
 
+import com.abn.amro.transaction.model.Transaction;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.abn.amro.transaction.model.Transaction;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
-import java.time.Instant;
 import java.time.LocalTime;
-import java.time.ZoneId;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Service class implementing logic to determine a customer classification from a input list of transactions.
@@ -74,17 +70,17 @@ public class ClassificationServiceImpl implements ClassificationService {
      * @return If customer is classified as AFTERNOON_PERSON
      */
     private void afternoonPersonRule(List<Transaction> transactions, List<ClassificationEnum> customerClassifications) {
-
-        long totalTransactions = transactions.size();
-
-        long totalAfternoonTransactions = transactions
-                .stream()
-                .filter(t -> t.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalTime().isAfter(MIDDAY))
-                .count();
-
-        if (totalAfternoonTransactions > (totalTransactions / 2)) {
-            customerClassifications.add(ClassificationEnum.AFTERNOON_PERSON);
-        }
+//
+//        long totalTransactions = transactions.size();
+//
+//        long totalAfternoonTransactions = transactions
+//                .stream()
+//                .filter(t -> t.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalTime().isAfter(MIDDAY))
+//                .count();
+//
+//        if (totalAfternoonTransactions > (totalTransactions / 2)) {
+//            customerClassifications.add(ClassificationEnum.AFTERNOON_PERSON);
+//        }
     }
 
     /**
@@ -95,24 +91,24 @@ public class ClassificationServiceImpl implements ClassificationService {
      */
     private void bigSpenderRule(List<Transaction> transactions, List<ClassificationEnum> customerClassifications) {
 
-        BigDecimal deposits = BigDecimal.valueOf(transactions
-                .stream()
-                .filter(t -> t.getAmount().doubleValue() > 0)
-                .mapToDouble(t -> t.getAmount().doubleValue()).sum());
-
-        if (deposits.doubleValue() == 0) {
-            return;
-        }
-
-        BigDecimal expenditures = BigDecimal.valueOf(transactions
-                .stream()
-                .filter(t -> t.getAmount().doubleValue() < 0)
-                .mapToDouble(t -> t.getAmount().abs().doubleValue()).sum());
-
-
-        if (expenditures.doubleValue() > deposits.multiply(BigDecimal.valueOf(0.8)).doubleValue()) {
-            customerClassifications.add(ClassificationEnum.BIG_SPENDER);
-        }
+//        BigDecimal deposits = BigDecimal.valueOf(transactions
+//                .stream()
+//                .filter(t -> t.getAmount().doubleValue() > 0)
+//                .mapToDouble(t -> t.getAmount().doubleValue()).sum());
+//
+//        if (deposits.doubleValue() == 0) {
+//            return;
+//        }
+//
+//        BigDecimal expenditures = BigDecimal.valueOf(transactions
+//                .stream()
+//                .filter(t -> t.getAmount().doubleValue() < 0)
+//                .mapToDouble(t -> t.getAmount().abs().doubleValue()).sum());
+//
+//
+//        if (expenditures.doubleValue() > deposits.multiply(BigDecimal.valueOf(0.8)).doubleValue()) {
+//            customerClassifications.add(ClassificationEnum.BIG_SPENDER);
+//        }
     }
 
     /**
@@ -123,12 +119,12 @@ public class ClassificationServiceImpl implements ClassificationService {
      */
     private void bigTicketSpenderRule(List<Transaction> transactions, List<ClassificationEnum> customerClassifications) {
 
-        if (transactions
-                .stream()
-                .filter(t -> t.getAmount().doubleValue() < -1000)
-                .findFirst().isPresent()) {
-            customerClassifications.add(ClassificationEnum.BIG_TICKET_SPENDER);
-        }
+//        if (transactions
+//                .stream()
+//                .filter(t -> t.getAmount().doubleValue() < -1000)
+//                .findFirst().isPresent()) {
+//            customerClassifications.add(ClassificationEnum.BIG_TICKET_SPENDER);
+//        }
     }
 
     /**
@@ -139,29 +135,29 @@ public class ClassificationServiceImpl implements ClassificationService {
      */
     private void fastSpenderRule(List<Transaction> transactions, List<ClassificationEnum> customerClassifications) {
 
-        List<Transaction> deposits = transactions
-                .stream()
-                .filter(t -> t.getAmount().doubleValue() > 0)
-                .collect(Collectors.toList());
-
-        for (Transaction depositTransaction : deposits) {
-
-            Instant depositDate = depositTransaction.getDate().toInstant();
-            BigDecimal depositAmount = depositTransaction.getAmount();
-            Instant sevenDaysAfterDepositDate = depositDate.atZone(ZoneId.systemDefault()).plusDays(7).toInstant();
-
-            BigDecimal expenditures = BigDecimal.valueOf(transactions
-                    .stream()
-                    .filter(t -> t.getAmount().doubleValue() < 0
-                            && t.getDate().toInstant().isAfter(depositDate)
-                            && t.getDate().toInstant().isBefore(sevenDaysAfterDepositDate))
-                    .mapToDouble(t -> t.getAmount().abs().doubleValue()).sum());
-
-            if (expenditures.doubleValue() > depositAmount.multiply(BigDecimal.valueOf(0.75)).doubleValue()) {
-                customerClassifications.add(ClassificationEnum.FAST_SPENDER);
-                return;
-            }
-        }
+//        List<Transaction> deposits = transactions
+//                .stream()
+//                .filter(t -> t.getAmount().doubleValue() > 0)
+//                .collect(Collectors.toList());
+//
+//        for (Transaction depositTransaction : deposits) {
+//
+//            Instant depositDate = depositTransaction.getDate().toInstant();
+//            BigDecimal depositAmount = depositTransaction.getAmount();
+//            Instant sevenDaysAfterDepositDate = depositDate.atZone(ZoneId.systemDefault()).plusDays(7).toInstant();
+//
+//            BigDecimal expenditures = BigDecimal.valueOf(transactions
+//                    .stream()
+//                    .filter(t -> t.getAmount().doubleValue() < 0
+//                            && t.getDate().toInstant().isAfter(depositDate)
+//                            && t.getDate().toInstant().isBefore(sevenDaysAfterDepositDate))
+//                    .mapToDouble(t -> t.getAmount().abs().doubleValue()).sum());
+//
+//            if (expenditures.doubleValue() > depositAmount.multiply(BigDecimal.valueOf(0.75)).doubleValue()) {
+//                customerClassifications.add(ClassificationEnum.FAST_SPENDER);
+//                return;
+//            }
+//        }
     }
 
     /**
@@ -171,17 +167,17 @@ public class ClassificationServiceImpl implements ClassificationService {
      * @return If customer is classified as MORNING_PERSON
      */
     private void morningPersonRule(List<Transaction> transactions, List<ClassificationEnum> customerClassifications) {
-
-        long totalTransactions = transactions.size();
-
-        long totalMorningTransactions = transactions
-                .stream()
-                .filter(t -> t.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalTime().isBefore(MIDDAY))
-                .count();
-
-        if (totalMorningTransactions > (totalTransactions / 2)) {
-            customerClassifications.add(ClassificationEnum.MORNING_PERSON);
-        }
+//
+//        long totalTransactions = transactions.size();
+//
+//        long totalMorningTransactions = transactions
+//                .stream()
+//                .filter(t -> t.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalTime().isBefore(MIDDAY))
+//                .count();
+//
+//        if (totalMorningTransactions > (totalTransactions / 2)) {
+//            customerClassifications.add(ClassificationEnum.MORNING_PERSON);
+//        }
     }
 
     /**
@@ -191,25 +187,25 @@ public class ClassificationServiceImpl implements ClassificationService {
      * @return If customer is classified as POTENTIAL_SAVER
      */
     private void potentialSaverRule(List<Transaction> transactions, List<ClassificationEnum> customerClassifications) {
-
-        BigDecimal deposits = BigDecimal.valueOf(transactions
-                .stream()
-                .filter(t -> t.getAmount().doubleValue() > 0)
-                .mapToDouble(t -> t.getAmount().doubleValue()).sum());
-
-        if (deposits.doubleValue() == 0) {
-            return;
-        }
-
-        BigDecimal expenditures = BigDecimal.valueOf(transactions
-                .stream()
-                .filter(t -> t.getAmount().doubleValue() < 0)
-                .mapToDouble(t -> t.getAmount().abs().doubleValue()).sum());
-
-
-        if (expenditures.doubleValue() < deposits.multiply(BigDecimal.valueOf(0.25)).doubleValue()) {
-            customerClassifications.add(ClassificationEnum.POTENTIAL_SAVER);
-        }
+//
+//        BigDecimal deposits = BigDecimal.valueOf(transactions
+//                .stream()
+//                .filter(t -> t.getAmount().doubleValue() > 0)
+//                .mapToDouble(t -> t.getAmount().doubleValue()).sum());
+//
+//        if (deposits.doubleValue() == 0) {
+//            return;
+//        }
+//
+//        BigDecimal expenditures = BigDecimal.valueOf(transactions
+//                .stream()
+//                .filter(t -> t.getAmount().doubleValue() < 0)
+//                .mapToDouble(t -> t.getAmount().abs().doubleValue()).sum());
+//
+//
+//        if (expenditures.doubleValue() < deposits.multiply(BigDecimal.valueOf(0.25)).doubleValue()) {
+//            customerClassifications.add(ClassificationEnum.POTENTIAL_SAVER);
+//        }
     }
 
     /**

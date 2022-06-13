@@ -4,7 +4,6 @@ import com.abn.amro.transaction.model.Transaction;
 import com.abn.amro.transaction.repository.TransactionRepository;
 import org.springframework.data.domain.Pageable;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,24 +28,6 @@ public interface TransactionService {
      * @return Optional transaction
      */
     Optional<Transaction> findById(String id);
-
-    /**
-     * Return a list of {@link Transaction} given {@code customerId} and {@code month} arguments.
-     *
-     * @param customerId Customer identifier
-     * @param start      Start of the month
-     * @param end        End of the month
-     * @return List of monthly transactions found for a given customer
-     */
-    List<Transaction> findByCustomerIdAndDate(String customerId, Date start, Date end);
-
-    /**
-     * Return a list of {@link Transaction} given {@code customerId} argument.
-     *
-     * @param customerId Customer identifier
-     * @return List of monthly transactions found for a given customer
-     */
-    List<Transaction> findByCustomerId(String customerId);
 
     /**
      * Returns a list of all {@link Transaction}.

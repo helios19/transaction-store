@@ -1,20 +1,39 @@
 spring:
   profiles.active: default
 ---
-server.port: 8080
+server.port: 8081
 spring:
   profiles: default
   application:
     name: product-analytics
-# Mongodb properties
-  data:
-    mongodb.host: localhost
-    mongodb.port: 27019
-    mongodb.database: transactions
-    mongodb.uri: mongodb://localhost/transactions
-    mongo.repositories.enabled: true
+# H2 properties
+#  data:
+#    mongodb.host: localhost
+#    mongodb.port: 27019
+#    mongodb.database: transactions
+#    mongodb.uri: mongodb://localhost/transactions
+#    mongo.repositories.enabled: true
+## browser url for h2 console - http://localhost:8081/h2-console
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
-# Jackson properties
+  datasource:
+    url: jdbc:h2:mem:transactions
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+
+  # Jackson properties
   jackson:
     date-format: yyyyMMdd
     serialization:
@@ -38,11 +57,16 @@ spring:
 ---
 spring:
   profiles: test
-  data:
-    mongodb.host: localhost
-    mongodb.port: 27029
-    mongodb.database: itest
-    mongodb.uri: mongodb://localhost/itest
+#  data:
+#    mongodb.host: localhost
+#    mongodb.port: 27029
+#    mongodb.database: itest
+#    mongodb.uri: mongodb://localhost/itest
+  datasource:
+    url: jdbc:h2:mem:itest
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
 
 ---
   profiles: cacheDisabled

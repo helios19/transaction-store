@@ -2,13 +2,18 @@ package com.abn.amro.transaction.controller;
 
 import com.abn.amro.transaction.model.Transaction;
 import com.abn.amro.transaction.service.TransactionService;
+import com.abn.amro.transaction.service.TransactionServiceTest;
 import com.abn.amro.transaction.service.TransactionSummaryService;
 import com.google.common.collect.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -33,7 +38,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ActiveProfiles("test")
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@SpringBootTest
-@WebMvcTest(controllers = TransactionController.class)
+//@WebMvcTest//(controllers = TransactionController.class)
+
+//@SpringBootTest
+//@AutoConfigureMockMvc
+
+//@ExtendWith(SpringExtension.class)
+@WebMvcTest(controllers = TransactionController.class, excludeAutoConfiguration =
+        {TransactionServiceTest.TestAppConfig.class, GroovyTemplateAutoConfiguration.class})
+@Import({TransactionControllerTest.TestAppConfig.class})
 public class TransactionControllerTest {
 
 //    @Mock
@@ -61,6 +74,9 @@ public class TransactionControllerTest {
 
     @MockBean
     private TransactionService transactionService;
+
+//    @MockBean
+//    private TransactionRepository transactionRepository;
 
     @SpyBean
     private TransactionSummaryService transactionSummaryService;
@@ -221,4 +237,24 @@ public class TransactionControllerTest {
 //        verifyNoMoreInteractions(classificationService);
 //    }
 
+
+//    @Configuration
+//    @Import({ CustomerConfig.class, SchedulerConfig.class })
+//    public class AppConfig {
+//
+//    }
+
+    @Configuration
+//    @EnableAutoConfiguration
+//    @EnableMongoRepositories(basePackages = "com.abn.amro.transaction.repository")
+    @ComponentScan({
+            "com.abn.amro.transaction.service"
+    })
+    public static class TestAppConfig {
+
+//        @Bean
+//        public TransactionRepository transactionRepository() {
+//            return null;
+//        }
+    }
 }

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -161,7 +161,7 @@ public class TransactionRepositoryTest {
 
     @Configuration
     @EnableAutoConfiguration
-    @EnableMongoRepositories(basePackages = "com.abn.amro.transaction.repository")
+    @EnableJpaRepositories(basePackages = "com.abn.amro.transaction.repository")
     @ComponentScan({
             "com.abn.amro.transaction.service",
             "com.abn.amro.common.service"

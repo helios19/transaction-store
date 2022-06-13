@@ -31,13 +31,12 @@ public class ClassUtils {
     public static final String DATE_FORMAT_PATTERN = "yyyyMMdd";
     public static final DateTimeFormatter FORMATTER = ofPattern("d/MM/yyyy h:mm:ss a");
     public static final DateTimeFormatter DATE_FORMATTER = ofPattern(DATE_FORMAT_PATTERN);
-
     public static final int DEFAULT_PAGE_SIZE = 50;
     public static final ModelMapper MODEL_MAPPER = new ModelMapper();
-
     public static BigDecimal HUNDRED = new BigDecimal("100");
-
     public static BigDecimal TEN_MILLIONS = new BigDecimal("10000000");
+    public static String CSV_FILENAME = "transaction-summary-report.csv";
+    public static final String MEDIATYPE_TEXT_HTML = "text/csv";
 
     private ClassUtils() {
     }
@@ -52,7 +51,7 @@ public class ClassUtils {
 
         // validate transaction
 
-        if (transaction == null || transaction.getCustomer() == null) {
+        if (transaction == null || transaction.getClientNum() == null) {
             throw new InvalidTransactionException(transaction);
         }
 
@@ -137,7 +136,7 @@ public class ClassUtils {
      */
     public static TransactionDto convertToDto(Transaction transaction) {
         TransactionDto transactionDto = MODEL_MAPPER.map(transaction, TransactionDto.class);
-        transactionDto.setDate(fromDate(transaction.getDate()));
+//        transactionDto.setDate(fromDate(transaction.getDate()));
         return transactionDto;
     }
 

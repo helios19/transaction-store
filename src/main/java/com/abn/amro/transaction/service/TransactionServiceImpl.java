@@ -2,6 +2,7 @@ package com.abn.amro.transaction.service;
 
 import com.abn.amro.transaction.model.Transaction;
 import com.abn.amro.transaction.repository.TransactionRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -10,7 +11,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +22,7 @@ import static com.abn.amro.common.utils.ClassUtils.TRANSACTIONS_COLLECTION_NAME;
  * @see TransactionRepository
  */
 @Service
+@Slf4j
 @CacheConfig(cacheNames = TRANSACTIONS_COLLECTION_NAME)
 public class TransactionServiceImpl implements TransactionService {
 
@@ -38,7 +39,7 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     @CacheEvict(allEntries = true)
     public void save(Transaction transaction) {
-        repository.saveOrUpdate(transaction);
+        repository.save(transaction);
     }
 
     /**
@@ -48,24 +49,6 @@ public class TransactionServiceImpl implements TransactionService {
     @Cacheable
     public Optional<Transaction> findById(String id) {
         return repository.findById(id);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Cacheable
-    public List<Transaction> findByCustomerIdAndDate(String customerId, Date start, Date end) {
-        return repository.findByCustomerIdAndDate(customerId, start, end);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Cacheable
-    public List<Transaction> findByCustomerId(String customerId) {
-        return repository.findByCustomerId(customerId);
     }
 
     /**

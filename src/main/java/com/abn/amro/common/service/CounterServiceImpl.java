@@ -1,15 +1,6 @@
 package com.abn.amro.common.service;
 
-import com.abn.amro.common.sequence.Counter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
-
-import static com.abn.amro.common.utils.ClassUtils.COUNTERS_COLLECTION_NAME;
-import static org.springframework.data.mongodb.core.FindAndModifyOptions.options;
-import static org.springframework.data.mongodb.core.query.Criteria.where;
-import static org.springframework.data.mongodb.core.query.Query.query;
 
 /**
  * Counter service class providing a convenient {@link #getNextSequence(String)} sequence method
@@ -22,8 +13,8 @@ import static org.springframework.data.mongodb.core.query.Query.query;
 @Service
 public class CounterServiceImpl implements CounterService {
 
-    @Autowired
-    private MongoOperations mongo;
+//    @Autowired
+//    private MongoOperations mongo;
 
     /**
      * Returns the next seauence integer for a given {@code collectionName}.
@@ -33,17 +24,18 @@ public class CounterServiceImpl implements CounterService {
      */
     public int getNextSequence(String collectionName) {
 
-        if (!mongo.collectionExists(COUNTERS_COLLECTION_NAME)) {
-            //db.Counter.insert({ 'name' : 'user_id', sequence : 1}
-            mongo.insert(Counter.builder().id(collectionName).seq(0).build(), COUNTERS_COLLECTION_NAME);
-        }
-
-        Counter counter = mongo.findAndModify(
-                query(where("_id").is(collectionName)),
-                new Update().inc("seq", 1),
-                options().returnNew(true),
-                Counter.class);
-
-        return counter.getSeq();
+//        if (!mongo.collectionExists(COUNTERS_COLLECTION_NAME)) {
+//            //db.Counter.insert({ 'name' : 'user_id', sequence : 1}
+//            mongo.insert(Counter.builder().id(collectionName).seq(0).build(), COUNTERS_COLLECTION_NAME);
+//        }
+//
+//        Counter counter = mongo.findAndModify(
+//                query(where("_id").is(collectionName)),
+//                new Update().inc("seq", 1),
+//                options().returnNew(true),
+//                Counter.class);
+//
+//        return counter.getSeq();
+        return 0;
     }
 }

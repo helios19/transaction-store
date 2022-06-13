@@ -25,11 +25,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
-import static com.abn.amro.common.utils.ClassUtils.toDate;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -59,10 +57,10 @@ public class TransactionCacheIT {
 
     private Transaction sampleTransaction = Transaction
             .builder()
-            .customer("1")
-            .date(toDate("1/10/2016 2:51:23 AM"))
-            .amount(BigDecimal.valueOf(12.3))
-            .description("transaction description")
+//            .customer("1")
+//            .date(toDate("1/10/2016 2:51:23 AM"))
+//            .amount(BigDecimal.valueOf(12.3))
+//            .description("transaction description")
             .build();
 
     @Before

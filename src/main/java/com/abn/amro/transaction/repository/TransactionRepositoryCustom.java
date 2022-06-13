@@ -1,23 +1,12 @@
 package com.abn.amro.transaction.repository;
 
-import com.abn.amro.transaction.model.Transaction;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.Date;
-import java.util.List;
+import javax.persistence.EntityManager;
 
 @Repository
 public interface TransactionRepositoryCustom {
 
-    void saveOrUpdate(Transaction... transaction);
-
-    List<Transaction> findByCustomerIdAndDate(String customerId, Date start, Date end);
-
-    List<Transaction> findByCustomerId(String customerId);
-
-    MongoTemplate getMongoTemplate();
-
-    void setMongoTemplate(MongoTemplate template);
+    EntityManager getEntityManager();
 
 }
