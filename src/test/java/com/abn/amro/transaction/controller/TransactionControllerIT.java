@@ -1,123 +1,83 @@
 package com.abn.amro.transaction.controller;
 
+import com.abn.amro.Application;
 import com.abn.amro.transaction.repository.TransactionRepository;
-import com.abn.amro.transaction.service.CsvService;
-import com.abn.amro.transaction.service.TransactionService;
-import com.abn.amro.transaction.service.TransactionSummaryService;
+import org.json.JSONException;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
 
-import java.nio.charset.Charset;
+import java.util.Arrays;
 
-import static org.hamcrest.Matchers.is;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static com.abn.amro.common.ClassTestUtils.TRANSACTION_SAMPLE;
+import static com.abn.amro.common.ClassTestUtils.TRANSACTION_SAMPLE_2;
+import static com.abn.amro.common.utils.ClassUtils.MEDIATYPE_TEXT_HTML;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-@ActiveProfiles("test")
-//@Ignore
-//@RunWith(SpringRunner.class)
-
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-//        classes = {Application.class})
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
+        classes = {Application.class})
 @ContextConfiguration(name = "contextWithFakeBean")
-//@AutoConfigureMockMvc
-@Import(TransactionController.class)
-@ImportAutoConfiguration(PropertyPlaceholderAutoConfiguration.class)
-@WebMvcTest(TransactionController.class)
 public class TransactionControllerIT {
-    @Configuration
-    public static class TestContext{
-        @Bean
-        public static PropertySourcesPlaceholderConfigurer properties(){
-            return new PropertySourcesPlaceholderConfigurer();
-        }
-    }
-//	@Autowired
-//	MockMvc mockMvc;
-
-	@MockBean
-    TransactionService transactionService;
-
-    @MockBean
-    TransactionSummaryService transactionSummaryService;
-
-    @MockBean
-    CsvService csvService;
 
     @Autowired
-    MockMvc mockMvc;
+    private TestRestTemplate testRestTemplate;
 
-    private MediaType contentType = new MediaType(MediaType.APPLICATION_JSON.getType(),
-            MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
-
-    @MockBean
+    @Autowired
     private TransactionRepository transactionRepository;
 
-//    @Autowired
-//    private WebApplicationContext webApplicationContext;
+    @LocalServerPort
+    private Integer port;
 
+    @BeforeEach
+    public void setUp() throws Exception {
+        transactionRepository.saveAll(Arrays.asList(TRANSACTION_SAMPLE, TRANSACTION_SAMPLE_2));
+    }
 
     @Test
-    public void testCreateRetrieveWithMockMVC() throws Exception {
-//		this.mockMvc.perform(post("/students")).andExpect(status().is2xxSuccessful());
-//		this.mockMvc.perform(get("/students/1")).andDo(print()).andExpect(status().isOk())
-//				.andExpect(content().string(containsString("Rajesh")));
+    void contextLoads() {
+    }
 
-        mockMvc.perform(get("/transaction-summary/all"))
-                .andDo(print())
-                .andExpect(status().isOk()).andExpect(content().contentType(contentType))
-                .andExpect(jsonPath("$.customerId", is("1")))
-                .andExpect(jsonPath("$.month", is("10")))
-                .andExpect(jsonPath("$.currentBalance", is(421.27)))
-                .andExpect(jsonPath("$.classification", is("UNKNOWN")));
+    @Test
+    void shouldReturnAllTransactionSummary() throws JSONException {
+
+        // Given
+        String url = "http://localhost:" + port + "/transaction-summary/all";
+        String expected = "[{\"clientInformation\":\"CL432100020001\",\"productInformation\":\"SGXFUNK20100910\",\"totalTransactionAmount\":4.0,\"date\":\"2010-08-19T14:00:00.000+00:00\"}]";
+
+        // When
+        ResponseEntity<String> response = testRestTemplate.getForEntity(url, String.class);
+
+        // Then
+        assertEquals(response.getStatusCode(), HttpStatus.OK);
+        assertEquals(MediaType.APPLICATION_JSON, response.getHeaders().getContentType());
+        JSONAssert.assertEquals(expected, response.getBody(), false);
+
 
     }
 
+    @Test
+    void shouldReturnCsvTransactionSummary() {
+        // Given
+        String url = "http://localhost:" + port + "/transaction-summary/export-csv";
+        String expected = "Client Information,Production Information,Date,Total Transaction Amount\n" +
+                "CL432100020001,SGXFUNK20100910,2010-08-20 00:00:00.0,4.0";
 
-//	@Test
-//	public void shouldFindTransactionByCustomerIdAndMonth() throws Exception {
-//		mockMvc.perform(get("/transaction-summary/"))
-//				.andDo(print())
-//				.andExpect(status().isOk()).andExpect(content().contentType(contentType))
-//				.andExpect(jsonPath("$.customerId", is("1")))
-//				.andExpect(jsonPath("$.month", is("10")))
-//				.andExpect(jsonPath("$.currentBalance", is(421.27)))
-//				.andExpect(jsonPath("$.classification", is("UNKNOWN")));
-//	}
-//
-//	@Test
-//	public void shouldThrowExceptionWhenTransactionIsNotFound() throws Exception {
-//		String unknownCustomerId = "1111";
-//		String month = "1";
-//
-//		mockMvc.perform(get("/transaction-summary/" + unknownCustomerId + "/" + month))
-//				.andDo(print())
-//				.andExpect(status().isNotFound())
-//				.andExpect(content().contentType(contentType))
-//				.andExpect(jsonPath("$[0].logref", is("error")))
-//				.andExpect(jsonPath("$[0].message", is("No transaction found for customer id:" + unknownCustomerId)));
-//	}
-//
-//	protected String json(Object o) throws IOException {
-//		MockHttpOutputMessage mockHttpOutputMessage = new MockHttpOutputMessage();
-//		new MappingJackson2HttpMessageConverter().write(o, MediaType.APPLICATION_JSON, mockHttpOutputMessage);
-//		return mockHttpOutputMessage.getBodyAsString();
-//	}
+        // When
+        ResponseEntity<String> response = testRestTemplate.getForEntity(url, String.class);
+
+        // Then
+        assertEquals(response.getStatusCode(), HttpStatus.OK);
+        assertEquals(MEDIATYPE_TEXT_HTML, response.getHeaders().getContentType().toString());
+        assertEquals(expected.replaceAll("\\n|\\r\\n", System.getProperty("line.separator")).trim(),
+                response.getBody().replaceAll("\\n|\\r\\n", System.getProperty("line.separator")).trim());
+    }
 
 }

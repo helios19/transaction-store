@@ -2,136 +2,67 @@ package com.abn.amro.transaction.service;
 
 import com.abn.amro.transaction.model.Transaction;
 import com.abn.amro.transaction.repository.TransactionRepository;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ActiveProfiles;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.List;
+
+import static com.abn.amro.common.ClassTestUtils.TRANSACTION_SAMPLE;
+import static com.abn.amro.common.ClassTestUtils.TRANSACTION_SAMPLE_2;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
-@ActiveProfiles({"test", "cacheDisabled"})
-@SpringBootTest(classes = TransactionServiceTest.TestAppConfig.class)
-//@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class TransactionServiceTest {
+    @Mock
+    private TransactionRepository transactionRepository;
 
     @InjectMocks
     private TransactionServiceImpl transactionService;
 
-    @Mock
-    private TransactionRepository repository;
+    private Transaction transaction1;
+    private Transaction transaction2;
 
-    @Before
-    public void init() {
-        MockitoAnnotations.initMocks(this);
-    }
-
-    private Transaction sampleTransaction = Transaction
-            .builder()
-//            .customer("1")
-//            .date(toDate("1/10/2016 2:51:23 AM"))
-//            .amount(BigDecimal.valueOf(23.4))
-//            .description("transaction description")
-            .build();
-
-    @Test
-    @DirtiesContext
-    public void shouldFindTransactionByCustomerId() {
-        // given
-//        when(repository.findByCustomerId(any(String.class))).thenReturn(
-//                Lists.newArrayList(sampleTransaction));
-//
-//        // when
-//        List<Transaction> transactions = transactionService.findByCustomerId("1");
-//
-//        // then
-//        assertFalse(transactions.isEmpty());
-//        assertNotNull(transactions.get(0));
-//        assertEquals("1", transactions.get(0).getCustomer());
-//        assertEquals(toDate("1/10/2016 2:51:23 AM"), transactions.get(0).getDate());
-//        assertEquals(BigDecimal.valueOf(23.4), transactions.get(0).getAmount());
-//        assertEquals("transaction description", transactions.get(0).getDescription());
-//        verify(repository, times(1)).findByCustomerId(any(String.class));
-//        verifyNoMoreInteractions(repository);
+    @BeforeEach
+    public void setup() {
+        transaction1 = TRANSACTION_SAMPLE;
+        transaction2 = TRANSACTION_SAMPLE_2;
     }
 
     @Test
-    @DirtiesContext
-    public void shouldFindTransactionByCustomerIdAndDate() {
-//        // given
-//        when(repository.findByCustomerIdAndDate(any(String.class), any(Date.class), any(Date.class)))
-//                .thenReturn(Lists.newArrayList(sampleTransaction));
-//
-//        // when
-//        Date start = toDate("1/10/2016 1:00:00 AM");
-//        Date end = toDate("1/10/2016 3:00:00 AM");
-//        List<Transaction> transactions = transactionService.findByCustomerIdAndDate("1", start, end);
-//
-//        // then
-//        assertFalse(transactions.isEmpty());
-//        assertNotNull(transactions.get(0));
-//        assertEquals("1", transactions.get(0).getCustomer());
-//        assertEquals(toDate("1/10/2016 2:51:23 AM"), transactions.get(0).getDate());
-//        assertEquals(BigDecimal.valueOf(23.4), transactions.get(0).getAmount());
-//        assertEquals("transaction description", transactions.get(0).getDescription());
-//        verify(repository, times(1)).findByCustomerIdAndDate(any(String.class), any(Date.class), any(Date.class));
-//        verifyNoMoreInteractions(repository);
+    public void givenTransactionWhenSavedThenReturnTransactionObject() {
+        // Given
+        given(transactionRepository.save(transaction1)).willReturn(transaction1);
+
+        // When
+        Transaction t = transactionService.save(transaction1);
+
+        // Then
+        assertThat(t).isNotNull();
+        verify(transactionRepository, times(1)).save(any(Transaction.class));
+        verifyNoMoreInteractions(transactionRepository);
     }
-//
-//    @Test
-//    @DirtiesContext
-//    public void shouldFindAll() {
-//        // given
-//        when(repository.findAll()).thenReturn(
-//                Lists.newArrayList(sampleTransaction));
-//
-//        // when
-//        List<Transaction> transactions = transactionService.findAll();
-//
-//        // then
-//        assertFalse(transactions.isEmpty());
-//        assertTrue(transactions.size() == 1);
-//        assertNotNull(transactions.get(0));
-//        assertEquals(transactions.get(0).getId(), "1");
-//        assertEquals(transactions.get(0).getVersion(), 1l, 0);
-//        assertEquals(transactions.get(0).getTitle(), "transaction title");
-//        assertEquals(transactions.get(0).getBody(), "transaction body");
-//        assertEquals(transactions.get(0).getTags(), Arrays.asList("news", "sport"));
-//        assertEquals(transactions.get(0).getDate(), toDate("2016-10-01"));
-//        verify(repository, times(1)).findAll();
-//        verifyNoMoreInteractions(repository);
-//    }
 
     @Test
-    @DirtiesContext
-    public void shouldSaveTransaction() {
-        // when
-        transactionService.save(sampleTransaction);
+    public void givenListOfTransactionsWhenFindAllInvokedThenReturnTransactionList() {
+        // Given
+        given(transactionRepository.findAll()).willReturn(List.of(transaction1, transaction2));
 
-        // then
-        verify(repository, times(1)).save(sampleTransaction);
-        verifyNoMoreInteractions(repository);
-    }
+        // When
+        List<Transaction> transactionList = transactionService.findAll();
 
-    @Configuration
-//    @EnableAutoConfiguration
-//    @EnableMongoRepositories(basePackages = "com.abn.amro.transaction.repository")
-    @ComponentScan({
-            "com.abn.amro.transaction.service"
-    })
-    public static class TestAppConfig {
-
-//        @Bean
-//        public TransactionRepository transactionRepository() {
-//            return null;
-//        }
+        // Then
+        assertThat(transactionList).isNotNull();
+        assertThat(transactionList.size()).isEqualTo(2);
+        verify(transactionRepository, times(1)).findAll();
+        verifyNoMoreInteractions(transactionRepository);
     }
 }
-

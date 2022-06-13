@@ -2,8 +2,8 @@
 var app = angular.module('customerAnalytics',['ui.router','ngStorage']);
 
 app.constant('urls', {
-    BASE: 'http://localhost:8080/',
-    TRANSACTION_SERVICE_API : 'http://localhost:8080/transaction-summary'
+    BASE: 'http://localhost:8081/',
+    TRANSACTION_SERVICE_API : 'http://localhost:8081/transaction-summary'
 });
 
 app.config(['$stateProvider', '$urlRouterProvider',

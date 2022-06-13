@@ -34,6 +34,7 @@ buildscript {
 group = 'abn-amro'
 
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'//'spring-boot'
 apply plugin: 'docker'
@@ -147,8 +148,13 @@ dependencies {
     testImplementation "com.jayway.restassured:spring-mock-mvc:${restAssuredVersion}"
 //    testImplementation "junit:junit:${junitVersion}"
     testImplementation 'org.junit.jupiter:junit-jupiter'//JUnit5
-    testImplementation "org.spockframework:spock-core:2.0-M2-groovy-2.5"
-    testImplementation "org.spockframework:spock-spring:2.0-M2-groovy-2.5"
+//    testImplementation "org.spockframework:spock-core:2.0-M2-groovy-2.5"
+//    testImplementation "org.spockframework:spock-spring:2.0-M2-groovy-2.5"
+
+    testCompileOnly "org.codehaus.groovy:groovy:2.5.13"
+    testImplementation platform("org.spockframework:spock-bom:2.0-M3-groovy-2.5")
+    testImplementation "org.spockframework:spock-core"
+//    testImplementation "org.spockframework:spock-junit4" // you can remove this if your code does not rely on old JUnit 4 rules
 
 //    // embedded mongodb
 //    testImplementation "de.flapdoodle.embed:de.flapdoodle.embed.mongo:${embedMongoVersion}"

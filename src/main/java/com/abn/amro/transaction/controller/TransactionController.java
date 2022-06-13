@@ -26,7 +26,7 @@ import static com.abn.amro.common.utils.ClassUtils.MEDIATYPE_TEXT_HTML;
 
 /**
  * Transaction controller class defining the HTTP operations available for the {@link Transaction} resource. This controller
- * is mainly used to return a customer transaction summary including its classification.
+ * is mainly used to return a customer transaction summary report.
  *
  * @see Transaction
  * @see TransactionSummary

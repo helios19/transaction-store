@@ -38,8 +38,8 @@ public class TransactionServiceImpl implements TransactionService {
      */
     @Override
     @CacheEvict(allEntries = true)
-    public void save(Transaction transaction) {
-        repository.save(transaction);
+    public Transaction save(Transaction transaction) {
+        return repository.save(transaction);
     }
 
     /**
@@ -47,7 +47,7 @@ public class TransactionServiceImpl implements TransactionService {
      */
     @Override
     @Cacheable
-    public Optional<Transaction> findById(String id) {
+    public Optional<Transaction> findById(Long id) {
         return repository.findById(id);
     }
 

@@ -6,7 +6,6 @@ import javax.persistence.EntityManager;
 
 @Repository
 public interface TransactionRepositoryCustom {
-
     EntityManager getEntityManager();
 
 }

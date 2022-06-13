@@ -18,8 +18,9 @@ public interface TransactionService {
      * Saves an {@link Optional<Transaction>} instance.
      *
      * @param transaction Transaction object to save
+     * @return Saved transaction
      */
-    void save(Transaction transaction);
+    Transaction save(Transaction transaction);
 
     /**
      * Returns an {@link Optional<Transaction>} instance given {@code id} argument.
@@ -27,7 +28,7 @@ public interface TransactionService {
      * @param id Transaction's identifier
      * @return Optional transaction
      */
-    Optional<Transaction> findById(String id);
+    Optional<Transaction> findById(Long id);
 
     /**
      * Returns a list of all {@link Transaction}.

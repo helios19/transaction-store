@@ -31,7 +31,7 @@ Alternatively, you could also use the bootRun gradle task to run the application
 The endpoints will be available at the following URLs:
 
 ```
-GET http://localhost:8080/transaction-summary/{customerId}/{month}
+GET http://localhost:8081/transaction-summary/{customerId}/{month}
 ```
 
 
@@ -61,7 +61,7 @@ docker run ing-direct/customer-analytics
 
 **UI**
 
-Once the application has started, to access the UI, just open your favorite browser and enter `http://localhost:8080`. Make sure port `8080`
+Once the application has started, to access the UI, just open your favorite browser and enter `http://localhost:8081`. Make sure port `8080`
 is not used by another process. Then you should be able to access the Customer Classification main page.
 
 

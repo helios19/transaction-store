@@ -26,7 +26,6 @@ import static java.time.format.DateTimeFormatter.ofPattern;
  * Utils class providing convenient factory and helper methods for {@link Transaction} resources.
  */
 public class ClassUtils {
-    public static final String COUNTERS_COLLECTION_NAME = "counters";
     public static final String TRANSACTIONS_COLLECTION_NAME = "transactions";
     public static final String DATE_FORMAT_PATTERN = "yyyyMMdd";
     public static final DateTimeFormatter FORMATTER = ofPattern("d/MM/yyyy h:mm:ss a");
@@ -183,12 +182,4 @@ public class ClassUtils {
                 .setScale(2, RoundingMode.CEILING)
                 .doubleValue();
     }
-
-
-//    public static final void main(String... args) {
-//
-//        System.out.println("toDate : " + toDate("31/05/2016 4:20:23 PM"));
-//        System.out.println("toDate : " + toDate("31/5/2016 9:15:24 AM"));
-//        System.out.println("toDate : " + toDate("31/5/2016 9:15:24 PM"));
-//    }
 }

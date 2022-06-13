@@ -7,5 +7,5 @@ RUN chmod 777 /wait-for-it.sh
 RUN sh -c 'touch /app.jar'
 RUN sh -c 'touch /wait-for-it.sh'
 VOLUME ["/var/log/app"]
-EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]

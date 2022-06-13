@@ -33,7 +33,7 @@
         <appender-ref ref="FILE" />
 	</logger>
 
-	<logger name="com.ing.direct" level="DEBUG" additivity="false">
+	<logger name="com.abn.amro" level="DEBUG" additivity="false">
 		<appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
 	</logger>

@@ -3,8 +3,7 @@ package com.abn.amro;
 import com.abn.amro.transaction.model.Transaction;
 import com.abn.amro.transaction.repository.TransactionRepository;
 import com.google.common.base.Strings;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,15 +24,13 @@ import static com.abn.amro.common.utils.ClassUtils.toDate;
 
 /**
  * Main Spring Boot Application class. Note that a {@link CommandLineRunner} is created
- * to initialize the Mongo database with a set of transactions.
+ * to initialize the H2 database with a set of transactions.
  */
-//@EnableMongoRepositories(basePackages = "com.abn.amro.transaction.repository")
 @EntityScan("com.abn.amro.transaction.model")
 @EnableJpaRepositories("com.abn.amro.transaction.repository")
 @SpringBootApplication
+@Slf4j
 public class Application {
-    private static final Logger LOG = LoggerFactory.getLogger(Application.class);
-
     public static final void main(String... args) {
         SpringApplication.run(Application.class, args);
     }
@@ -47,7 +44,7 @@ public class Application {
     @Bean
     CommandLineRunner init(TransactionRepository transactionRepository) {
 
-        LOG.info("start initializing mongodb...");
+        log.info("start initializing mongodb...");
 
         try {
             return (evt) -> transactionRepository.saveAll(
@@ -94,16 +91,11 @@ public class Application {
                                     .openCloseCode(s.substring(175, 176))
                                     .filler(s.substring(176, 303))
                                     .build()
-//                                    .customer(s[0])
-//                                    .date(toDate(s[1]))
-//                                    .amount(new BigDecimal(s[2]))
-//                                    .description(s[3])
-//                                    .build()
                             )
-                            .collect(Collectors.toList())//.toArray(new Transaction[]{})
+                            .collect(Collectors.toList())
             );
         } finally {
-            LOG.info("end of mongodb initialization...");
+            log.info("end of mongodb initialization...");
         }
     }
 

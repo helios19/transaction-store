@@ -1,8 +1,7 @@
 package com.abn.amro.transaction.repository;
 
 import com.abn.amro.transaction.model.Transaction;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -15,9 +14,8 @@ import javax.persistence.PersistenceContext;
  * @see TransactionRepositoryCustom
  */
 @Repository
+@Slf4j
 public class TransactionRepositoryImpl implements TransactionRepositoryCustom {
-
-    private static final Logger LOG = LoggerFactory.getLogger(com.abn.amro.transaction.repository.TransactionRepositoryImpl.class);
 
     @PersistenceContext
     private EntityManager entityManager;

@@ -1,26 +1,24 @@
-package com.abn.amro.common;
+package com.abn.amro.transaction.service
 
-import com.abn.amro.transaction.dto.TransactionSummary;
-import com.abn.amro.transaction.model.Transaction;
+import com.abn.amro.transaction.dto.TransactionSummary
+import com.abn.amro.transaction.model.Transaction
+import spock.lang.Specification
+import spock.lang.Unroll
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
+import static com.abn.amro.common.utils.ClassUtils.*
 
-import static com.abn.amro.common.utils.ClassUtils.HUNDRED;
-import static com.abn.amro.common.utils.ClassUtils.TEN_MILLIONS;
-import static com.abn.amro.common.utils.ClassUtils.toDate;
+class TransactionSummaryServiceImplTest  extends Specification {
+    def transactionSummaryService = new TransactionSummaryServiceImpl()
 
-public class ClassTestUtils {
-
-    public static final TransactionSummary TRANSACTION_SUMMARY = TransactionSummary
+    def static transactionSummary = TransactionSummary
             .builder()
             .clientInformation("CL  432100020001")
             .productInformation("SGX FUNK    20100910")
             .date(toDate("20100910"))
             .totalTransactionAmount(0)
-            .build();
+            .build()
 
-    public static final Transaction TRANSACTION_SAMPLE = Transaction
+    def static transaction1 = Transaction
             .builder()
             .recordCode("315")
             .clientType("CL  ")
@@ -57,9 +55,9 @@ public class ClassTestUtils {
             .oppositeTraderId("       ")
             .openCloseCode(" ")
             .filler("O                                                                                                                              ")
-            .build();
+            .build()
 
-    public static final Transaction TRANSACTION_SAMPLE_2 = Transaction
+    def static transaction2 = Transaction
             .builder()
             .recordCode("315")
             .clientType("CL  ")
@@ -96,8 +94,38 @@ public class ClassTestUtils {
             .oppositeTraderId("       ")
             .openCloseCode(" ")
             .filler("O                                                                                                                              ")
-            .build();
+            .build()
+
+    def static transaction_single1 = [
+            transaction1
+    ]
+
+    def static transaction_single2 = [
+            transaction2
+    ]
+
+    def static transaction_multi = [
+            transaction1,
+            transaction2
+    ]
 
 
+    @Unroll
+    def "should build transaction summaries"() {
 
+        given:
+
+        when: "invoking classification service"
+        TransactionSummary[] transactionSummaries = transactionSummaryService.buildTransactionSummaryReport(transactions)
+
+        then:
+        transactionSummaries.sort() == expectTransactionSummaries.sort()
+
+        where:
+        transactions                        | expectTransactionSummaries
+        transaction_single1                 | [transactionSummary]
+        transaction_single2                 | [transactionSummary]
+        transaction_multi                   | [transactionSummary]
+
+    }
 }

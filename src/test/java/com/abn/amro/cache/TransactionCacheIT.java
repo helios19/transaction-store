@@ -3,17 +3,17 @@ package com.abn.amro.cache;
 import com.abn.amro.common.utils.ClassUtils;
 import com.abn.amro.transaction.model.Transaction;
 import com.abn.amro.transaction.repository.TransactionRepository;
-import com.abn.amro.transaction.service.TransactionService;
+import com.abn.amro.transaction.service.TransactionServiceImpl;
 import com.google.common.collect.Lists;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
@@ -28,11 +28,12 @@ import org.springframework.test.context.ActiveProfiles;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static com.abn.amro.common.ClassTestUtils.TRANSACTION_SAMPLE;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -47,30 +48,24 @@ public class TransactionCacheIT {
 
     @Autowired
     @InjectMocks
-    private TransactionService transactionService;
+    private TransactionServiceImpl transactionService;
 
-    @Mock
+    @MockBean
     private TransactionRepository repository;
 
     @Autowired
     private CacheManager cacheManager;
 
-    private Transaction sampleTransaction = Transaction
-            .builder()
-//            .customer("1")
-//            .date(toDate("1/10/2016 2:51:23 AM"))
-//            .amount(BigDecimal.valueOf(12.3))
-//            .description("transaction description")
-            .build();
+    private Transaction sampleTransaction = TRANSACTION_SAMPLE;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         transactionService.save(sampleTransaction);
         transactionService.setRepository(repository);
     }
 
-    @After
+    @AfterEach
     public void tearDown() throws Exception {
         // reset transaction cache
         cacheManager.getCache(ClassUtils.TRANSACTIONS_COLLECTION_NAME).clear();
@@ -81,10 +76,10 @@ public class TransactionCacheIT {
     public void shouldFindTransactionByIdFromCache() {
 
         // given
-        when(repository.findById(any(String.class)))
+        when(repository.findById(any(Long.class)))
                 .thenReturn(Optional.of(sampleTransaction));
 
-        String id = "1";
+        Long id = 1L;
         Cache transactionCache = cacheManager.getCache(ClassUtils.TRANSACTIONS_COLLECTION_NAME);
         Cache.ValueWrapper beforeFillingCache = transactionCache.get(id);
 
@@ -101,7 +96,7 @@ public class TransactionCacheIT {
         assertTrue(transactionFromCache.isPresent());
         assertEquals(transactionFromCache, transactionFromRepo);
 
-        verify(repository, times(1)).findById(any(String.class));
+        verify(repository, times(1)).findById(any(Long.class));
     }
 
     @Test
