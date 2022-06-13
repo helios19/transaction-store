@@ -36,7 +36,7 @@ public class CsvServiceImpl implements CsvService {
     }
 
     /**
-     * Write transaction to csv.
+     * Write transactions to csv input stream.
      *
      * @param transactionSummaries
      * @return Byte input stream of the transaction summaries

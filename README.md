@@ -34,7 +34,12 @@ The endpoints to retrieve the transaction summary in json format will be availab
 GET http://localhost:8081/transaction-summary/all
 ```
 
-The endpoints to retrieve the transaction summary in csv format will be available at the following URLs:
+Invoking the above endpoint should give you the following transaction summary:
+```
+[{"clientInformation":"CL432100020001","productInformation":"SGXFUNK20100910","totalTransactionAmount":46.0,"date":"2010-08-19T14:00:00.000+00:00"},{"clientInformation":"CL432100030001","productInformation":"CMEFUN120100910","totalTransactionAmount":-79.0,"date":"2010-08-18T14:00:00.000+00:00"},{"clientInformation":"CL123400020001","productInformation":"SGXFUNK20100910","totalTransactionAmount":-52.0,"date":"2010-08-19T14:00:00.000+00:00"},{"clientInformation":"CL123400030001","productInformation":"CMEFUNK.20100910","totalTransactionAmount":-215.0,"date":"2010-08-18T14:00:00.000+00:00"},{"clientInformation":"CL123400030001","productInformation":"CMEFUN120100910","totalTransactionAmount":285.0,"date":"2010-08-18T14:00:00.000+00:00"}]
+```
+
+Similarly, the endpoint to retrieve the transaction summary in csv format will be available at the following URLs:
 
 ```
 GET http://localhost:8081/transaction-summary/export-csv
@@ -68,7 +73,9 @@ docker run abn-amro/product-analytics
 
 Once the application has started, to access the UI, just open your favorite browser and enter `http://localhost:8081`. Make sure port `8081`
 is not used by another process. Then you should be able to access the Transaction Summary Report main page.
+> **_NOTE:_**  The UI part of the application might not fully work yet.
 
+***
 
 
 Requirement assumptions
@@ -84,6 +91,8 @@ considered while implementing the solution:
     - Vulnerability of the system through common XSS attacks
     - Performance and scalability of the system
     - Testability of the system from the start through BDD
+
+***
 
 Design and architecture decisions
 --
@@ -114,8 +123,7 @@ and being used to check submitted request and header values.
 **Performance**
 
 A particular emphasis was place on the performance aspect of the system through
-the use of NoSQL database - namely mongodb (the system is actually comprising an embedded version
-of mongodb), caching strategies (using guava cache), SPA AngularJS and localstorage
+the use of an in-memory database - namely h2, caching strategies (using guava cache), SPA AngularJS and localstorage
 to minimize network round trips.
 
 **SPA UI**

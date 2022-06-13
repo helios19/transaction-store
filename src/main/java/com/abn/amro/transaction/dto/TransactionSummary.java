@@ -9,7 +9,7 @@ import lombok.ToString;
 import java.util.Date;
 
 /**
- * Transaction Summary DTO class gathering customer transaction details to be displayed in report.
+ * Transaction Summary DTO class gathering transaction details to be displayed in report.
  */
 @Data
 @Builder

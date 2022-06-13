@@ -1,21 +1,16 @@
 package com.abn.amro.common.utils;
 
 import com.abn.amro.transaction.dto.TransactionDto;
-import com.abn.amro.transaction.exception.InvalidParameterException;
 import com.abn.amro.transaction.exception.InvalidTransactionException;
 import com.abn.amro.transaction.model.Transaction;
 import com.google.common.base.Strings;
-import com.google.common.primitives.Ints;
-import org.apache.commons.lang3.tuple.Pair;
 import org.modelmapper.ModelMapper;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
 import java.util.List;
 import java.util.StringJoiner;
@@ -54,54 +49,6 @@ public class ClassUtils {
             throw new InvalidTransactionException(transaction);
         }
 
-    }
-
-    /**
-     * Validates transaction identifier field.
-     *
-     * @param customerId Transaction identifier
-     * @return Transaction identifier if valid
-     * @throws InvalidParameterException in case transaction identifier is invalid
-     */
-    public static String validateCustomerId(String customerId) {
-        if (Ints.tryParse(customerId) == null) {
-            throw new InvalidParameterException("customerId", customerId);
-        }
-
-        return customerId;
-    }
-
-    /**
-     * Validates transaction identifier field.
-     *
-     * @param month Month
-     * @return Month if valid
-     * @throws InvalidParameterException in case month is invalid
-     */
-    public static int validateMonth(String month) {
-
-        Integer iMonth = Ints.tryParse(month);
-
-        if (iMonth == null || iMonth <= 0) {
-            throw new InvalidParameterException("month", month);
-        }
-
-        return iMonth;
-    }
-
-    /**
-     * Returns start and end date given month number.
-     *
-     * @param month Month
-     * @return Pair of start and end date
-     */
-    public static Pair<Date, Date> toStartEndDate(int month) {
-        LocalDateTime firstDayOfMonthDate = LocalDateTime.of(2016, month, 1, 0, 0, 0);
-        LocalDateTime lastDayOfMonthDate = firstDayOfMonthDate.with(TemporalAdjusters.lastDayOfMonth()).plusDays(1);
-
-        return Pair.of(
-                Date.from(firstDayOfMonthDate.atZone(ZoneId.systemDefault()).toInstant()),
-                Date.from(lastDayOfMonthDate.atZone(ZoneId.systemDefault()).toInstant()));
     }
 
     /**

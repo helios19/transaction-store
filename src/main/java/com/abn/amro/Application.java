@@ -52,7 +52,7 @@ public class Application {
                     new BufferedReader(
                             new InputStreamReader(ResourceUtils.getURL("classpath:Input.txt").openStream()))
                             .lines()
-                            .filter(s -> !Strings.isNullOrEmpty(s) /*&& s.length() >= 303*/)
+                            .filter(s -> !Strings.isNullOrEmpty(s))
                             .map(s -> Transaction
                                     .builder()
                                     .recordCode(s.substring(0, 3))
@@ -89,7 +89,7 @@ public class Application {
                                     .traderInitials(s.substring(162, 168))
                                     .oppositeTraderId(s.substring(168, 175))
                                     .openCloseCode(s.substring(175, 176))
-                                    .filler(s.substring(176/*, 302*/))
+                                    .filler(s.substring(176))
                                     .build()
                             )
                             .collect(Collectors.toList())

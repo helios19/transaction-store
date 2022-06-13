@@ -41,9 +41,5 @@ public class CacheConfig extends CachingConfigurerSupport {
     @Bean
     public CacheManager cacheManager() {
         return new ConcurrentMapCacheManager(ClassUtils.TRANSACTIONS_COLLECTION_NAME);
-//        // configure and return an implementation of Spring's CacheManager SPI
-//        SimpleCacheManager cacheManager = new SimpleCacheManager();
-//        cacheManager.setCaches(Arrays.asList(new ConcurrentMapCache("default")));
-//        return cacheManager;
     }
 }

@@ -12,7 +12,7 @@ import java.math.BigInteger;
 import java.util.Date;
 
 /**
- * Transaction DTO class representing a customer transaction.
+ * Transaction DTO class representing a transaction.
  */
 @Data
 @Builder

@@ -21,8 +21,6 @@ import static com.abn.amro.common.utils.ClassUtils.DATE_FORMAT_PATTERN;
 
 /**
  * Plain java class representing an transaction resource.
- * <p>
- * <p>This class also declares a compound-index based on {@code customer} and {@code date} fields.</p>
  */
 @Entity
 @Data

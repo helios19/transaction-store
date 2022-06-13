@@ -10,8 +10,4 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 @EnableCaching
 public class TestCacheConfig {
-//    @Bean
-//    CacheManager cacheManager() {
-//        return new ConcurrentMapCacheManager(ClassUtils.TRANSACTIONS_COLLECTION_NAME);
-//    }
 }
