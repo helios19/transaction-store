@@ -1,6 +1,6 @@
 describe('TransactionController', function() {
 
-  beforeEach(module('customerAnalytics'));
+  beforeEach(module('productAnalytics'));
 
   it('should create a transaction model objects', inject(function($controller) {
     var scope = {};
@@ -9,8 +9,6 @@ describe('TransactionController', function() {
     expect(ctrl.transaction).toBeDefined();
     expect(ctrl.transactions).toBeDefined();
     expect(ctrl.transactions.length).toBe(0);
-    expect(ctrl.classification).toEqual('');
-    expect(ctrl.currentBalance).toEqual('');
     expect(ctrl.submit).toBeDefined();
     expect(ctrl.reset).toBeDefined();
     expect(ctrl.successMessage).toEqual('');

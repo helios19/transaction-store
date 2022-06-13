@@ -1,7 +1,7 @@
 
 'use strict';
  
-angular.module('customerAnalytics').factory('TransactionService',
+angular.module('productAnalytics').factory('TransactionService',
     ['$localStorage', '$http', '$q', 'urls',
         function ($localStorage, $http, $q, urls) {
  
@@ -11,14 +11,14 @@ angular.module('customerAnalytics').factory('TransactionService',
  
             return factory;
 
-             function loadCustomerTransactions(transaction) {
-                console.log('Fetching all transactions given customer:' + transaction.customerid + ' and month:' + transaction.month);
+             function loadCustomerTransactions() {
+                console.log('Fetching all transaction summaries');
                 var deferred = $q.defer();
-                $http.get(urls.TRANSACTION_SERVICE_API + '/' + transaction.customerid + '/' + transaction.month)
+                $http.get(urls.TRANSACTION_SERVICE_API + '/all')
                     .then(
                         function (response) {
-                            console.log('Fetched successfully customer transactions');
-                            $localStorage.transactions = response.data.transactions;
+                            console.log('Fetched successfully client product transactions');
+                            $localStorage.transactions = response.data;
                             deferred.resolve(response);
                         },
                         function (errResponse) {

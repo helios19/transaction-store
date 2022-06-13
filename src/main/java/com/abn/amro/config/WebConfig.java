@@ -1,13 +1,13 @@
 package com.abn.amro.config;
 
+import com.abn.amro.common.security.XssFilter;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.abn.amro.common.security.XssFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ResourceProperties;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -16,7 +16,7 @@ import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.resource.PathResourceResolver;
 
 import java.io.IOException;
@@ -29,7 +29,7 @@ import java.io.IOException;
 @EnableSpringDataWebSupport
 @Configuration
 @EnableConfigurationProperties({ResourceProperties.class})
-public class WebConfig extends WebMvcConfigurerAdapter {
+public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
     private ResourceProperties resourceProperties = new ResourceProperties();
@@ -59,6 +59,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 "/**/*.woff2"
         )
                 .addResourceLocations(staticLocations)
+                .addResourceLocations("/webjars/", "/resources/", "classpath:/META-INF/resources/webjars/")
                 .setCachePeriod(cachePeriod);
 
         registry.addResourceHandler("/**")

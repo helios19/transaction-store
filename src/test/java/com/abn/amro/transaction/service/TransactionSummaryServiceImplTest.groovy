@@ -115,7 +115,7 @@ class TransactionSummaryServiceImplTest  extends Specification {
 
         given:
 
-        when: "invoking classification service"
+        when: "invoking transaction service build report"
         TransactionSummary[] transactionSummaries = transactionSummaryService.buildTransactionSummaryReport(transactions)
 
         then:

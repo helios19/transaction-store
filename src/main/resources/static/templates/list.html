@@ -14,28 +14,16 @@
                     <input type="hidden" ng-model="ctrl.transaction.id" />
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-lable" for="customerid">Customer ID</label>
-                            <div class="col-md-7">
-                                <input type="text" ng-model="ctrl.transaction.customerid" id="customerid" class="transactionname form-control input-sm" placeholder="Enter customer identifier" required ng-pattern="ctrl.onlyIntegers"/>
-                            </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-lable" for="month">Month</label>
-                            <div class="col-md-7">
-                                <input type="text" ng-model="ctrl.transaction.month" id="month" class="form-control input-sm" placeholder="Enter the classification month." required ng-pattern="ctrl.onlyIntegers"/>
-                            </div>
                         </div>
                     </div>
 
                     <div class="row" ng-if="ctrl.classification">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-lable">Classification</label>
-                            <div class="col-md-7">
-                                <p class="mark text-left" ng-if="ctrl.classification">{{ctrl.classification}}</p>
-                            </div>
                         </div>
                     </div>
 
@@ -57,20 +45,20 @@
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>CUSTOMER ID</th>
+                        <th>CLIENT INFORMATION</th>
+                        <th>PRODUCT INFORMATION</th>
+                        <th>TOTAL TRANSACTION AMOUNT</th>
                         <th>DATE</th>
-                        <th>AMOUNT</th>
-                        <th>DESCRIPTION</th>
                         <th width="20"></th>
-                        <th width="180"><p class="mark text-right" ng-if="ctrl.currentBalance">Current Balance : {{ctrl.currentBalance}}</p></th>
+                        <th width="180"><p class="mark text-right" ng-if="ctrl.currentBalance"></p></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ng-repeat="u in ctrl.transactions">
-                        <td>{{u.customer}}</td>
+                        <td>{{u.clientInformation}}</td>
+                        <td>{{u.productInformation}}</td>
+                        <td>{{u.totalTransactionAmount}}</td>
                         <td>{{u.date}}</td>
-                        <td>{{u.amount}}</td>
-                        <td>{{u.description}}</td>
                     </tr>
                     </tbody>
                 </table>

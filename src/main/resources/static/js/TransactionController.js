@@ -1,13 +1,11 @@
 'use strict';
  
-angular.module('customerAnalytics').controller('TransactionController',
+angular.module('productAnalytics').controller('TransactionController',
     ['TransactionService', '$scope',  function( TransactionService, $scope) {
  
         var self = this;
         self.transaction = {};
         self.transactions=[];
-        self.classification='';
-        self.currentBalance='';
 
         self.submit = submit;
         self.reset = reset;
@@ -20,18 +18,16 @@ angular.module('customerAnalytics').controller('TransactionController',
         self.onlyNumbers = /^\d+([,.]\d+)?$/;
  
         function submit() {
-            console.log('Submitting : ' + self.transaction.customerid + '|' + self.transaction.month);
+            console.log('Loading transaction summary report');
 
-            TransactionService.loadCustomerTransactions(self.transaction)
+            TransactionService.loadCustomerTransactions()
                 .then(
                     function (response) {
                         console.log('Transactions loaded successfully');
                         self.successMessage = 'Transactions loaded successfully';
                         self.errorMessage='';
                         self.done = true;
-                        self.transactions=response.data.transactions;
-                        self.classification = response.data.classification;
-                        self.currentBalance = response.data.currentBalance;
+                        self.transactions=response.data;
                         $scope.myForm.$setPristine();
                     },
                     function (errResponse) {
@@ -47,10 +43,6 @@ angular.module('customerAnalytics').controller('TransactionController',
             self.errorMessage='';
             self.transaction={};
             self.transactions=[];
-            self.transaction.customerid='';
-            self.transaction.month='';
-            self.classification='';
-            self.currentBalance='';
             $scope.myForm.$setPristine(); //reset Form
         }
     }

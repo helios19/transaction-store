@@ -3,7 +3,7 @@ Setup Instructions
 
 **Fat-Jar**
 
-The microservice customer-analytics has been implemented using gradle wrapper. Hence, to build it, simply run the following command
+The microservice product-analytics has been implemented using gradle wrapper. Hence, to build it, simply run the following command
 in a terminal, at the root of the source folder to generate the runnable fat jar:
 
 ```
@@ -28,12 +28,17 @@ Alternatively, you could also use the bootRun gradle task to run the application
 ./gradlew bootRun
 ```
 
-The endpoints will be available at the following URLs:
+The endpoints to retrieve the transaction summary in json format will be available at the following URLs:
 
 ```
 GET http://localhost:8081/transaction-summary/all
 ```
 
+The endpoints to retrieve the transaction summary in csv format will be available at the following URLs:
+
+```
+GET http://localhost:8081/transaction-summary/export-csv
+```
 
 **Docker**
 
@@ -61,8 +66,8 @@ docker run abn-amro/product-analytics
 
 **UI**
 
-Once the application has started, to access the UI, just open your favorite browser and enter `http://localhost:8081`. Make sure port `8080`
-is not used by another process. Then you should be able to access the Customer Classification main page.
+Once the application has started, to access the UI, just open your favorite browser and enter `http://localhost:8081`. Make sure port `8081`
+is not used by another process. Then you should be able to access the Transaction Summary Report main page.
 
 
 
@@ -84,7 +89,7 @@ Design and architecture decisions
 --
 
 The solution implemented has been designed in a microservice architecture model,
-even though only one fat jar (covering both transaction resource and related summary details) has been produced.
+even though only one fat jar (dedicated to the transaction resource and related summary details) has been produced.
 
 This type of architecture provides to the application several benefits among, being loosely coupled
 with other services, stateless, scalable and resilent to failures.

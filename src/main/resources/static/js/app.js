@@ -1,5 +1,5 @@
 
-var app = angular.module('customerAnalytics',['ui.router','ngStorage']);
+var app = angular.module('productAnalytics',['ui.router','ngStorage']);
 
 app.constant('urls', {
     BASE: 'http://localhost:8081/',
