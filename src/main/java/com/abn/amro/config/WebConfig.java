@@ -86,7 +86,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
      *
      * @return FilterRegistrationBean instance
      */
-    @Bean
+//    @Bean
     public FilterRegistrationBean xssFilterRegistrationBean() {
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         XssFilter xssFilter = new XssFilter();

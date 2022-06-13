@@ -3,6 +3,7 @@ package com.abn.amro.transaction.controller;
 import com.abn.amro.Application;
 import com.abn.amro.transaction.repository.TransactionRepository;
 import org.json.JSONException;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -38,7 +39,13 @@ public class TransactionControllerIT {
 
     @BeforeEach
     public void setUp() throws Exception {
+        transactionRepository.deleteAll();
         transactionRepository.saveAll(Arrays.asList(TRANSACTION_SAMPLE, TRANSACTION_SAMPLE_2));
+    }
+
+    @AfterEach
+    public void tearDown() {
+        transactionRepository.deleteAll();
     }
 
     @Test
@@ -59,8 +66,6 @@ public class TransactionControllerIT {
         assertEquals(response.getStatusCode(), HttpStatus.OK);
         assertEquals(MediaType.APPLICATION_JSON, response.getHeaders().getContentType());
         JSONAssert.assertEquals(expected, response.getBody(), false);
-
-
     }
 
     @Test

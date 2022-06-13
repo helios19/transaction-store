@@ -1,6 +1,8 @@
 package com.abn.amro.transaction.repository;
 
 import com.abn.amro.transaction.model.Transaction;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +28,19 @@ public class TransactionRepositoryTest {
     @Autowired
     TransactionRepository repository;
 
+    @BeforeEach
+    public void setUp() throws Exception {
+        repository.deleteAll();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        repository.deleteAll();
+    }
     @Test
     public void shouldNotFindAnyTransactionIfRepositoryIsEmpty() {
-        Iterable tutorials = repository.findAll();
-        assertThat(tutorials).isEmpty();
+        Iterable transactions = repository.findAll();
+        assertThat(transactions).isEmpty();
     }
 
     @Test
@@ -74,9 +85,9 @@ public class TransactionRepositoryTest {
     @Test
     public void shouldFindAllTransactions() {
         Transaction t1 = TRANSACTION_SAMPLE;
-        entityManager.persist(t1);
+        repository.save(t1);
         Transaction t2 = TRANSACTION_SAMPLE_2;
-        entityManager.persist(t2);
+        repository.save(t2);
         Iterable transactions = repository.findAll();
         assertThat(transactions).hasSize(2).contains(t1, t2);
     }

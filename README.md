@@ -19,7 +19,7 @@ given the list of third party dependencies, the build process might vary from
 Then, to run the application, simply type:
 
 ```
-java -jar <SOURCE_FOLDER>/build/libs/customer-analytics-1.0.jar
+java -jar <SOURCE_FOLDER>/build/libs/product-analytics-1.0.jar
 ```
 
 Alternatively, you could also use the bootRun gradle task to run the application (skipping the jar packaging altogether):
@@ -31,7 +31,7 @@ Alternatively, you could also use the bootRun gradle task to run the application
 The endpoints will be available at the following URLs:
 
 ```
-GET http://localhost:8081/transaction-summary/{customerId}/{month}
+GET http://localhost:8081/transaction-summary/all
 ```
 
 
@@ -46,16 +46,16 @@ When Docker has been installed on your machine, just run the following gradle ta
 to generate the docker image:
 
 ```
-./gradlew buildDocker
+./gradlew dockerBuildImage
 ```
 
 Then, after a few minutes, if the task run successfully, you should be able to see the application docker image
-created in the local docker registry with the following name: "ing-direct/customer-analytics".
+created in the local docker registry with the following name: "abn-amro/product-analytics".
 
 To run the application, just type in a terminal the following docker command:
 
 ```
-docker run ing-direct/customer-analytics
+docker run abn-amro/product-analytics
 ```
 
 

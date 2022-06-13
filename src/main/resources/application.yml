@@ -26,6 +26,13 @@ spring:
     properties:
       hibernate:
         show_sql: true
+#        javax:
+#          cache:
+#          #missing_cache_strategy: fail # Useful for testing if Hibernate creates a second cache manager
+#        cache:
+#          use_second_level_cache: true
+#          use_query_cache: false
+##          region.factory_class: jcache
 
   # Jackson properties
   jackson:
