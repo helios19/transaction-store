@@ -1,6 +1,6 @@
 describe('TransactionController', function() {
 
-  beforeEach(module('productAnalytics'));
+  beforeEach(module('transactionStore'));
 
   it('should create a transaction model objects', inject(function($controller) {
     var scope = {};

@@ -3,7 +3,7 @@ Setup Instructions
 
 **Fat-Jar**
 
-The microservice product-analytics has been implemented using gradle wrapper. Hence, to build it, simply run the following command
+The microservice transaction-store has been implemented using gradle wrapper. Hence, to build it, simply run the following command
 in a terminal, at the root of the source folder to generate the runnable fat jar:
 
 ```
@@ -19,7 +19,7 @@ given the list of third party dependencies, the build process might vary from
 Then, to run the application, simply type:
 
 ```
-java -jar <SOURCE_FOLDER>/build/libs/product-analytics-1.0.jar
+java -jar <SOURCE_FOLDER>/build/libs/transaction-store-1.0.jar
 ```
 
 Alternatively, you could also use the bootRun gradle task to run the application (skipping the jar packaging altogether):
@@ -60,12 +60,12 @@ to generate the docker image:
 ```
 
 Then, after a few minutes, if the task run successfully, you should be able to see the application docker image
-created in the local docker registry with the following name: "abn-amro/product-analytics".
+created in the local docker registry with the following name: "wex/transaction-store".
 
 To run the application, just type in a terminal the following docker command:
 
 ```
-docker run abn-amro/product-analytics
+docker run wex/transaction-store
 ```
 
 

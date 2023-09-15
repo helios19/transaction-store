@@ -1,0 +1,727 @@
+Record Date,Country,Currency,Country - Currency Description,Exchange Rate,Effective Date,Source Line Number,Fiscal Year,Fiscal Quarter Number,Calendar Year,Calendar Quarter Number,Calendar Month Number,Calendar Day Number
+2023-06-30,Argentina,Peso,Argentina-Peso,365.5,2023-08-15,7,2023,3,2023,2,06,30
+2023-06-30,Belarus,New Ruble,Belarus-New Ruble,3.265,2023-08-15,16,2023,3,2023,2,06,30
+2023-06-30,Myanmar,Kyat,Myanmar-Kyat,2918.0,2023-08-15,107,2023,3,2023,2,06,30
+2023-06-30,Russia,Ruble,Russia-Ruble,98.855,2023-08-15,129,2023,3,2023,2,06,30
+2023-06-30,Syria,Pound,Syria-Pound,8585.0,2023-08-15,151,2023,3,2023,2,06,30
+2023-06-30,Zambia,New Kwacha,Zambia-New Kwacha,19.4,2023-08-15,177,2023,3,2023,2,06,30
+2023-06-30,Mauritania,Ouguiya,Mauritania-Ouguiya,37.88,2023-07-31,98,2023,3,2023,2,06,30
+2023-06-30,Sierra Leone,Leone,Sierra Leone-Leone,22.25,2023-07-31,137,2023,3,2023,2,06,30
+2023-06-30,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,28.385,2023-07-14,171,2023,3,2023,2,06,30
+2023-06-30,Zimbabwe,RTGS,Zimbabwe-RTGS,4800.96,2023-07-14,179,2023,3,2023,2,06,30
+2023-06-30,Afghanistan,Afghani,Afghanistan-Afghani,85.95,2023-06-30,1,2023,3,2023,2,06,30
+2023-06-30,Albania,Lek,Albania-Lek,97.55,2023-06-30,2,2023,3,2023,2,06,30
+2023-06-30,Algeria,Dinar,Algeria-Dinar,135.657,2023-06-30,3,2023,3,2023,2,06,30
+2023-06-30,Angola,Kwanza,Angola-Kwanza,825.0,2023-06-30,4,2023,3,2023,2,06,30
+2023-06-30,Antigua & Barbuda,E. Caribbean Dollar,Antigua & Barbuda-E. Caribbean Dollar,2.7,2023-06-30,5,2023,3,2023,2,06,30
+2023-06-30,Argentina,Peso,Argentina-Peso,266.0,2023-06-30,6,2023,3,2023,2,06,30
+2023-06-30,Armenia,Dram,Armenia-Dram,390.0,2023-06-30,8,2023,3,2023,2,06,30
+2023-06-30,Australia,Dollar,Australia-Dollar,1.509,2023-06-30,9,2023,3,2023,2,06,30
+2023-06-30,Azerbaijan,Manat,Azerbaijan-Manat,1.7,2023-06-30,10,2023,3,2023,2,06,30
+2023-06-30,Bahamas,Dollar,Bahamas-Dollar,1.0,2023-06-30,11,2023,3,2023,2,06,30
+2023-06-30,Bahrain,Dinar,Bahrain-Dinar,0.377,2023-06-30,12,2023,3,2023,2,06,30
+2023-06-30,Bangladesh,Taka,Bangladesh-Taka,108.0,2023-06-30,13,2023,3,2023,2,06,30
+2023-06-30,Barbados,Dollar,Barbados-Dollar,2.02,2023-06-30,14,2023,3,2023,2,06,30
+2023-06-30,Belarus,New Ruble,Belarus-New Ruble,2.933,2023-06-30,15,2023,3,2023,2,06,30
+2023-06-30,Belize,Dollar,Belize-Dollar,2.0,2023-06-30,17,2023,3,2023,2,06,30
+2023-06-30,Benin,CFA Franc,Benin-CFA Franc,628.64,2023-06-30,18,2023,3,2023,2,06,30
+2023-06-30,Bermuda,Dollar,Bermuda-Dollar,1.0,2023-06-30,19,2023,3,2023,2,06,30
+2023-06-30,Bolivia,Boliviano,Bolivia-Boliviano,6.86,2023-06-30,20,2023,3,2023,2,06,30
+2023-06-30,Bosnia,Marka,Bosnia-Marka,1.799,2023-06-30,21,2023,3,2023,2,06,30
+2023-06-30,Botswana,Pula,Botswana-Pula,13.514,2023-06-30,22,2023,3,2023,2,06,30
+2023-06-30,Brazil,Real,Brazil-Real,4.858,2023-06-30,23,2023,3,2023,2,06,30
+2023-06-30,Brunei,Dollar,Brunei-Dollar,1.356,2023-06-30,24,2023,3,2023,2,06,30
+2023-06-30,Bulgaria,Lev New,Bulgaria-Lev New,1.8,2023-06-30,25,2023,3,2023,2,06,30
+2023-06-30,Burkina Faso,CFA Franc,Burkina Faso-CFA Franc,628.64,2023-06-30,26,2023,3,2023,2,06,30
+2023-06-30,Burundi,Franc,Burundi-Franc,2826.27,2023-06-30,27,2023,3,2023,2,06,30
+2023-06-30,Cambodia,Riel,Cambodia-Riel,4051.0,2023-06-30,28,2023,3,2023,2,06,30
+2023-06-30,Cameroon,CFA Franc,Cameroon-CFA Franc,603.57,2023-06-30,29,2023,3,2023,2,06,30
+2023-06-30,Canada,Dollar,Canada-Dollar,1.326,2023-06-30,30,2023,3,2023,2,06,30
+2023-06-30,Cape Verde,Escudo,Cape Verde-Escudo,101.47,2023-06-30,31,2023,3,2023,2,06,30
+2023-06-30,Cayman Islands,Dollar,Cayman Islands-Dollar,0.82,2023-06-30,32,2023,3,2023,2,06,30
+2023-06-30,Central African Rep.,CFA Franc,Central African Rep.-CFA Franc,603.57,2023-06-30,33,2023,3,2023,2,06,30
+2023-06-30,Chad,CFA Franc,Chad-CFA Franc,603.57,2023-06-30,34,2023,3,2023,2,06,30
+2023-06-30,Chile,Peso,Chile-Peso,802.37,2023-06-30,35,2023,3,2023,2,06,30
+2023-06-30,China,Renminbi,China-Renminbi,7.268,2023-06-30,36,2023,3,2023,2,06,30
+2023-06-30,Colombia,Peso,Colombia-Peso,4171.72,2023-06-30,37,2023,3,2023,2,06,30
+2023-06-30,Comoros,Franc,Comoros-Franc,452.44,2023-06-30,38,2023,3,2023,2,06,30
+2023-06-30,Congo,CFA Franc,Congo-CFA Franc,603.57,2023-06-30,39,2023,3,2023,2,06,30
+2023-06-30,Costa Rica,Colon,Costa Rica-Colon,541.9,2023-06-30,40,2023,3,2023,2,06,30
+2023-06-30,Cote D'ivoire,CFA Franc,Cote D'ivoire-CFA Franc,628.64,2023-06-30,41,2023,3,2023,2,06,30
+2023-06-30,Cuba,Chavito,Cuba-Chavito,1.0,2023-06-30,42,2023,3,2023,2,06,30
+2023-06-30,Cuba,Peso,Cuba-Peso,24.0,2023-06-30,43,2023,3,2023,2,06,30
+2023-06-30,Cyprus,Euro,Cyprus-Euro,0.92,2023-06-30,44,2023,3,2023,2,06,30
+2023-06-30,Czech Republic,Koruna,Czech Republic-Koruna,21.245,2023-06-30,45,2023,3,2023,2,06,30
+2023-06-30,Dem. Rep. of Congo,Congolese Franc,Dem. Rep. of Congo-Congolese Franc,2383.0,2023-06-30,46,2023,3,2023,2,06,30
+2023-06-30,Denmark,Krone,Denmark-Krone,6.854,2023-06-30,47,2023,3,2023,2,06,30
+2023-06-30,Djibouti,Franc,Djibouti-Franc,177.0,2023-06-30,48,2023,3,2023,2,06,30
+2023-06-30,Dominican Republic,Peso,Dominican Republic-Peso,55.03,2023-06-30,49,2023,3,2023,2,06,30
+2023-06-30,Ecuador,Dolares,Ecuador-Dolares,1.0,2023-06-30,50,2023,3,2023,2,06,30
+2023-06-30,Egypt,Pound,Egypt-Pound,30.85,2023-06-30,51,2023,3,2023,2,06,30
+2023-06-30,El Salvador,Dollar,El Salvador-Dollar,1.0,2023-06-30,52,2023,3,2023,2,06,30
+2023-06-30,Equatorial Guinea,CFA Franc,Equatorial Guinea-CFA Franc,603.57,2023-06-30,53,2023,3,2023,2,06,30
+2023-06-30,Eritrea,Nakfa,Eritrea-Nakfa,15.0,2023-06-30,54,2023,3,2023,2,06,30
+2023-06-30,Eswatini,Lilangeni,Eswatini-Lilangeni,18.936,2023-06-30,55,2023,3,2023,2,06,30
+2023-06-30,Ethiopia,Birr,Ethiopia-Birr,54.594,2023-06-30,56,2023,3,2023,2,06,30
+2023-06-30,Euro Zone,Euro,Euro Zone-Euro,0.92,2023-06-30,57,2023,3,2023,2,06,30
+2023-06-30,Fiji,Dollar,Fiji-Dollar,2.205,2023-06-30,58,2023,3,2023,2,06,30
+2023-06-30,Gabon,CFA Franc,Gabon-CFA Franc,603.57,2023-06-30,59,2023,3,2023,2,06,30
+2023-06-30,Gambia,Dalasi,Gambia-Dalasi,60.0,2023-06-30,60,2023,3,2023,2,06,30
+2023-06-30,Georgia,Lari,Georgia-Lari,2.585,2023-06-30,61,2023,3,2023,2,06,30
+2023-06-30,Ghana,Cedi,Ghana-Cedi,11.0,2023-06-30,62,2023,3,2023,2,06,30
+2023-06-30,Grenada,E.Caribbean Dollar,Grenada-E.Caribbean Dollar,2.7,2023-06-30,63,2023,3,2023,2,06,30
+2023-06-30,Guatemala,Quentzal,Guatemala-Quentzal,7.835,2023-06-30,64,2023,3,2023,2,06,30
+2023-06-30,Guinea,Franc,Guinea-Franc,8511.0,2023-06-30,66,2023,3,2023,2,06,30
+2023-06-30,Guinea Bissau,CFA Franc,Guinea Bissau-CFA Franc,628.64,2023-06-30,65,2023,3,2023,2,06,30
+2023-06-30,Guyana,Dollar,Guyana-Dollar,215.0,2023-06-30,67,2023,3,2023,2,06,30
+2023-06-30,Haiti,Gourde,Haiti-Gourde,138.251,2023-06-30,68,2023,3,2023,2,06,30
+2023-06-30,Honduras,Lempira,Honduras-Lempira,24.566,2023-06-30,69,2023,3,2023,2,06,30
+2023-06-30,Hong Kong,Dollar,Hong Kong-Dollar,7.837,2023-06-30,70,2023,3,2023,2,06,30
+2023-06-30,Hungary,Forint,Hungary-Forint,342.15,2023-06-30,71,2023,3,2023,2,06,30
+2023-06-30,Iceland,Krona,Iceland-Krona,136.67,2023-06-30,72,2023,3,2023,2,06,30
+2023-06-30,India,Rupee,India-Rupee,82.086,2023-06-30,73,2023,3,2023,2,06,30
+2023-06-30,Indonesia,Rupiah,Indonesia-Rupiah,14957.53,2023-06-30,74,2023,3,2023,2,06,30
+2023-06-30,Iran,Rial,Iran-Rial,42000.0,2023-06-30,75,2023,3,2023,2,06,30
+2023-06-30,Iraq,Dinar,Iraq-Dinar,1309.0,2023-06-30,76,2023,3,2023,2,06,30
+2023-06-30,Israel,Shekel,Israel-Shekel,3.725,2023-06-30,77,2023,3,2023,2,06,30
+2023-06-30,Jamaica,Dollar,Jamaica-Dollar,154.0,2023-06-30,78,2023,3,2023,2,06,30
+2023-06-30,Japan,Yen,Japan-Yen,144.62,2023-06-30,79,2023,3,2023,2,06,30
+2023-06-30,Jordan,Dinar,Jordan-Dinar,0.708,2023-06-30,80,2023,3,2023,2,06,30
+2023-06-30,Kazakhstan,Tenge,Kazakhstan-Tenge,450.33,2023-06-30,81,2023,3,2023,2,06,30
+2023-06-30,Kenya,Shilling,Kenya-Shilling,140.55,2023-06-30,82,2023,3,2023,2,06,30
+2023-06-30,Korea,Won,Korea-Won,1321.19,2023-06-30,83,2023,3,2023,2,06,30
+2023-06-30,Kuwait,Dinar,Kuwait-Dinar,0.308,2023-06-30,84,2023,3,2023,2,06,30
+2023-06-30,Kyrgyzstan,Som,Kyrgyzstan-Som,87.227,2023-06-30,85,2023,3,2023,2,06,30
+2023-06-30,Laos,Kip,Laos-Kip,19034.0,2023-06-30,86,2023,3,2023,2,06,30
+2023-06-30,Lebanon,Pound,Lebanon-Pound,15000.0,2023-06-30,87,2023,3,2023,2,06,30
+2023-06-30,Lesotho,Maloti,Lesotho-Maloti,18.936,2023-06-30,88,2023,3,2023,2,06,30
+2023-06-30,Liberia,Dollar,Liberia-Dollar,182.0,2023-06-30,89,2023,3,2023,2,06,30
+2023-06-30,Libya,Dinar,Libya-Dinar,4.778,2023-06-30,90,2023,3,2023,2,06,30
+2023-06-30,Madagascar,Ariary,Madagascar-Ariary,4400.0,2023-06-30,91,2023,3,2023,2,06,30
+2023-06-30,Malawi,Kwacha,Malawi-Kwacha,1053.43,2023-06-30,92,2023,3,2023,2,06,30
+2023-06-30,Malaysia,Ringgit,Malaysia-Ringgit,4.665,2023-06-30,93,2023,3,2023,2,06,30
+2023-06-30,Maldives,Rufiyaa,Maldives-Rufiyaa,15.42,2023-06-30,94,2023,3,2023,2,06,30
+2023-06-30,Mali,CFA Franc,Mali-CFA Franc,628.64,2023-06-30,95,2023,3,2023,2,06,30
+2023-06-30,Marshall Islands,U.S. Dollar,Marshall Islands-U.S. Dollar,1.0,2023-06-30,96,2023,3,2023,2,06,30
+2023-06-30,Mauritania,Ouguiya,Mauritania-Ouguiya,34.38,2023-06-30,97,2023,3,2023,2,06,30
+2023-06-30,Mauritius,Rupee,Mauritius-Rupee,45.4,2023-06-30,99,2023,3,2023,2,06,30
+2023-06-30,Mexico,Peso,Mexico-Peso,17.077,2023-06-30,100,2023,3,2023,2,06,30
+2023-06-30,Micronesia,U.S. Dollar,Micronesia-U.S. Dollar,1.0,2023-06-30,101,2023,3,2023,2,06,30
+2023-06-30,Moldova,LEU,Moldova-LEU,18.25,2023-06-30,102,2023,3,2023,2,06,30
+2023-06-30,Mongolia,Tugrik,Mongolia-Tugrik,3432.51,2023-06-30,103,2023,3,2023,2,06,30
+2023-06-30,Morocco,Dirham,Morocco-Dirham,9.895,2023-06-30,104,2023,3,2023,2,06,30
+2023-06-30,Mozambique,Metical,Mozambique-Metical,63.25,2023-06-30,105,2023,3,2023,2,06,30
+2023-06-30,Myanmar,Kyat,Myanmar-Kyat,2100.0,2023-06-30,106,2023,3,2023,2,06,30
+2023-06-30,Nambia,Dollar,Nambia-Dollar,18.936,2023-06-30,108,2023,3,2023,2,06,30
+2023-06-30,Nepal,Rupee,Nepal-Rupee,131.0,2023-06-30,109,2023,3,2023,2,06,30
+2023-06-30,Netherlands Antilles,Guilder,Netherlands Antilles-Guilder,1.78,2023-06-30,110,2023,3,2023,2,06,30
+2023-06-30,New Zealand,Dollar,New Zealand-Dollar,1.643,2023-06-30,111,2023,3,2023,2,06,30
+2023-06-30,Nicaragua,Cordoba,Nicaragua-Cordoba,36.4,2023-06-30,112,2023,3,2023,2,06,30
+2023-06-30,Niger,CFA Franc,Niger-CFA Franc,628.64,2023-06-30,113,2023,3,2023,2,06,30
+2023-06-30,Nigeria,Naira,Nigeria-Naira,765.0,2023-06-30,114,2023,3,2023,2,06,30
+2023-06-30,Norway,Krone,Norway-Krone,10.769,2023-06-30,115,2023,3,2023,2,06,30
+2023-06-30,Oman,Rial,Oman-Rial,0.385,2023-06-30,116,2023,3,2023,2,06,30
+2023-06-30,Pakistan,Rupee,Pakistan-Rupee,286.15,2023-06-30,117,2023,3,2023,2,06,30
+2023-06-30,Palau,Dollar,Palau-Dollar,1.0,2023-06-30,118,2023,3,2023,2,06,30
+2023-06-30,Panama,Dolares,Panama-Dolares,1.0,2023-06-30,119,2023,3,2023,2,06,30
+2023-06-30,Papua New Guinea,Kina,Papua New Guinea-Kina,3.46,2023-06-30,120,2023,3,2023,2,06,30
+2023-06-30,Paraguay,Guarani,Paraguay-Guarani,7276.32,2023-06-30,121,2023,3,2023,2,06,30
+2023-06-30,Peru,Sol,Peru-Sol,3.628,2023-06-30,122,2023,3,2023,2,06,30
+2023-06-30,Philippines,Peso,Philippines-Peso,55.284,2023-06-30,123,2023,3,2023,2,06,30
+2023-06-30,Poland,Zloty,Poland-Zloty,4.084,2023-06-30,124,2023,3,2023,2,06,30
+2023-06-30,Qatar,Riyal,Qatar-Riyal,3.643,2023-06-30,125,2023,3,2023,2,06,30
+2023-06-30,Rep. of N. Macedonia,Denar,Rep. of N. Macedonia-Denar,55.95,2023-06-30,126,2023,3,2023,2,06,30
+2023-06-30,Romania,New Leu,Romania-New Leu,4.566,2023-06-30,127,2023,3,2023,2,06,30
+2023-06-30,Russia,Ruble,Russia-Ruble,89.006,2023-06-30,128,2023,3,2023,2,06,30
+2023-06-30,Rwanda,Franc,Rwanda-Franc,1135.0,2023-06-30,130,2023,3,2023,2,06,30
+2023-06-30,Sao Tome & Principe,New Dobras,Sao Tome & Principe-New Dobras,22.399,2023-06-30,131,2023,3,2023,2,06,30
+2023-06-30,Saudi Arabia,Riyal,Saudi Arabia-Riyal,3.75,2023-06-30,132,2023,3,2023,2,06,30
+2023-06-30,Senegal,CFA Franc,Senegal-CFA Franc,628.64,2023-06-30,133,2023,3,2023,2,06,30
+2023-06-30,Serbia,Dinar,Serbia-Dinar,107.74,2023-06-30,134,2023,3,2023,2,06,30
+2023-06-30,Seychelles,Rupee,Seychelles-Rupee,13.21,2023-06-30,135,2023,3,2023,2,06,30
+2023-06-30,Sierra Leone,Leone,Sierra Leone-Leone,19.0,2023-06-30,136,2023,3,2023,2,06,30
+2023-06-30,Sierra Leone,Old Leone,Sierra Leone-Old Leone,21.4,2023-06-30,138,2023,3,2023,2,06,30
+2023-06-30,Singapore,Dollar,Singapore-Dollar,1.356,2023-06-30,139,2023,3,2023,2,06,30
+2023-06-30,Solomon Islands,Dollar,Solomon Islands-Dollar,8.065,2023-06-30,140,2023,3,2023,2,06,30
+2023-06-30,Somali,Shilling,Somali-Shilling,566.0,2023-06-30,141,2023,3,2023,2,06,30
+2023-06-30,South Africa,Rand,South Africa-Rand,18.936,2023-06-30,142,2023,3,2023,2,06,30
+2023-06-30,South Sudan,Sudanese Pound,South Sudan-Sudanese Pound,988.0,2023-06-30,143,2023,3,2023,2,06,30
+2023-06-30,Sri Lanka,Rupee,Sri Lanka-Rupee,307.5,2023-06-30,144,2023,3,2023,2,06,30
+2023-06-30,St. Lucia,E. Caribbean Dollar,St. Lucia-E. Caribbean Dollar,2.7,2023-06-30,145,2023,3,2023,2,06,30
+2023-06-30,Sudan,Pound,Sudan-Pound,570.0,2023-06-30,146,2023,3,2023,2,06,30
+2023-06-30,Suriname,Dollar,Suriname-Dollar,37.493,2023-06-30,147,2023,3,2023,2,06,30
+2023-06-30,Sweden,Krona,Sweden-Krona,10.863,2023-06-30,148,2023,3,2023,2,06,30
+2023-06-30,Switzerland,Franc,Switzerland-Franc,0.901,2023-06-30,149,2023,3,2023,2,06,30
+2023-06-30,Syria,Pound,Syria-Pound,6500.0,2023-06-30,150,2023,3,2023,2,06,30
+2023-06-30,Taiwan,Dollar,Taiwan-Dollar,31.163,2023-06-30,152,2023,3,2023,2,06,30
+2023-06-30,Tajikistan,Somoni,Tajikistan-Somoni,10.9,2023-06-30,153,2023,3,2023,2,06,30
+2023-06-30,Tanzania,Shilling,Tanzania-Shilling,2415.0,2023-06-30,154,2023,3,2023,2,06,30
+2023-06-30,Thailand,Baht,Thailand-Baht,35.39,2023-06-30,155,2023,3,2023,2,06,30
+2023-06-30,Timor,Leste-Dili,Timor-Leste-Dili,1.0,2023-06-30,156,2023,3,2023,2,06,30
+2023-06-30,Togo,CFA Franc,Togo-CFA Franc,628.64,2023-06-30,157,2023,3,2023,2,06,30
+2023-06-30,Tonga,Pa'anga,Tonga-Pa'anga,2.327,2023-06-30,158,2023,3,2023,2,06,30
+2023-06-30,Trinidad & Tobago,Dollar,Trinidad & Tobago-Dollar,6.766,2023-06-30,159,2023,3,2023,2,06,30
+2023-06-30,Tunisia,Dinar,Tunisia-Dinar,3.097,2023-06-30,160,2023,3,2023,2,06,30
+2023-06-30,Turkey,New Lira,Turkey-New Lira,26.058,2023-06-30,161,2023,3,2023,2,06,30
+2023-06-30,Turkmenistan,New Manat,Turkmenistan-New Manat,3.491,2023-06-30,162,2023,3,2023,2,06,30
+2023-06-30,Uganda,Shilling,Uganda-Shilling,3665.0,2023-06-30,163,2023,3,2023,2,06,30
+2023-06-30,Ukraine,Hryvnia,Ukraine-Hryvnia,36.92,2023-06-30,164,2023,3,2023,2,06,30
+2023-06-30,United Arab Emirates,Dirham,United Arab Emirates-Dirham,3.673,2023-06-30,165,2023,3,2023,2,06,30
+2023-06-30,United Kingdom,Pound,United Kingdom-Pound,0.79,2023-06-30,166,2023,3,2023,2,06,30
+2023-06-30,Uruguay,Peso,Uruguay-Peso,37.62,2023-06-30,167,2023,3,2023,2,06,30
+2023-06-30,Uzbekistan,Som,Uzbekistan-Som,11517.13,2023-06-30,168,2023,3,2023,2,06,30
+2023-06-30,Vanuatu,Vatu,Vanuatu-Vatu,118.04,2023-06-30,169,2023,3,2023,2,06,30
+2023-06-30,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,27.785,2023-06-30,170,2023,3,2023,2,06,30
+2023-06-30,Venezuela,Fuerte (OLD),Venezuela-Fuerte (OLD),248832.0,2023-06-30,172,2023,3,2023,2,06,30
+2023-06-30,Vietnam,Dong,Vietnam-Dong,23575.0,2023-06-30,173,2023,3,2023,2,06,30
+2023-06-30,Western Samoa,Tala,Western Samoa-Tala,2.653,2023-06-30,174,2023,3,2023,2,06,30
+2023-06-30,Yemen,Rial,Yemen-Rial,528.0,2023-06-30,175,2023,3,2023,2,06,30
+2023-06-30,Zambia,New Kwacha,Zambia-New Kwacha,17.5,2023-06-30,176,2023,3,2023,2,06,30
+2023-06-30,Zimbabwe,RTGS,Zimbabwe-RTGS,6141.84,2023-06-30,178,2023,3,2023,2,06,30
+2023-03-31,Colombia,Peso,Colombia-Peso,4170.33,2023-06-15,41,2023,2,2023,1,03,31
+2023-03-31,Turkey,New Lira,Turkey-New Lira,23.657,2023-06-15,166,2023,2,2023,1,03,31
+2023-03-31,Angola,Kwanza,Angola-Kwanza,575.0,2023-05-31,5,2023,2,2023,1,03,31
+2023-03-31,Belarus,New Ruble,Belarus-New Ruble,2.933,2023-05-31,17,2023,2,2023,1,03,31
+2023-03-31,Dem. Rep. of Congo,Congolese Franc,Dem. Rep. of Congo-Congolese Franc,2305.0,2023-05-31,50,2023,2,2023,1,03,31
+2023-03-31,Eswatini,Lilangeni,Eswatini-Lilangeni,19.818,2023-05-31,60,2023,2,2023,1,03,31
+2023-03-31,Lesotho,Maloti,Lesotho-Maloti,19.818,2023-05-31,94,2023,2,2023,1,03,31
+2023-03-31,Nambia,Dollar,Nambia-Dollar,19.818,2023-05-31,112,2023,2,2023,1,03,31
+2023-03-31,South Africa,Rand,South Africa-Rand,19.818,2023-05-31,144,2023,2,2023,1,03,31
+2023-03-31,South Sudan,Sudanese Pound,South Sudan-Sudanese Pound,963.0,2023-05-31,146,2023,2,2023,1,03,31
+2023-03-31,Sri Lanka,Rupee,Sri Lanka-Rupee,290.0,2023-05-31,148,2023,2,2023,1,03,31
+2023-03-31,Argentina,Peso,Argentina-Peso,238.5,2023-05-15,8,2023,2,2023,1,03,31
+2023-03-31,Burundi,Franc,Burundi-Franc,2818.45,2023-05-15,30,2023,2,2023,1,03,31
+2023-03-31,Syria,Pound,Syria-Pound,6500.0,2023-04-28,155,2023,2,2023,1,03,31
+2023-03-31,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,24.481,2023-04-14,176,2023,2,2023,1,03,31
+2023-03-31,Zambia,New Kwacha,Zambia-New Kwacha,18.206,2023-04-14,182,2023,2,2023,1,03,31
+2023-03-31,Zimbabwe,RTGS,Zimbabwe-RTGS,968.042,2023-04-14,184,2023,2,2023,1,03,31
+2023-03-31,Afghanistan,Afghani,Afghanistan-Afghani,86.75,2023-03-31,1,2023,2,2023,1,03,31
+2023-03-31,Albania,Lek,Albania-Lek,103.77,2023-03-31,2,2023,2,2023,1,03,31
+2023-03-31,Algeria,Dinar,Algeria-Dinar,135.132,2023-03-31,3,2023,2,2023,1,03,31
+2023-03-31,Angola,Kwanza,Angola-Kwanza,503.0,2023-03-31,4,2023,2,2023,1,03,31
+2023-03-31,Antigua & Barbuda,E. Caribbean Dollar,Antigua & Barbuda-E. Caribbean Dollar,2.7,2023-03-31,6,2023,2,2023,1,03,31
+2023-03-31,Argentina,Peso,Argentina-Peso,215.5,2023-03-31,7,2023,2,2023,1,03,31
+2023-03-31,Armenia,Dram,Armenia-Dram,390.0,2023-03-31,9,2023,2,2023,1,03,31
+2023-03-31,Australia,Dollar,Australia-Dollar,1.494,2023-03-31,10,2023,2,2023,1,03,31
+2023-03-31,Azerbaijan,Manat,Azerbaijan-Manat,1.7,2023-03-31,11,2023,2,2023,1,03,31
+2023-03-31,Bahamas,Dollar,Bahamas-Dollar,1.0,2023-03-31,12,2023,2,2023,1,03,31
+2023-03-31,Bahrain,Dinar,Bahrain-Dinar,0.377,2023-03-31,13,2023,2,2023,1,03,31
+2023-03-31,Bangladesh,Taka,Bangladesh-Taka,105.0,2023-03-31,14,2023,2,2023,1,03,31
+2023-03-31,Barbados,Dollar,Barbados-Dollar,2.02,2023-03-31,15,2023,2,2023,1,03,31
+2023-03-31,Belarus,New Ruble,Belarus-New Ruble,2.518,2023-03-31,16,2023,2,2023,1,03,31
+2023-03-31,Belize,Dollar,Belize-Dollar,2.0,2023-03-31,18,2023,2,2023,1,03,31
+2023-03-31,Benin,CFA Franc,Benin-CFA Franc,600.45,2023-03-31,19,2023,2,2023,1,03,31
+2023-03-31,Bermuda,Dollar,Bermuda-Dollar,1.0,2023-03-31,20,2023,2,2023,1,03,31
+2023-03-31,Bolivia,Boliviano,Bolivia-Boliviano,6.85,2023-03-31,21,2023,2,2023,1,03,31
+2023-03-31,Bosnia,Marka,Bosnia-Marka,1.798,2023-03-31,22,2023,2,2023,1,03,31
+2023-03-31,Botswana,Pula,Botswana-Pula,13.004,2023-03-31,23,2023,2,2023,1,03,31
+2023-03-31,Brazil,Real,Brazil-Real,5.098,2023-03-31,24,2023,2,2023,1,03,31
+2023-03-31,Brunei,Dollar,Brunei-Dollar,1.33,2023-03-31,25,2023,2,2023,1,03,31
+2023-03-31,Bulgaria,Lev New,Bulgaria-Lev New,1.798,2023-03-31,26,2023,2,2023,1,03,31
+2023-03-31,Burkina Faso,CFA Franc,Burkina Faso-CFA Franc,600.45,2023-03-31,27,2023,2,2023,1,03,31
+2023-03-31,Burma,Kyat,Burma-Kyat,2100.0,2023-03-31,28,2023,2,2023,1,03,31
+2023-03-31,Burundi,Franc,Burundi-Franc,2061.25,2023-03-31,29,2023,2,2023,1,03,31
+2023-03-31,Cambodia,Riel,Cambodia-Riel,4051.0,2023-03-31,31,2023,2,2023,1,03,31
+2023-03-31,Cameroon,CFA Franc,Cameroon-CFA Franc,603.18,2023-03-31,32,2023,2,2023,1,03,31
+2023-03-31,Canada,Dollar,Canada-Dollar,1.355,2023-03-31,33,2023,2,2023,1,03,31
+2023-03-31,Cape Verde,Escudo,Cape Verde-Escudo,101.39,2023-03-31,34,2023,2,2023,1,03,31
+2023-03-31,Cayman Islands,Dollar,Cayman Islands-Dollar,0.82,2023-03-31,35,2023,2,2023,1,03,31
+2023-03-31,Central African Rep.,CFA Franc,Central African Rep.-CFA Franc,603.18,2023-03-31,36,2023,2,2023,1,03,31
+2023-03-31,Chad,CFA Franc,Chad-CFA Franc,603.18,2023-03-31,37,2023,2,2023,1,03,31
+2023-03-31,Chile,Peso,Chile-Peso,790.95,2023-03-31,38,2023,2,2023,1,03,31
+2023-03-31,China,Renminbi,China-Renminbi,6.875,2023-03-31,39,2023,2,2023,1,03,31
+2023-03-31,Colombia,Peso,Colombia-Peso,4637.0,2023-03-31,40,2023,2,2023,1,03,31
+2023-03-31,Comoros,Franc,Comoros-Franc,451.02,2023-03-31,42,2023,2,2023,1,03,31
+2023-03-31,Congo,CFA Franc,Congo-CFA Franc,593.2,2023-03-31,43,2023,2,2023,1,03,31
+2023-03-31,Costa Rica,Colon,Costa Rica-Colon,539.65,2023-03-31,44,2023,2,2023,1,03,31
+2023-03-31,Cote D'ivoire,CFA Franc,Cote D'ivoire-CFA Franc,600.45,2023-03-31,45,2023,2,2023,1,03,31
+2023-03-31,Cuba,Chavito,Cuba-Chavito,1.0,2023-03-31,46,2023,2,2023,1,03,31
+2023-03-31,Cuba,Peso,Cuba-Peso,24.0,2023-03-31,47,2023,2,2023,1,03,31
+2023-03-31,Czech Republic,Koruna,Czech Republic-Koruna,20.998,2023-03-31,48,2023,2,2023,1,03,31
+2023-03-31,Dem. Rep. of Congo,Congolese Franc,Dem. Rep. of Congo-Congolese Franc,2070.0,2023-03-31,49,2023,2,2023,1,03,31
+2023-03-31,Denmark,Krone,Denmark-Krone,6.85,2023-03-31,51,2023,2,2023,1,03,31
+2023-03-31,Djibouti,Franc,Djibouti-Franc,177.0,2023-03-31,52,2023,2,2023,1,03,31
+2023-03-31,Dominican Republic,Peso,Dominican Republic-Peso,54.76,2023-03-31,53,2023,2,2023,1,03,31
+2023-03-31,Ecuador,Dolares,Ecuador-Dolares,1.0,2023-03-31,54,2023,2,2023,1,03,31
+2023-03-31,Egypt,Pound,Egypt-Pound,30.75,2023-03-31,55,2023,2,2023,1,03,31
+2023-03-31,El Salvador,Dollar,El Salvador-Dollar,1.0,2023-03-31,56,2023,2,2023,1,03,31
+2023-03-31,Equatorial Guinea,CFA Franc,Equatorial Guinea-CFA Franc,603.18,2023-03-31,57,2023,2,2023,1,03,31
+2023-03-31,Eritrea,Nakfa,Eritrea-Nakfa,15.0,2023-03-31,58,2023,2,2023,1,03,31
+2023-03-31,Eswatini,Lilangeni,Eswatini-Lilangeni,17.6,2023-03-31,59,2023,2,2023,1,03,31
+2023-03-31,Ethiopia,Birr,Ethiopia-Birr,53.903,2023-03-31,61,2023,2,2023,1,03,31
+2023-03-31,Euro Zone,Euro,Euro Zone-Euro,0.92,2023-03-31,62,2023,2,2023,1,03,31
+2023-03-31,Fiji,Dollar,Fiji-Dollar,2.183,2023-03-31,63,2023,2,2023,1,03,31
+2023-03-31,Gabon,CFA Franc,Gabon-CFA Franc,603.18,2023-03-31,64,2023,2,2023,1,03,31
+2023-03-31,Gambia,Dalasi,Gambia-Dalasi,61.0,2023-03-31,65,2023,2,2023,1,03,31
+2023-03-31,Georgia,Lari,Georgia-Lari,2.52,2023-03-31,66,2023,2,2023,1,03,31
+2023-03-31,Ghana,Cedi,Ghana-Cedi,11.5,2023-03-31,67,2023,2,2023,1,03,31
+2023-03-31,Grenada,E.Caribbean Dollar,Grenada-E.Caribbean Dollar,2.7,2023-03-31,68,2023,2,2023,1,03,31
+2023-03-31,Guatemala,Quentzal,Guatemala-Quentzal,7.79,2023-03-31,69,2023,2,2023,1,03,31
+2023-03-31,Guinea,Franc,Guinea-Franc,8501.0,2023-03-31,71,2023,2,2023,1,03,31
+2023-03-31,Guinea Bissau,CFA Franc,Guinea Bissau-CFA Franc,600.45,2023-03-31,70,2023,2,2023,1,03,31
+2023-03-31,Guyana,Dollar,Guyana-Dollar,215.0,2023-03-31,72,2023,2,2023,1,03,31
+2023-03-31,Haiti,Gourde,Haiti-Gourde,153.35,2023-03-31,73,2023,2,2023,1,03,31
+2023-03-31,Honduras,Lempira,Honduras-Lempira,24.55,2023-03-31,74,2023,2,2023,1,03,31
+2023-03-31,Hong Kong,Dollar,Hong Kong-Dollar,7.85,2023-03-31,75,2023,2,2023,1,03,31
+2023-03-31,Hungary,Forint,Hungary-Forint,348.83,2023-03-31,76,2023,2,2023,1,03,31
+2023-03-31,Iceland,Krona,Iceland-Krona,136.05,2023-03-31,77,2023,2,2023,1,03,31
+2023-03-31,India,Rupee,India-Rupee,82.19,2023-03-31,78,2023,2,2023,1,03,31
+2023-03-31,Indonesia,Rupiah,Indonesia-Rupiah,14962.51,2023-03-31,79,2023,2,2023,1,03,31
+2023-03-31,Iran,Rial,Iran-Rial,42000.0,2023-03-31,80,2023,2,2023,1,03,31
+2023-03-31,Iraq,Dinar,Iraq-Dinar,1311.0,2023-03-31,81,2023,2,2023,1,03,31
+2023-03-31,Israel,Shekel,Israel-Shekel,3.614,2023-03-31,82,2023,2,2023,1,03,31
+2023-03-31,Jamaica,Dollar,Jamaica-Dollar,154.0,2023-03-31,83,2023,2,2023,1,03,31
+2023-03-31,Japan,Yen,Japan-Yen,133.16,2023-03-31,84,2023,2,2023,1,03,31
+2023-03-31,Jordan,Dinar,Jordan-Dinar,0.708,2023-03-31,85,2023,2,2023,1,03,31
+2023-03-31,Kazakhstan,Tenge,Kazakhstan-Tenge,455.29,2023-03-31,86,2023,2,2023,1,03,31
+2023-03-31,Kenya,Shilling,Kenya-Shilling,132.5,2023-03-31,87,2023,2,2023,1,03,31
+2023-03-31,Korea,Won,Korea-Won,1306.3,2023-03-31,88,2023,2,2023,1,03,31
+2023-03-31,Kuwait,Dinar,Kuwait-Dinar,0.307,2023-03-31,89,2023,2,2023,1,03,31
+2023-03-31,Kyrgyzstan,Som,Kyrgyzstan-Som,87.42,2023-03-31,90,2023,2,2023,1,03,31
+2023-03-31,Laos,Kip,Laos-Kip,16855.1,2023-03-31,91,2023,2,2023,1,03,31
+2023-03-31,Lebanon,Pound,Lebanon-Pound,15000.0,2023-03-31,92,2023,2,2023,1,03,31
+2023-03-31,Lesotho,Maloti,Lesotho-Maloti,17.76,2023-03-31,93,2023,2,2023,1,03,31
+2023-03-31,Liberia,Dollar,Liberia-Dollar,164.0,2023-03-31,95,2023,2,2023,1,03,31
+2023-03-31,Libya,Dinar,Libya-Dinar,4.769,2023-03-31,96,2023,2,2023,1,03,31
+2023-03-31,Madagascar,Ariary,Madagascar-Ariary,4250.0,2023-03-31,97,2023,2,2023,1,03,31
+2023-03-31,Malawi,Kwacha,Malawi-Kwacha,1035.49,2023-03-31,98,2023,2,2023,1,03,31
+2023-03-31,Malaysia,Ringgit,Malaysia-Ringgit,4.41,2023-03-31,99,2023,2,2023,1,03,31
+2023-03-31,Maldives,Rufiyaa,Maldives-Rufiyaa,15.42,2023-03-31,100,2023,2,2023,1,03,31
+2023-03-31,Mali,CFA Franc,Mali-CFA Franc,600.45,2023-03-31,101,2023,2,2023,1,03,31
+2023-03-31,Marshall Islands,U.S. Dollar,Marshall Islands-U.S. Dollar,1.0,2023-03-31,102,2023,2,2023,1,03,31
+2023-03-31,Mauritania,Ouguiya,Mauritania-Ouguiya,37.0,2023-03-31,103,2023,2,2023,1,03,31
+2023-03-31,Mauritius,Rupee,Mauritius-Rupee,45.35,2023-03-31,104,2023,2,2023,1,03,31
+2023-03-31,Mexico,Peso,Mexico-Peso,18.063,2023-03-31,105,2023,2,2023,1,03,31
+2023-03-31,Micronesia,U.S. Dollar,Micronesia-U.S. Dollar,1.0,2023-03-31,106,2023,2,2023,1,03,31
+2023-03-31,Moldova,LEU,Moldova-LEU,18.252,2023-03-31,107,2023,2,2023,1,03,31
+2023-03-31,Mongolia,Tugrik,Mongolia-Tugrik,3520.67,2023-03-31,108,2023,2,2023,1,03,31
+2023-03-31,Morocco,Dirham,Morocco-Dirham,10.21,2023-03-31,109,2023,2,2023,1,03,31
+2023-03-31,Mozambique,Metical,Mozambique-Metical,63.24,2023-03-31,110,2023,2,2023,1,03,31
+2023-03-31,Nambia,Dollar,Nambia-Dollar,17.76,2023-03-31,111,2023,2,2023,1,03,31
+2023-03-31,Nepal,Rupee,Nepal-Rupee,131.5,2023-03-31,113,2023,2,2023,1,03,31
+2023-03-31,Netherlands Antilles,Guilder,Netherlands Antilles-Guilder,1.78,2023-03-31,114,2023,2,2023,1,03,31
+2023-03-31,New Zealand,Dollar,New Zealand-Dollar,1.598,2023-03-31,115,2023,2,2023,1,03,31
+2023-03-31,Nicaragua,Cordoba,Nicaragua-Cordoba,36.3,2023-03-31,116,2023,2,2023,1,03,31
+2023-03-31,Niger,CFA Franc,Niger-CFA Franc,600.45,2023-03-31,117,2023,2,2023,1,03,31
+2023-03-31,Nigeria,Naira,Nigeria-Naira,440.0,2023-03-31,118,2023,2,2023,1,03,31
+2023-03-31,Norway,Krone,Norway-Krone,10.459,2023-03-31,119,2023,2,2023,1,03,31
+2023-03-31,Oman,Rial,Oman-Rial,0.385,2023-03-31,120,2023,2,2023,1,03,31
+2023-03-31,Pakistan,Rupee,Pakistan-Rupee,283.37,2023-03-31,121,2023,2,2023,1,03,31
+2023-03-31,Palau,Dollar,Palau-Dollar,1.0,2023-03-31,122,2023,2,2023,1,03,31
+2023-03-31,Panama,Dolares,Panama-Dolares,1.0,2023-03-31,123,2023,2,2023,1,03,31
+2023-03-31,Papua New Guinea,Kina,Papua New Guinea-Kina,3.431,2023-03-31,124,2023,2,2023,1,03,31
+2023-03-31,Paraguay,Guarani,Paraguay-Guarani,7161.0,2023-03-31,125,2023,2,2023,1,03,31
+2023-03-31,Peru,Sol,Peru-Sol,3.753,2023-03-31,126,2023,2,2023,1,03,31
+2023-03-31,Philippines,Peso,Philippines-Peso,54.293,2023-03-31,127,2023,2,2023,1,03,31
+2023-03-31,Poland,Zloty,Poland-Zloty,4.299,2023-03-31,128,2023,2,2023,1,03,31
+2023-03-31,Qatar,Riyal,Qatar-Riyal,3.64,2023-03-31,129,2023,2,2023,1,03,31
+2023-03-31,Rep. of N. Macedonia,Denar,Rep. of N. Macedonia-Denar,56.57,2023-03-31,130,2023,2,2023,1,03,31
+2023-03-31,Romania,New Leu,Romania-New Leu,4.466,2023-03-31,131,2023,2,2023,1,03,31
+2023-03-31,Russia,Ruble,Russia-Ruble,77.646,2023-03-31,132,2023,2,2023,1,03,31
+2023-03-31,Rwanda,Franc,Rwanda-Franc,1100.0,2023-03-31,133,2023,2,2023,1,03,31
+2023-03-31,Sao Tome & Principe,New Dobras,Sao Tome & Principe-New Dobras,22.587,2023-03-31,134,2023,2,2023,1,03,31
+2023-03-31,Saudi Arabia,Riyal,Saudi Arabia-Riyal,3.75,2023-03-31,135,2023,2,2023,1,03,31
+2023-03-31,Senegal,CFA Franc,Senegal-CFA Franc,600.45,2023-03-31,136,2023,2,2023,1,03,31
+2023-03-31,Serbia,Dinar,Serbia-Dinar,107.82,2023-03-31,137,2023,2,2023,1,03,31
+2023-03-31,Seychelles,Rupee,Seychelles-Rupee,13.062,2023-03-31,138,2023,2,2023,1,03,31
+2023-03-31,Sierra Leone,Leone,Sierra Leone-Leone,21.4,2023-03-31,139,2023,2,2023,1,03,31
+2023-03-31,Singapore,Dollar,Singapore-Dollar,1.33,2023-03-31,140,2023,2,2023,1,03,31
+2023-03-31,Solomon Islands,Dollar,Solomon Islands-Dollar,8.065,2023-03-31,141,2023,2,2023,1,03,31
+2023-03-31,Somali,Shilling,Somali-Shilling,565.0,2023-03-31,142,2023,2,2023,1,03,31
+2023-03-31,South Africa,Rand,South Africa-Rand,17.76,2023-03-31,143,2023,2,2023,1,03,31
+2023-03-31,South Sudan,Sudanese Pound,South Sudan-Sudanese Pound,847.0,2023-03-31,145,2023,2,2023,1,03,31
+2023-03-31,Sri Lanka,Rupee,Sri Lanka-Rupee,324.0,2023-03-31,147,2023,2,2023,1,03,31
+2023-03-31,St. Lucia,E. Caribbean Dollar,St. Lucia-E. Caribbean Dollar,2.7,2023-03-31,149,2023,2,2023,1,03,31
+2023-03-31,Sudan,Pound,Sudan-Pound,594.0,2023-03-31,150,2023,2,2023,1,03,31
+2023-03-31,Suriname,Dollar,Suriname-Dollar,35.858,2023-03-31,151,2023,2,2023,1,03,31
+2023-03-31,Sweden,Krona,Sweden-Krona,10.368,2023-03-31,152,2023,2,2023,1,03,31
+2023-03-31,Switzerland,Franc,Switzerland-Franc,0.917,2023-03-31,153,2023,2,2023,1,03,31
+2023-03-31,Syria,Pound,Syria-Pound,4500.0,2023-03-31,154,2023,2,2023,1,03,31
+2023-03-31,Taiwan,Dollar,Taiwan-Dollar,30.546,2023-03-31,156,2023,2,2023,1,03,31
+2023-03-31,Tajikistan,Somoni,Tajikistan-Somoni,10.88,2023-03-31,157,2023,2,2023,1,03,31
+2023-03-31,Tanzania,Shilling,Tanzania-Shilling,2335.0,2023-03-31,158,2023,2,2023,1,03,31
+2023-03-31,Thailand,Baht,Thailand-Baht,34.12,2023-03-31,159,2023,2,2023,1,03,31
+2023-03-31,Timor,Leste-Dili,Timor-Leste-Dili,1.0,2023-03-31,160,2023,2,2023,1,03,31
+2023-03-31,Togo,CFA Franc,Togo-CFA Franc,600.45,2023-03-31,161,2023,2,2023,1,03,31
+2023-03-31,Tonga,Pa'anga,Tonga-Pa'anga,2.304,2023-03-31,162,2023,2,2023,1,03,31
+2023-03-31,Trinidad & Tobago,Dollar,Trinidad & Tobago-Dollar,6.746,2023-03-31,163,2023,2,2023,1,03,31
+2023-03-31,Tunisia,Dinar,Tunisia-Dinar,3.049,2023-03-31,164,2023,2,2023,1,03,31
+2023-03-31,Turkey,New Lira,Turkey-New Lira,19.183,2023-03-31,165,2023,2,2023,1,03,31
+2023-03-31,Turkmenistan,New Manat,Turkmenistan-New Manat,3.491,2023-03-31,167,2023,2,2023,1,03,31
+2023-03-31,Uganda,Shilling,Uganda-Shilling,3768.64,2023-03-31,168,2023,2,2023,1,03,31
+2023-03-31,Ukraine,Hryvnia,Ukraine-Hryvnia,36.91,2023-03-31,169,2023,2,2023,1,03,31
+2023-03-31,United Arab Emirates,Dirham,United Arab Emirates-Dirham,3.672,2023-03-31,170,2023,2,2023,1,03,31
+2023-03-31,United Kingdom,Pound,United Kingdom-Pound,0.808,2023-03-31,171,2023,2,2023,1,03,31
+2023-03-31,Uruguay,Peso,Uruguay-Peso,38.87,2023-03-31,172,2023,2,2023,1,03,31
+2023-03-31,Uzbekistan,Som,Uzbekistan-Som,11391.6,2023-03-31,173,2023,2,2023,1,03,31
+2023-03-31,Vanuatu,Vatu,Vanuatu-Vatu,117.0,2023-03-31,174,2023,2,2023,1,03,31
+2023-03-31,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,17.236,2023-03-31,175,2023,2,2023,1,03,31
+2023-03-31,Venezuela,Fuerte (OLD),Venezuela-Fuerte (OLD),248832.0,2023-03-31,177,2023,2,2023,1,03,31
+2023-03-31,Vietnam,Dong,Vietnam-Dong,23450.0,2023-03-31,178,2023,2,2023,1,03,31
+2023-03-31,Western Samoa,Tala,Western Samoa-Tala,2.652,2023-03-31,179,2023,2,2023,1,03,31
+2023-03-31,Yemen,Rial,Yemen-Rial,528.0,2023-03-31,180,2023,2,2023,1,03,31
+2023-03-31,Zambia,New Kwacha,Zambia-New Kwacha,21.253,2023-03-31,181,2023,2,2023,1,03,31
+2023-03-31,Zimbabwe,RTGS,Zimbabwe-RTGS,894.0,2023-03-31,183,2023,2,2023,1,03,31
+2022-12-31,Zambia,New Kwacha,Zambia-New Kwacha,20.377,2023-03-15,178,2023,1,2022,4,12,31
+2022-12-31,Argentina,Peso,Argentina-Peso,203.5,2023-02-28,7,2023,1,2022,4,12,31
+2022-12-31,Lebanon,Pound,Lebanon-Pound,15000.0,2023-02-15,91,2023,1,2022,4,12,31
+2022-12-31,South Sudan,Sudanese Pound,South Sudan-Sudanese Pound,758.0,2023-02-15,144,2023,1,2022,4,12,31
+2022-12-31,Syria,Pound,Syria-Pound,4500.0,2023-02-15,152,2023,1,2022,4,12,31
+2022-12-31,Pakistan,Rupee,Pakistan-Rupee,267.48,2023-01-31,120,2023,1,2022,4,12,31
+2022-12-31,Zimbabwe,RTGS,Zimbabwe-RTGS,795.725,2023-01-31,180,2023,1,2022,4,12,31
+2022-12-31,Croatia,Euro,Croatia-Euro,0.925,2023-01-13,43,2023,1,2022,4,12,31
+2022-12-31,Egypt,Pound,Egypt-Pound,29.5,2023-01-13,53,2023,1,2022,4,12,31
+2022-12-31,Ghana,Cedi,Ghana-Cedi,11.5,2023-01-13,65,2023,1,2022,4,12,31
+2022-12-31,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,19.23,2023-01-13,172,2023,1,2022,4,12,31
+2022-12-31,Afghanistan,Afghani,Afghanistan-Afghani,89.11,2022-12-31,1,2023,1,2022,4,12,31
+2022-12-31,Albania,Lek,Albania-Lek,106.5,2022-12-31,2,2023,1,2022,4,12,31
+2022-12-31,Algeria,Dinar,Algeria-Dinar,136.467,2022-12-31,3,2023,1,2022,4,12,31
+2022-12-31,Angola,Kwanza,Angola-Kwanza,503.65,2022-12-31,4,2023,1,2022,4,12,31
+2022-12-31,Antigua & Barbuda,E. Caribbean Dollar,Antigua & Barbuda-E. Caribbean Dollar,2.7,2022-12-31,5,2023,1,2022,4,12,31
+2022-12-31,Argentina,Peso,Argentina-Peso,183.0,2022-12-31,6,2023,1,2022,4,12,31
+2022-12-31,Armenia,Dram,Armenia-Dram,400.0,2022-12-31,8,2023,1,2022,4,12,31
+2022-12-31,Australia,Dollar,Australia-Dollar,1.471,2022-12-31,9,2023,1,2022,4,12,31
+2022-12-31,Azerbaijan,Manat,Azerbaijan-Manat,1.7,2022-12-31,10,2023,1,2022,4,12,31
+2022-12-31,Bahamas,Dollar,Bahamas-Dollar,1.0,2022-12-31,11,2023,1,2022,4,12,31
+2022-12-31,Bahrain,Dinar,Bahrain-Dinar,0.377,2022-12-31,12,2023,1,2022,4,12,31
+2022-12-31,Bangladesh,Taka,Bangladesh-Taka,105.0,2022-12-31,13,2023,1,2022,4,12,31
+2022-12-31,Barbados,Dollar,Barbados-Dollar,2.02,2022-12-31,14,2023,1,2022,4,12,31
+2022-12-31,Belarus,New Ruble,Belarus-New Ruble,2.518,2022-12-31,15,2023,1,2022,4,12,31
+2022-12-31,Belize,Dollar,Belize-Dollar,2.0,2022-12-31,16,2023,1,2022,4,12,31
+2022-12-31,Benin,CFA Franc,Benin-CFA Franc,614.84,2022-12-31,17,2023,1,2022,4,12,31
+2022-12-31,Bermuda,Dollar,Bermuda-Dollar,1.0,2022-12-31,18,2023,1,2022,4,12,31
+2022-12-31,Bolivia,Boliviano,Bolivia-Boliviano,6.86,2022-12-31,19,2023,1,2022,4,12,31
+2022-12-31,Bosnia,Marka,Bosnia-Marka,1.83,2022-12-31,20,2023,1,2022,4,12,31
+2022-12-31,Botswana,Pula,Botswana-Pula,12.739,2022-12-31,21,2023,1,2022,4,12,31
+2022-12-31,Brazil,Real,Brazil-Real,5.286,2022-12-31,22,2023,1,2022,4,12,31
+2022-12-31,Brunei,Dollar,Brunei-Dollar,1.34,2022-12-31,23,2023,1,2022,4,12,31
+2022-12-31,Bulgaria,Lev New,Bulgaria-Lev New,1.83,2022-12-31,24,2023,1,2022,4,12,31
+2022-12-31,Burkina Faso,CFA Franc,Burkina Faso-CFA Franc,614.84,2022-12-31,25,2023,1,2022,4,12,31
+2022-12-31,Burma,Kyat,Burma-Kyat,2100.0,2022-12-31,26,2023,1,2022,4,12,31
+2022-12-31,Burundi,Franc,Burundi-Franc,2045.3,2022-12-31,27,2023,1,2022,4,12,31
+2022-12-31,Cambodia,Riel,Cambodia-Riel,4051.0,2022-12-31,28,2023,1,2022,4,12,31
+2022-12-31,Cameroon,CFA Franc,Cameroon-CFA Franc,613.79,2022-12-31,29,2023,1,2022,4,12,31
+2022-12-31,Canada,Dollar,Canada-Dollar,1.354,2022-12-31,30,2023,1,2022,4,12,31
+2022-12-31,Cape Verde,Escudo,Cape Verde-Escudo,103.16,2022-12-31,31,2023,1,2022,4,12,31
+2022-12-31,Cayman Islands,Dollar,Cayman Islands-Dollar,0.82,2022-12-31,32,2023,1,2022,4,12,31
+2022-12-31,Central African Rep.,CFA Franc,Central African Rep.-CFA Franc,613.79,2022-12-31,33,2023,1,2022,4,12,31
+2022-12-31,Chad,CFA Franc,Chad-CFA Franc,613.79,2022-12-31,34,2023,1,2022,4,12,31
+2022-12-31,Chile,Peso,Chile-Peso,851.5,2022-12-31,35,2023,1,2022,4,12,31
+2022-12-31,China,Renminbi,China-Renminbi,6.897,2022-12-31,36,2023,1,2022,4,12,31
+2022-12-31,Colombia,Peso,Colombia-Peso,4845.83,2022-12-31,37,2023,1,2022,4,12,31
+2022-12-31,Comoros,Franc,Comoros-Franc,461.6,2022-12-31,38,2023,1,2022,4,12,31
+2022-12-31,Congo,CFA Franc,Congo-CFA Franc,613.79,2022-12-31,39,2023,1,2022,4,12,31
+2022-12-31,Costa Rica,Colon,Costa Rica-Colon,591.36,2022-12-31,40,2023,1,2022,4,12,31
+2022-12-31,Cote D'ivoire,CFA Franc,Cote D'ivoire-CFA Franc,614.84,2022-12-31,41,2023,1,2022,4,12,31
+2022-12-31,Croatia,KUNA,Croatia-KUNA,6.87,2022-12-31,42,2023,1,2022,4,12,31
+2022-12-31,Cuba,Chavito,Cuba-Chavito,1.0,2022-12-31,44,2023,1,2022,4,12,31
+2022-12-31,Cuba,Peso,Cuba-Peso,24.0,2022-12-31,45,2023,1,2022,4,12,31
+2022-12-31,Czech Republic,Koruna,Czech Republic-Koruna,22.102,2022-12-31,46,2023,1,2022,4,12,31
+2022-12-31,Dem. Rep. of Congo,Congolese Franc,Dem. Rep. of Congo-Congolese Franc,2012.0,2022-12-31,47,2023,1,2022,4,12,31
+2022-12-31,Denmark,Krone,Denmark-Krone,6.959,2022-12-31,48,2023,1,2022,4,12,31
+2022-12-31,Djibouti,Franc,Djibouti-Franc,177.0,2022-12-31,49,2023,1,2022,4,12,31
+2022-12-31,Dominican Republic,Peso,Dominican Republic-Peso,55.72,2022-12-31,50,2023,1,2022,4,12,31
+2022-12-31,Ecuador,Dolares,Ecuador-Dolares,1.0,2022-12-31,51,2023,1,2022,4,12,31
+2022-12-31,Egypt,Pound,Egypt-Pound,24.74,2022-12-31,52,2023,1,2022,4,12,31
+2022-12-31,El Salvador,Dollar,El Salvador-Dollar,1.0,2022-12-31,54,2023,1,2022,4,12,31
+2022-12-31,Equatorial Guinea,CFA Franc,Equatorial Guinea-CFA Franc,613.79,2022-12-31,55,2023,1,2022,4,12,31
+2022-12-31,Eritrea,Nakfa,Eritrea-Nakfa,15.0,2022-12-31,56,2023,1,2022,4,12,31
+2022-12-31,Eswatini,Lilangeni,Eswatini-Lilangeni,16.948,2022-12-31,57,2023,1,2022,4,12,31
+2022-12-31,Ethiopia,Birr,Ethiopia-Birr,53.339,2022-12-31,58,2023,1,2022,4,12,31
+2022-12-31,Euro Zone,Euro,Euro Zone-Euro,0.936,2022-12-31,59,2023,1,2022,4,12,31
+2022-12-31,Fiji,Dollar,Fiji-Dollar,2.176,2022-12-31,60,2023,1,2022,4,12,31
+2022-12-31,Gabon,CFA Franc,Gabon-CFA Franc,613.79,2022-12-31,61,2023,1,2022,4,12,31
+2022-12-31,Gambia,Dalasi,Gambia-Dalasi,61.0,2022-12-31,62,2023,1,2022,4,12,31
+2022-12-31,Georgia,Lari,Georgia-Lari,2.665,2022-12-31,63,2023,1,2022,4,12,31
+2022-12-31,Ghana,Cedi,Ghana-Cedi,9.8,2022-12-31,64,2023,1,2022,4,12,31
+2022-12-31,Grenada,E.Caribbean Dollar,Grenada-E.Caribbean Dollar,2.7,2022-12-31,66,2023,1,2022,4,12,31
+2022-12-31,Guatemala,Quentzal,Guatemala-Quentzal,7.84,2022-12-31,67,2023,1,2022,4,12,31
+2022-12-31,Guinea,Franc,Guinea-Franc,8554.0,2022-12-31,69,2023,1,2022,4,12,31
+2022-12-31,Guinea Bissau,CFA Franc,Guinea Bissau-CFA Franc,614.84,2022-12-31,68,2023,1,2022,4,12,31
+2022-12-31,Guyana,Dollar,Guyana-Dollar,215.0,2022-12-31,70,2023,1,2022,4,12,31
+2022-12-31,Haiti,Gourde,Haiti-Gourde,145.0,2022-12-31,71,2023,1,2022,4,12,31
+2022-12-31,Honduras,Lempira,Honduras-Lempira,24.552,2022-12-31,72,2023,1,2022,4,12,31
+2022-12-31,Hong Kong,Dollar,Hong Kong-Dollar,7.797,2022-12-31,73,2023,1,2022,4,12,31
+2022-12-31,Hungary,Forint,Hungary-Forint,374.63,2022-12-31,74,2023,1,2022,4,12,31
+2022-12-31,Iceland,Krona,Iceland-Krona,141.61,2022-12-31,75,2023,1,2022,4,12,31
+2022-12-31,India,Rupee,India-Rupee,82.599,2022-12-31,76,2023,1,2022,4,12,31
+2022-12-31,Indonesia,Rupiah,Indonesia-Rupiah,15528.42,2022-12-31,77,2023,1,2022,4,12,31
+2022-12-31,Iran,Rial,Iran-Rial,42000.0,2022-12-31,78,2023,1,2022,4,12,31
+2022-12-31,Iraq,Dinar,Iraq-Dinar,1458.53,2022-12-31,79,2023,1,2022,4,12,31
+2022-12-31,Israel,Shekel,Israel-Shekel,3.518,2022-12-31,80,2023,1,2022,4,12,31
+2022-12-31,Jamaica,Dollar,Jamaica-Dollar,150.0,2022-12-31,81,2023,1,2022,4,12,31
+2022-12-31,Japan,Yen,Japan-Yen,131.83,2022-12-31,82,2023,1,2022,4,12,31
+2022-12-31,Jordan,Dinar,Jordan-Dinar,0.708,2022-12-31,83,2023,1,2022,4,12,31
+2022-12-31,Kazakhstan,Tenge,Kazakhstan-Tenge,462.54,2022-12-31,84,2023,1,2022,4,12,31
+2022-12-31,Kenya,Shilling,Kenya-Shilling,123.25,2022-12-31,85,2023,1,2022,4,12,31
+2022-12-31,Korea,Won,Korea-Won,1252.61,2022-12-31,86,2023,1,2022,4,12,31
+2022-12-31,Kuwait,Dinar,Kuwait-Dinar,0.306,2022-12-31,87,2023,1,2022,4,12,31
+2022-12-31,Kyrgyzstan,Som,Kyrgyzstan-Som,85.68,2022-12-31,88,2023,1,2022,4,12,31
+2022-12-31,Laos,Kip,Laos-Kip,17217.0,2022-12-31,89,2023,1,2022,4,12,31
+2022-12-31,Lebanon,Pound,Lebanon-Pound,1500.0,2022-12-31,90,2023,1,2022,4,12,31
+2022-12-31,Lesotho,Maloti,Lesotho-Maloti,16.948,2022-12-31,92,2023,1,2022,4,12,31
+2022-12-31,Liberia,Dollar,Liberia-Dollar,153.5,2022-12-31,93,2023,1,2022,4,12,31
+2022-12-31,Libya,Dinar,Libya-Dinar,4.817,2022-12-31,94,2023,1,2022,4,12,31
+2022-12-31,Madagascar,Ariary,Madagascar-Ariary,4360.0,2022-12-31,95,2023,1,2022,4,12,31
+2022-12-31,Malawi,Kwacha,Malawi-Kwacha,1035.49,2022-12-31,96,2023,1,2022,4,12,31
+2022-12-31,Malaysia,Ringgit,Malaysia-Ringgit,4.4,2022-12-31,97,2023,1,2022,4,12,31
+2022-12-31,Maldives,Rufiyaa,Maldives-Rufiyaa,15.42,2022-12-31,98,2023,1,2022,4,12,31
+2022-12-31,Mali,CFA Franc,Mali-CFA Franc,614.84,2022-12-31,99,2023,1,2022,4,12,31
+2022-12-31,Marshall Islands,U.S. Dollar,Marshall Islands-U.S. Dollar,1.0,2022-12-31,100,2023,1,2022,4,12,31
+2022-12-31,Mauritania,Ouguiya,Mauritania-Ouguiya,37.0,2022-12-31,101,2023,1,2022,4,12,31
+2022-12-31,Mauritius,Rupee,Mauritius-Rupee,43.85,2022-12-31,102,2023,1,2022,4,12,31
+2022-12-31,Mexico,Peso,Mexico-Peso,19.546,2022-12-31,103,2023,1,2022,4,12,31
+2022-12-31,Micronesia,U.S. Dollar,Micronesia-U.S. Dollar,1.0,2022-12-31,104,2023,1,2022,4,12,31
+2022-12-31,Moldova,LEU,Moldova-LEU,19.08,2022-12-31,105,2023,1,2022,4,12,31
+2022-12-31,Mongolia,Tugrik,Mongolia-Tugrik,3443.37,2022-12-31,106,2023,1,2022,4,12,31
+2022-12-31,Morocco,Dirham,Morocco-Dirham,10.48,2022-12-31,107,2023,1,2022,4,12,31
+2022-12-31,Mozambique,Metical,Mozambique-Metical,63.24,2022-12-31,108,2023,1,2022,4,12,31
+2022-12-31,Nambia,Dollar,Nambia-Dollar,16.948,2022-12-31,109,2023,1,2022,4,12,31
+2022-12-31,Nepal,Rupee,Nepal-Rupee,132.25,2022-12-31,110,2023,1,2022,4,12,31
+2022-12-31,Netherlands,Euro,Netherlands-Euro,0.936,2022-12-31,111,2023,1,2022,4,12,31
+2022-12-31,Netherlands Antilles,Guilder,Netherlands Antilles-Guilder,1.78,2022-12-31,112,2023,1,2022,4,12,31
+2022-12-31,New Zealand,Dollar,New Zealand-Dollar,1.575,2022-12-31,113,2023,1,2022,4,12,31
+2022-12-31,Nicaragua,Cordoba,Nicaragua-Cordoba,36.15,2022-12-31,114,2023,1,2022,4,12,31
+2022-12-31,Niger,CFA Franc,Niger-CFA Franc,614.84,2022-12-31,115,2023,1,2022,4,12,31
+2022-12-31,Nigeria,Naira,Nigeria-Naira,440.0,2022-12-31,116,2023,1,2022,4,12,31
+2022-12-31,Norway,Krone,Norway-Krone,9.831,2022-12-31,117,2023,1,2022,4,12,31
+2022-12-31,Oman,Rial,Oman-Rial,0.385,2022-12-31,118,2023,1,2022,4,12,31
+2022-12-31,Pakistan,Rupee,Pakistan-Rupee,226.4,2022-12-31,119,2023,1,2022,4,12,31
+2022-12-31,Palau,Dollar,Palau-Dollar,1.0,2022-12-31,121,2023,1,2022,4,12,31
+2022-12-31,Panama,Dolares,Panama-Dolares,1.0,2022-12-31,122,2023,1,2022,4,12,31
+2022-12-31,Papua New Guinea,Kina,Papua New Guinea-Kina,3.431,2022-12-31,123,2023,1,2022,4,12,31
+2022-12-31,Paraguay,Guarani,Paraguay-Guarani,7309.61,2022-12-31,124,2023,1,2022,4,12,31
+2022-12-31,Peru,Sol,Peru-Sol,3.786,2022-12-31,125,2023,1,2022,4,12,31
+2022-12-31,Philippines,Peso,Philippines-Peso,55.606,2022-12-31,126,2023,1,2022,4,12,31
+2022-12-31,Poland,Zloty,Poland-Zloty,4.38,2022-12-31,127,2023,1,2022,4,12,31
+2022-12-31,Qatar,Riyal,Qatar-Riyal,3.64,2022-12-31,128,2023,1,2022,4,12,31
+2022-12-31,Rep. of N. Macedonia,Denar,Rep. of N. Macedonia-Denar,57.56,2022-12-31,129,2023,1,2022,4,12,31
+2022-12-31,Romania,New Leu,Romania-New Leu,4.627,2022-12-31,130,2023,1,2022,4,12,31
+2022-12-31,Russia,Ruble,Russia-Ruble,71.481,2022-12-31,131,2023,1,2022,4,12,31
+2022-12-31,Rwanda,Franc,Rwanda-Franc,1060.0,2022-12-31,132,2023,1,2022,4,12,31
+2022-12-31,Sao Tome & Principe,New Dobras,Sao Tome & Principe-New Dobras,23.062,2022-12-31,133,2023,1,2022,4,12,31
+2022-12-31,Saudi Arabia,Riyal,Saudi Arabia-Riyal,3.75,2022-12-31,134,2023,1,2022,4,12,31
+2022-12-31,Senegal,CFA Franc,Senegal-CFA Franc,614.84,2022-12-31,135,2023,1,2022,4,12,31
+2022-12-31,Serbia,Dinar,Serbia-Dinar,109.69,2022-12-31,136,2023,1,2022,4,12,31
+2022-12-31,Seychelles,Rupee,Seychelles-Rupee,12.87,2022-12-31,137,2023,1,2022,4,12,31
+2022-12-31,Sierra Leone,Leone,Sierra Leone-Leone,18.8,2022-12-31,138,2023,1,2022,4,12,31
+2022-12-31,Singapore,Dollar,Singapore-Dollar,1.34,2022-12-31,139,2023,1,2022,4,12,31
+2022-12-31,Solomon Islands,Dollar,Solomon Islands-Dollar,7.949,2022-12-31,140,2023,1,2022,4,12,31
+2022-12-31,Somali,Shilling,Somali-Shilling,565.0,2022-12-31,141,2023,1,2022,4,12,31
+2022-12-31,South Africa,Rand,South Africa-Rand,16.948,2022-12-31,142,2023,1,2022,4,12,31
+2022-12-31,South Sudan,Sudanese Pound,South Sudan-Sudanese Pound,669.0,2022-12-31,143,2023,1,2022,4,12,31
+2022-12-31,Sri Lanka,Rupee,Sri Lanka-Rupee,363.0,2022-12-31,145,2023,1,2022,4,12,31
+2022-12-31,St. Lucia,E. Caribbean Dollar,St. Lucia-E. Caribbean Dollar,2.7,2022-12-31,146,2023,1,2022,4,12,31
+2022-12-31,Sudan,Pound,Sudan-Pound,576.0,2022-12-31,147,2023,1,2022,4,12,31
+2022-12-31,Suriname,Dollar,Suriname-Dollar,31.714,2022-12-31,148,2023,1,2022,4,12,31
+2022-12-31,Sweden,Krona,Sweden-Krona,10.386,2022-12-31,149,2023,1,2022,4,12,31
+2022-12-31,Switzerland,Franc,Switzerland-Franc,0.923,2022-12-31,150,2023,1,2022,4,12,31
+2022-12-31,Syria,Pound,Syria-Pound,2510.0,2022-12-31,151,2023,1,2022,4,12,31
+2022-12-31,Taiwan,Dollar,Taiwan-Dollar,30.648,2022-12-31,153,2023,1,2022,4,12,31
+2022-12-31,Tajikistan,Somoni,Tajikistan-Somoni,10.16,2022-12-31,154,2023,1,2022,4,12,31
+2022-12-31,Tanzania,Shilling,Tanzania-Shilling,2329.0,2022-12-31,155,2023,1,2022,4,12,31
+2022-12-31,Thailand,Baht,Thailand-Baht,34.52,2022-12-31,156,2023,1,2022,4,12,31
+2022-12-31,Timor,Leste-Dili,Timor-Leste-Dili,1.0,2022-12-31,157,2023,1,2022,4,12,31
+2022-12-31,Togo,CFA Franc,Togo-CFA Franc,614.84,2022-12-31,158,2023,1,2022,4,12,31
+2022-12-31,Tonga,Pa'anga,Tonga-Pa'anga,2.261,2022-12-31,159,2023,1,2022,4,12,31
+2022-12-31,Trinidad & Tobago,Dollar,Trinidad & Tobago-Dollar,6.765,2022-12-31,160,2023,1,2022,4,12,31
+2022-12-31,Tunisia,Dinar,Tunisia-Dinar,3.094,2022-12-31,161,2023,1,2022,4,12,31
+2022-12-31,Turkey,New Lira,Turkey-New Lira,18.711,2022-12-31,162,2023,1,2022,4,12,31
+2022-12-31,Turkmenistan,New Manat,Turkmenistan-New Manat,3.491,2022-12-31,163,2023,1,2022,4,12,31
+2022-12-31,Uganda,Shilling,Uganda-Shilling,3715.0,2022-12-31,164,2023,1,2022,4,12,31
+2022-12-31,Ukraine,Hryvnia,Ukraine-Hryvnia,36.569,2022-12-31,165,2023,1,2022,4,12,31
+2022-12-31,United Arab Emirates,Dirham,United Arab Emirates-Dirham,3.673,2022-12-31,166,2023,1,2022,4,12,31
+2022-12-31,United Kingdom,Pound,United Kingdom-Pound,0.83,2022-12-31,167,2023,1,2022,4,12,31
+2022-12-31,Uruguay,Peso,Uruguay-Peso,39.95,2022-12-31,168,2023,1,2022,4,12,31
+2022-12-31,Uzbekistan,Som,Uzbekistan-Som,11224.32,2022-12-31,169,2023,1,2022,4,12,31
+2022-12-31,Vanuatu,Vatu,Vanuatu-Vatu,119.9,2022-12-31,170,2023,1,2022,4,12,31
+2022-12-31,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,17.236,2022-12-31,171,2023,1,2022,4,12,31
+2022-12-31,Venezuela,Fuerte (OLD),Venezuela-Fuerte (OLD),248832.0,2022-12-31,173,2023,1,2022,4,12,31
+2022-12-31,Vietnam,Dong,Vietnam-Dong,23610.0,2022-12-31,174,2023,1,2022,4,12,31
+2022-12-31,Western Samoa,Tala,Western Samoa-Tala,2.607,2022-12-31,175,2023,1,2022,4,12,31
+2022-12-31,Yemen,Rial,Yemen-Rial,580.0,2022-12-31,176,2023,1,2022,4,12,31
+2022-12-31,Zambia,New Kwacha,Zambia-New Kwacha,18.1,2022-12-31,177,2023,1,2022,4,12,31
+2022-12-31,Zimbabwe,RTGS,Zimbabwe-RTGS,654.66,2022-12-31,179,2023,1,2022,4,12,31
+2022-09-30,Gambia,Dalasi,Gambia-Dalasi,61.0,2022-12-15,62,2022,4,2022,3,09,30
+2022-09-30,Hungary,Forint,Hungary-Forint,382.18,2022-12-15,76,2022,4,2022,3,09,30
+2022-09-30,New Zealand,Dollar,New Zealand-Dollar,1.566,2022-12-15,114,2022,4,2022,3,09,30
+2022-09-30,Poland,Zloty,Poland-Zloty,4.414,2022-12-15,127,2022,4,2022,3,09,30
+2022-09-30,Russia,Ruble,Russia-Ruble,64.39,2022-12-15,133,2022,4,2022,3,09,30
+2022-09-30,United Kingdom,Pound,United Kingdom-Pound,0.812,2022-12-15,171,2022,4,2022,3,09,30
+2022-09-30,Zambia,New Kwacha,Zambia-New Kwacha,17.534,2022-12-15,182,2022,4,2022,3,09,30
+2022-09-30,Argentina,Peso,Argentina-Peso,173.75,2022-11-30,8,2022,4,2022,3,09,30
+2022-09-30,Suriname,Dollar,Suriname-Dollar,30.95,2022-11-30,151,2022,4,2022,3,09,30
+2022-09-30,Haiti,Gourde,Haiti-Gourde,133.0,2022-11-15,72,2022,4,2022,3,09,30
+2022-09-30,Sierra Leone,Leone,Sierra Leone-Leone,18.0,2022-11-15,141,2022,4,2022,3,09,30
+2022-09-30,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,9.29,2022-11-15,176,2022,4,2022,3,09,30
+2022-09-30,Angola,Kwanza,Angola-Kwanza,473.0,2022-10-31,5,2022,4,2022,3,09,30
+2022-09-30,Egypt,Pound,Egypt-Pound,24.15,2022-10-31,53,2022,4,2022,3,09,30
+2022-09-30,Ghana,Cedi,Ghana-Cedi,13.5,2022-10-31,65,2022,4,2022,3,09,30
+2022-09-30,Afghanistan,Afghani,Afghanistan-Afghani,88.04,2022-09-30,1,2022,4,2022,3,09,30
+2022-09-30,Albania,Lek,Albania-Lek,118.93,2022-09-30,2,2022,4,2022,3,09,30
+2022-09-30,Algeria,Dinar,Algeria-Dinar,140.422,2022-09-30,3,2022,4,2022,3,09,30
+2022-09-30,Angola,Kwanza,Angola-Kwanza,423.412,2022-09-30,4,2022,4,2022,3,09,30
+2022-09-30,Antigua & Barbuda,E. Caribbean Dollar,Antigua & Barbuda-E. Caribbean Dollar,2.7,2022-09-30,6,2022,4,2022,3,09,30
+2022-09-30,Argentina,Peso,Argentina-Peso,153.0,2022-09-30,7,2022,4,2022,3,09,30
+2022-09-30,Armenia,Dram,Armenia-Dram,420.0,2022-09-30,9,2022,4,2022,3,09,30
+2022-09-30,Australia,Dollar,Australia-Dollar,1.547,2022-09-30,10,2022,4,2022,3,09,30
+2022-09-30,Azerbaijan,Manat,Azerbaijan-Manat,1.7,2022-09-30,11,2022,4,2022,3,09,30
+2022-09-30,Bahamas,Dollar,Bahamas-Dollar,1.0,2022-09-30,12,2022,4,2022,3,09,30
+2022-09-30,Bahrain,Dinar,Bahrain-Dinar,0.377,2022-09-30,13,2022,4,2022,3,09,30
+2022-09-30,Bangladesh,Taka,Bangladesh-Taka,103.0,2022-09-30,14,2022,4,2022,3,09,30
+2022-09-30,Barbados,Dollar,Barbados-Dollar,2.02,2022-09-30,15,2022,4,2022,3,09,30
+2022-09-30,Belarus,New Ruble,Belarus-New Ruble,2.518,2022-09-30,16,2022,4,2022,3,09,30
+2022-09-30,Belize,Dollar,Belize-Dollar,2.0,2022-09-30,17,2022,4,2022,3,09,30
+2022-09-30,Benin,CFA Franc,Benin-CFA Franc,673.48,2022-09-30,18,2022,4,2022,3,09,30
+2022-09-30,Bermuda,Dollar,Bermuda-Dollar,1.0,2022-09-30,19,2022,4,2022,3,09,30
+2022-09-30,Bolivia,Boliviano,Bolivia-Boliviano,6.85,2022-09-30,20,2022,4,2022,3,09,30
+2022-09-30,Bosnia,Marka,Bosnia-Marka,2.006,2022-09-30,21,2022,4,2022,3,09,30
+2022-09-30,Botswana,Pula,Botswana-Pula,13.28,2022-09-30,22,2022,4,2022,3,09,30
+2022-09-30,Brazil,Real,Brazil-Real,5.397,2022-09-30,23,2022,4,2022,3,09,30
+2022-09-30,Brunei,Dollar,Brunei-Dollar,1.436,2022-09-30,24,2022,4,2022,3,09,30
+2022-09-30,Bulgaria,Lev New,Bulgaria-Lev New,2.006,2022-09-30,25,2022,4,2022,3,09,30
+2022-09-30,Burkina Faso,CFA Franc,Burkina Faso-CFA Franc,673.48,2022-09-30,26,2022,4,2022,3,09,30
+2022-09-30,Burma,Kyat,Burma-Kyat,2100.0,2022-09-30,27,2022,4,2022,3,09,30
+2022-09-30,Burundi,Franc,Burundi-Franc,2031.97,2022-09-30,28,2022,4,2022,3,09,30
+2022-09-30,Cambodia,Riel,Cambodia-Riel,4051.0,2022-09-30,29,2022,4,2022,3,09,30
+2022-09-30,Cameroon,CFA Franc,Cameroon-CFA Franc,672.91,2022-09-30,30,2022,4,2022,3,09,30
+2022-09-30,Canada,Dollar,Canada-Dollar,1.374,2022-09-30,31,2022,4,2022,3,09,30
+2022-09-30,Cape Verde,Escudo,Cape Verde-Escudo,113.0,2022-09-30,32,2022,4,2022,3,09,30
+2022-09-30,Cayman Island,Dollar,Cayman Island-Dollar,0.82,2022-09-30,33,2022,4,2022,3,09,30
+2022-09-30,Central African Rep.,CFA Franc,Central African Rep.-CFA Franc,672.91,2022-09-30,34,2022,4,2022,3,09,30
+2022-09-30,Chad,CFA Franc,Chad-CFA Franc,672.91,2022-09-30,35,2022,4,2022,3,09,30
+2022-09-30,Chile,Peso,Chile-Peso,960.1,2022-09-30,36,2022,4,2022,3,09,30
+2022-09-30,China,Renminbi,China-Renminbi,7.114,2022-09-30,37,2022,4,2022,3,09,30
+2022-09-30,Colombia,Peso,Colombia-Peso,4518.3,2022-09-30,38,2022,4,2022,3,09,30
+2022-09-30,Comoros,Franc,Comoros-Franc,507.53,2022-09-30,39,2022,4,2022,3,09,30
+2022-09-30,Congo,CFA Franc,Congo-CFA Franc,672.91,2022-09-30,40,2022,4,2022,3,09,30
+2022-09-30,Costa Rica,Colon,Costa Rica-Colon,625.39,2022-09-30,41,2022,4,2022,3,09,30
+2022-09-30,Cote D'ivoire,CFA Franc,Cote D'ivoire-CFA Franc,673.48,2022-09-30,42,2022,4,2022,3,09,30
+2022-09-30,Croatia,KUNA,Croatia-KUNA,7.63,2022-09-30,43,2022,4,2022,3,09,30
+2022-09-30,Cuba,Chavito,Cuba-Chavito,1.0,2022-09-30,44,2022,4,2022,3,09,30
+2022-09-30,Cuba,Peso,Cuba-Peso,24.0,2022-09-30,45,2022,4,2022,3,09,30
+2022-09-30,Czech. Republic,Koruna,Czech. Republic-Koruna,24.371,2022-09-30,46,2022,4,2022,3,09,30
+2022-09-30,Dem. Rep. of Congo,Franc,Dem. Rep. of Congo-Franc,1998.5,2022-09-30,47,2022,4,2022,3,09,30
+2022-09-30,Denmark,Krone,Denmark-Krone,7.629,2022-09-30,48,2022,4,2022,3,09,30
+2022-09-30,Djibouti,Franc,Djibouti-Franc,177.0,2022-09-30,49,2022,4,2022,3,09,30
+2022-09-30,Dominican Republic,Peso,Dominican Republic-Peso,53.31,2022-09-30,50,2022,4,2022,3,09,30
+2022-09-30,Ecuador,Dolares,Ecuador-Dolares,1.0,2022-09-30,51,2022,4,2022,3,09,30
+2022-09-30,Egypt,Pound,Egypt-Pound,19.49,2022-09-30,52,2022,4,2022,3,09,30
+2022-09-30,El Salvador,Dollar,El Salvador-Dollar,1.0,2022-09-30,54,2022,4,2022,3,09,30
+2022-09-30,Equatorial Guinea,CFA Franc,Equatorial Guinea-CFA Franc,672.91,2022-09-30,55,2022,4,2022,3,09,30
+2022-09-30,Eritrea,Nakfa,Eritrea-Nakfa,15.0,2022-09-30,56,2022,4,2022,3,09,30
+2022-09-30,Ethiopia,Birr,Ethiopia-Birr,52.548,2022-09-30,57,2022,4,2022,3,09,30
+2022-09-30,Euro Zone,Euro,Euro Zone-Euro,1.026,2022-09-30,58,2022,4,2022,3,09,30
+2022-09-30,Fiji,Dollar,Fiji-Dollar,2.27,2022-09-30,59,2022,4,2022,3,09,30
+2022-09-30,Gabon,CFA Franc,Gabon-CFA Franc,672.91,2022-09-30,60,2022,4,2022,3,09,30
+2022-09-30,Gambia,Dalasi,Gambia-Dalasi,55.0,2022-09-30,61,2022,4,2022,3,09,30
+2022-09-30,Georgia,Lari,Georgia-Lari,2.792,2022-09-30,63,2022,4,2022,3,09,30
+2022-09-30,Ghana,Cedi,Ghana-Cedi,10.2,2022-09-30,64,2022,4,2022,3,09,30
+2022-09-30,Grenada,E.Caribbean Dollar,Grenada-E.Caribbean Dollar,2.7,2022-09-30,66,2022,4,2022,3,09,30
+2022-09-30,Guatemala,Quetzal,Guatemala-Quetzal,7.852,2022-09-30,67,2022,4,2022,3,09,30
+2022-09-30,Guinea,Franc,Guinea-Franc,8595.4,2022-09-30,69,2022,4,2022,3,09,30
+2022-09-30,Guinea Bissau,CFA Franc,Guinea Bissau-CFA Franc,673.48,2022-09-30,68,2022,4,2022,3,09,30
+2022-09-30,Guyana,Dollar,Guyana-Dollar,215.0,2022-09-30,70,2022,4,2022,3,09,30
+2022-09-30,Haiti,Gourde,Haiti-Gourde,116.944,2022-09-30,71,2022,4,2022,3,09,30
+2022-09-30,Honduras,Lempira,Honduras-Lempira,24.56,2022-09-30,73,2022,4,2022,3,09,30
+2022-09-30,Hong Kong,Dollar,Hong Kong-Dollar,7.85,2022-09-30,74,2022,4,2022,3,09,30
+2022-09-30,Hungary,Forint,Hungary-Forint,432.45,2022-09-30,75,2022,4,2022,3,09,30
+2022-09-30,Iceland,Krona,Iceland-Krona,144.39,2022-09-30,77,2022,4,2022,3,09,30
+2022-09-30,India,Rupee,India-Rupee,81.476,2022-09-30,78,2022,4,2022,3,09,30
+2022-09-30,Indonesia,Rupiah,Indonesia-Rupiah,15209.78,2022-09-30,79,2022,4,2022,3,09,30
+2022-09-30,Iran,Rial,Iran-Rial,42000.0,2022-09-30,80,2022,4,2022,3,09,30
+2022-09-30,Iraq,Dinar,Iraq-Dinar,1458.54,2022-09-30,81,2022,4,2022,3,09,30
+2022-09-30,Israel,Shekel,Israel-Shekel,3.565,2022-09-30,82,2022,4,2022,3,09,30
+2022-09-30,Jamaica,Dollar,Jamaica-Dollar,150.0,2022-09-30,83,2022,4,2022,3,09,30
+2022-09-30,Japan,Yen,Japan-Yen,144.63,2022-09-30,84,2022,4,2022,3,09,30
+2022-09-30,Jordan,Dinar,Jordan-Dinar,0.708,2022-09-30,85,2022,4,2022,3,09,30
+2022-09-30,Kazakhstan,Tenge,Kazakhstan-Tenge,476.39,2022-09-30,86,2022,4,2022,3,09,30
+2022-09-30,Kenya,Shilling,Kenya-Shilling,120.65,2022-09-30,87,2022,4,2022,3,09,30
+2022-09-30,Korea,Won,Korea-Won,1436.66,2022-09-30,88,2022,4,2022,3,09,30
+2022-09-30,Kuwait,Dinar,Kuwait-Dinar,0.31,2022-09-30,89,2022,4,2022,3,09,30
+2022-09-30,Kyrgyzstan,Som,Kyrgyzstan-Som,80.183,2022-09-30,90,2022,4,2022,3,09,30
+2022-09-30,Laos,Kip,Laos-Kip,16473.5,2022-09-30,91,2022,4,2022,3,09,30
+2022-09-30,Lebanon,Pound,Lebanon-Pound,1500.0,2022-09-30,92,2022,4,2022,3,09,30
+2022-09-30,Lesotho,Maloti,Lesotho-Maloti,17.988,2022-09-30,93,2022,4,2022,3,09,30
+2022-09-30,Liberia,Dollar,Liberia-Dollar,152.5,2022-09-30,94,2022,4,2022,3,09,30
+2022-09-30,Libya,Dinar,Libya-Dinar,5.042,2022-09-30,95,2022,4,2022,3,09,30
+2022-09-30,Madagascar,Ariary,Madagascar-Ariary,4120.0,2022-09-30,96,2022,4,2022,3,09,30
+2022-09-30,Malawi,Kwacha,Malawi-Kwacha,1035.49,2022-09-30,97,2022,4,2022,3,09,30
+2022-09-30,Malaysia,Ringgit,Malaysia-Ringgit,4.635,2022-09-30,98,2022,4,2022,3,09,30
+2022-09-30,Maldives,Rufiyaa,Maldives-Rufiyaa,15.4,2022-09-30,99,2022,4,2022,3,09,30
+2022-09-30,Mali,CFA Franc,Mali-CFA Franc,673.48,2022-09-30,100,2022,4,2022,3,09,30
+2022-09-30,Marshall Islands,U.S. Dollar,Marshall Islands-U.S. Dollar,1.0,2022-09-30,101,2022,4,2022,3,09,30
+2022-09-30,Mauritania,Ouguiya,Mauritania-Ouguiya,37.0,2022-09-30,102,2022,4,2022,3,09,30
+2022-09-30,Mauritius,Rupee,Mauritius-Rupee,45.6,2022-09-30,103,2022,4,2022,3,09,30
+2022-09-30,Mexico,Peso,Mexico-Peso,20.149,2022-09-30,104,2022,4,2022,3,09,30
+2022-09-30,Micronesia,U.S. Dollar,Micronesia-U.S. Dollar,1.0,2022-09-30,105,2022,4,2022,3,09,30
+2022-09-30,Moldova,LEU,Moldova-LEU,19.401,2022-09-30,106,2022,4,2022,3,09,30
+2022-09-30,Mongolia,Tugrik,Mongolia-Tugrik,3333.02,2022-09-30,107,2022,4,2022,3,09,30
+2022-09-30,Morocco,Dirham,Morocco-Dirham,11.062,2022-09-30,108,2022,4,2022,3,09,30
+2022-09-30,Mozambique,Metical,Mozambique-Metical,63.11,2022-09-30,109,2022,4,2022,3,09,30
+2022-09-30,Nambia,Dollar,Nambia-Dollar,17.988,2022-09-30,110,2022,4,2022,3,09,30
+2022-09-30,Nepal,Rupee,Nepal-Rupee,130.5,2022-09-30,111,2022,4,2022,3,09,30
+2022-09-30,Netherlands Antilles,Guilder,Netherlands Antilles-Guilder,1.78,2022-09-30,112,2022,4,2022,3,09,30
+2022-09-30,New Zealand,Dollar,New Zealand-Dollar,1.761,2022-09-30,113,2022,4,2022,3,09,30
+2022-09-30,Nicaragua,Cordoba,Nicaragua-Cordoba,36.0,2022-09-30,115,2022,4,2022,3,09,30
+2022-09-30,Niger,CFA Franc,Niger-CFA Franc,673.48,2022-09-30,116,2022,4,2022,3,09,30
+2022-09-30,Nigeria,Naira,Nigeria-Naira,428.0,2022-09-30,117,2022,4,2022,3,09,30
+2022-09-30,Norway,Krone,Norway-Krone,10.819,2022-09-30,118,2022,4,2022,3,09,30
+2022-09-30,Oman,Rial,Oman-Rial,0.385,2022-09-30,119,2022,4,2022,3,09,30
+2022-09-30,Pakistan,Rupee,Pakistan-Rupee,227.77,2022-09-30,120,2022,4,2022,3,09,30
+2022-09-30,Panama,Dolares,Panama-Dolares,1.0,2022-09-30,121,2022,4,2022,3,09,30
+2022-09-30,Papua New Guinea,Kina,Papua New Guinea-Kina,3.431,2022-09-30,122,2022,4,2022,3,09,30
+2022-09-30,Paraguay,Guarani,Paraguay-Guarani,7046.0,2022-09-30,123,2022,4,2022,3,09,30
+2022-09-30,Peru,Sol,Peru-Sol,3.968,2022-09-30,124,2022,4,2022,3,09,30
+2022-09-30,Philippines,Peso,Philippines-Peso,58.745,2022-09-30,125,2022,4,2022,3,09,30
+2022-09-30,Poland,Zloty,Poland-Zloty,4.973,2022-09-30,126,2022,4,2022,3,09,30
+2022-09-30,Qatar,Riyal,Qatar-Riyal,3.678,2022-09-30,128,2022,4,2022,3,09,30
+2022-09-30,Rep. of N Macedonia,Dinar,Rep. of N Macedonia-Dinar,63.05,2022-09-30,129,2022,4,2022,3,09,30
+2022-09-30,Republic of Palau,Dollar,Republic of Palau-Dollar,1.0,2022-09-30,130,2022,4,2022,3,09,30
+2022-09-30,Romania,New Leu,Romania-New Leu,5.075,2022-09-30,131,2022,4,2022,3,09,30
+2022-09-30,Russia,Ruble,Russia-Ruble,57.7,2022-09-30,132,2022,4,2022,3,09,30
+2022-09-30,Rwanda,Franc,Rwanda-Franc,1030.0,2022-09-30,134,2022,4,2022,3,09,30
+2022-09-30,Sao Tome & Principe,New Dobras,Sao Tome & Principe-New Dobras,25.405,2022-09-30,135,2022,4,2022,3,09,30
+2022-09-30,Saudi Arabia,Riyal,Saudi Arabia-Riyal,3.75,2022-09-30,136,2022,4,2022,3,09,30
+2022-09-30,Senegal,CFA Franc,Senegal-CFA Franc,673.48,2022-09-30,137,2022,4,2022,3,09,30
+2022-09-30,Serbia,Dinar,Serbia-Dinar,120.26,2022-09-30,138,2022,4,2022,3,09,30
+2022-09-30,Seychelles,Rupee,Seychelles-Rupee,13.11,2022-09-30,139,2022,4,2022,3,09,30
+2022-09-30,Sierra Leone,Leone,Sierra Leone-Leone,15.78,2022-09-30,140,2022,4,2022,3,09,30
+2022-09-30,Singapore,Dollar,Singapore-Dollar,1.436,2022-09-30,142,2022,4,2022,3,09,30
+2022-09-30,Solomon Islands,Dollar,Solomon Islands-Dollar,8.078,2022-09-30,143,2022,4,2022,3,09,30
+2022-09-30,Somali,Shilling,Somali-Shilling,565.0,2022-09-30,144,2022,4,2022,3,09,30
+2022-09-30,South,Sudanese-Pound,South-Sudanese-Pound,620.0,2022-09-30,146,2022,4,2022,3,09,30
+2022-09-30,South Africa,Rand,South Africa-Rand,17.988,2022-09-30,145,2022,4,2022,3,09,30
+2022-09-30,Sri Lanka,Rupee,Sri Lanka-Rupee,362.0,2022-09-30,147,2022,4,2022,3,09,30
+2022-09-30,St. Lucia,E. Caribbean Dollar,St. Lucia-E. Caribbean Dollar,2.7,2022-09-30,148,2022,4,2022,3,09,30
+2022-09-30,Sudan,Pound,Sudan-Pound,574.0,2022-09-30,149,2022,4,2022,3,09,30
+2022-09-30,Suriname,Dollar,Suriname-Dollar,28.007,2022-09-30,150,2022,4,2022,3,09,30
+2022-09-30,Swaziland,Langeni,Swaziland-Langeni,17.988,2022-09-30,152,2022,4,2022,3,09,30
+2022-09-30,Sweden,Krona,Sweden-Krona,11.177,2022-09-30,153,2022,4,2022,3,09,30
+2022-09-30,Switzerland,Franc,Switzerland-Franc,0.981,2022-09-30,154,2022,4,2022,3,09,30
+2022-09-30,Syria,Pound,Syria-Pound,2511.0,2022-09-30,155,2022,4,2022,3,09,30
+2022-09-30,Taiwan,Dollar,Taiwan-Dollar,31.817,2022-09-30,156,2022,4,2022,3,09,30
+2022-09-30,Tajikistan,Somoni,Tajikistan-Somoni,9.75,2022-09-30,157,2022,4,2022,3,09,30
+2022-09-30,Tanzania,Shilling,Tanzania-Shilling,2327.0,2022-09-30,158,2022,4,2022,3,09,30
+2022-09-30,Thailand,Baht,Thailand-Baht,37.79,2022-09-30,159,2022,4,2022,3,09,30
+2022-09-30,Timor,Leste-Dili,Timor-Leste-Dili,1.0,2022-09-30,160,2022,4,2022,3,09,30
+2022-09-30,Togo,CFA Franc,Togo-CFA Franc,673.48,2022-09-30,161,2022,4,2022,3,09,30
+2022-09-30,Tonga,Pa'anga,Tonga-Pa'anga,2.364,2022-09-30,162,2022,4,2022,3,09,30
+2022-09-30,Trinidad & Tobago,Dollar,Trinidad & Tobago-Dollar,6.745,2022-09-30,163,2022,4,2022,3,09,30
+2022-09-30,Tunisia,Dinar,Tunisia-Dinar,3.256,2022-09-30,164,2022,4,2022,3,09,30
+2022-09-30,Turkey,New Lira,Turkey-New Lira,18.549,2022-09-30,165,2022,4,2022,3,09,30
+2022-09-30,Turkmenistan,New Manat,Turkmenistan-New Manat,3.491,2022-09-30,166,2022,4,2022,3,09,30
+2022-09-30,Uganda,Shilling,Uganda-Shilling,3846.32,2022-09-30,167,2022,4,2022,3,09,30
+2022-09-30,Ukraine,Hryvnia,Ukraine-Hryvnia,36.93,2022-09-30,168,2022,4,2022,3,09,30
+2022-09-30,United Arab Emirates,Dirham,United Arab Emirates-Dirham,3.673,2022-09-30,169,2022,4,2022,3,09,30
+2022-09-30,United Kingdom,Pound,United Kingdom-Pound,0.906,2022-09-30,170,2022,4,2022,3,09,30
+2022-09-30,Uruguay,Peso,Uruguay-Peso,41.33,2022-09-30,172,2022,4,2022,3,09,30
+2022-09-30,Uzbekistan,Som,Uzbekistan-Som,10983.7,2022-09-30,173,2022,4,2022,3,09,30
+2022-09-30,Vanuatu,Vatu,Vanuatu-Vatu,120.89,2022-09-30,174,2022,4,2022,3,09,30
+2022-09-30,Venezuela,Bolivar Soberano,Venezuela-Bolivar Soberano,8.163,2022-09-30,175,2022,4,2022,3,09,30
+2022-09-30,Venezuela,Fuerte (OLD),Venezuela-Fuerte (OLD),248832.0,2022-09-30,177,2022,4,2022,3,09,30
+2022-09-30,Vietnam,Dong,Vietnam-Dong,23855.0,2022-09-30,178,2022,4,2022,3,09,30
+2022-09-30,Western Samoa,Tala,Western Samoa-Tala,2.763,2022-09-30,179,2022,4,2022,3,09,30
+2022-09-30,Yemen,Rial,Yemen-Rial,580.0,2022-09-30,180,2022,4,2022,3,09,30
+2022-09-30,Zambia,New Kwacha,Zambia-New Kwacha,15.734,2022-09-30,181,2022,4,2022,3,09,30
+2022-09-30,Zimbabwe,RTGS,Zimbabwe-RTGS,606.345,2022-09-30,183,2022,4,2022,3,09,30

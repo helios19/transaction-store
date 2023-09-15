@@ -5,7 +5,7 @@ server.port: 8081
 spring:
   profiles: default
   application:
-    name: product-analytics
+    name: transaction-store
 # H2 properties
 ## browser url for h2 console - http://localhost:8081/h2-console
   h2:

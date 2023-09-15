@@ -14,16 +14,37 @@
                     <input type="hidden" ng-model="ctrl.transaction.id" />
                     <div class="row">
                         <div class="form-group col-md-12">
+                            <label class="col-md-2 control-label" for="customerid">Customer ID</label>
+                            <div class="col-md-7">
+                                <input type="text" ng-model="ctrl.transaction.customerid" id="customerid" class="transactionname form-control input-sm" placeholder="Enter customer identifier" required ng-pattern="ctrl.onlyIntegers"/>
+                            </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-12">
+                            <label class="col-md-2 control-label" for="month">Month</label>
+                            <div class="col-md-7">
+                                <input type="text" ng-model="ctrl.transaction.month" id="month" class="form-control input-sm" placeholder="Enter the classification month." required ng-pattern="ctrl.onlyIntegers"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-2 control-label" for="date">Date</label>
+                            <div class="col-md-7">
+                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                            </div>
                         </div>
                     </div>
 
                     <div class="row" ng-if="ctrl.classification">
                         <div class="form-group col-md-12">
+                            <label class="col-md-2 control-label">Classification</label>
+                            <div class="col-md-7">
+                                <p class="mark text-left" ng-if="ctrl.classification">{{ctrl.classification}}</p>
+                            </div>
                         </div>
                     </div>
 

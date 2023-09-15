@@ -1,5 +1,5 @@
 {
-  "name": "productAnalytics",
+  "name": "transactionStore",
   "version": "1.0.0",
   "description": "Product Analytics app",
   "scripts": {

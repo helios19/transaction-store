@@ -1,6 +1,6 @@
 'use strict';
  
-angular.module('productAnalytics').controller('TransactionController',
+angular.module('transactionStore').controller('TransactionController',
     ['TransactionService', '$scope',  function( TransactionService, $scope) {
  
         var self = this;

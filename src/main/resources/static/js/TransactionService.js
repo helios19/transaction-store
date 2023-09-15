@@ -1,7 +1,7 @@
 
 'use strict';
  
-angular.module('productAnalytics').factory('TransactionService',
+angular.module('transactionStore').factory('TransactionService',
     ['$localStorage', '$http', '$q', 'urls',
         function ($localStorage, $http, $q, urls) {
  
