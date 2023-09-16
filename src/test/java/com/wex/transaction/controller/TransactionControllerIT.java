@@ -57,7 +57,7 @@ public class TransactionControllerIT {
     void shouldReturnAllTransactionSummary() throws JSONException {
 
         // Given
-        String url = "http://localhost:" + port + "/transaction-summary/all";
+        String url = "http://localhost:" + port + "/transactions/all";
         String expected = "[{\"clientInformation\":\"CL432100020001\",\"productInformation\":\"SGXFUNK20100910\",\"totalTransactionAmount\":4.0,\"date\":\"2010-08-19T14:00:00.000+00:00\"}]";
 
         // When
@@ -72,7 +72,7 @@ public class TransactionControllerIT {
     @Test
     void shouldReturnCsvTransactionSummary() {
         // Given
-        String url = "http://localhost:" + port + "/transaction-summary/export-csv";
+        String url = "http://localhost:" + port + "/transactions/export-csv";
         String expected = "Client Information,Production Information,Date,Total Transaction Amount\n" +
                 "CL432100020001,SGXFUNK20100910,2010-08-20 00:00:00.0,4.0";
 

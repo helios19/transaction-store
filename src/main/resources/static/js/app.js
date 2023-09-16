@@ -3,7 +3,7 @@ var app = angular.module('transactionStore',['ui.router','ngStorage']);
 
 app.constant('urls', {
     BASE: 'http://localhost:8081/',
-    TRANSACTION_SERVICE_API : 'http://localhost:8081/transaction-summary'
+    TRANSACTION_SERVICE_API : 'http://localhost:8081/transactions'
 });
 
 app.config(['$stateProvider', '$urlRouterProvider',

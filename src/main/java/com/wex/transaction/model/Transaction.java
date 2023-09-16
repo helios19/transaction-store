@@ -35,6 +35,9 @@ public class Transaction {
     private String description;
 
     @NotNull
+    private String currency;
+
+    @NotNull
     @JsonFormat(pattern = ClassUtils.DATE_FORMAT_PATTERN)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date transactionDate;

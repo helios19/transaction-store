@@ -1,7 +1,9 @@
 package com.wex.common.utils;
 
+import com.wex.transaction.dto.RateExchangeDto;
 import com.wex.transaction.dto.TransactionDto;
 import com.wex.transaction.exception.InvalidTransactionException;
+import com.wex.transaction.model.RateExchange;
 import com.wex.transaction.model.Transaction;
 import org.modelmapper.ModelMapper;
 
@@ -10,7 +12,6 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.StringJoiner;
 
 import static java.time.format.DateTimeFormatter.ofPattern;
 
@@ -26,8 +27,6 @@ public class ClassUtils {
     public static final int DEFAULT_PAGE_SIZE = 50;
     public static final ModelMapper MODEL_MAPPER = new ModelMapper();
     public static BigDecimal HUNDRED = new BigDecimal("100");
-    public static BigDecimal TEN_MILLIONS = new BigDecimal("10000000");
-    public static String CSV_FILENAME = "transaction-summary-report.csv";
     public static final String MEDIATYPE_TEXT_HTML = "text/csv";
 
     private ClassUtils() {
@@ -79,41 +78,17 @@ public class ClassUtils {
      * @return TransactionDto
      */
     public static TransactionDto convertToDto(Transaction transaction) {
-        TransactionDto transactionDto = MODEL_MAPPER.map(transaction, TransactionDto.class);
-//        transactionDto.setDate(fromDate(transaction.getDate()));
-        return transactionDto;
+        return MODEL_MAPPER.map(transaction, TransactionDto.class);
     }
 
     /**
-     * Returns the client information from a given transaction. It is a combination
-     * of the ClientType, ClientNum, AcctNum and the SubAcctNum fields.
+     * Converts a {@link RateExchange} instance into a {@link RateExchangeDto} object.
      *
-     * @param transaction Transaction to extract the client information from
-     * @return Client Information
+     * @param rateExchange RateExchange to convert
+     * @return RateExchangeDto
      */
-    public static String getClientInformation(Transaction transaction) {
-        return new StringJoiner("")
-//                .add(Strings.nullToEmpty(transaction.getClientType()).trim())
-//                .add(Strings.nullToEmpty(transaction.getClientNum()).trim())
-//                .add(Strings.nullToEmpty(transaction.getAcctNum()).trim())
-//                .add(Strings.nullToEmpty(transaction.getSubAcctNum()).trim())
-                .toString();
-    }
-
-    /**
-     * Returns the product information from a given transaction. It is a combination
-     * of the ExchangeCode, ProductGroupCode, Symbol and the ExpirationDate fields.
-     *
-     * @param transaction Transaction to extract the product information from
-     * @return Product Information
-     */
-    public static String getProductInformation(Transaction transaction) {
-        return new StringJoiner("")
-//                .add(Strings.nullToEmpty(transaction.getExchangeCode()).trim())
-//                .add(Strings.nullToEmpty(transaction.getProductGroupCode()).trim())
-//                .add(Strings.nullToEmpty(transaction.getSymbol()).trim())
-//                .add(Strings.nullToEmpty(transaction.getExpirationDate()).trim())
-                .toString();
+    public static RateExchangeDto convertToDto(RateExchange rateExchange) {
+        return MODEL_MAPPER.map(rateExchange, RateExchangeDto.class);
     }
 
     /**

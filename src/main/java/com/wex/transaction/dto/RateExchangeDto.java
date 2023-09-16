@@ -8,19 +8,18 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
- * Transaction DTO class representing a transaction.
+ * RateExchange DTO class representing a rate exchange.
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class TransactionDto {
+public class RateExchangeDto {
     private Long id;
-    private String description;
+    private String country;
     private String currency;
-    private String transactionDate;
-    private String amount;
+    private String rate;
 }
 
 

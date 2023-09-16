@@ -2,6 +2,7 @@ package com.wex.transaction.service;
 
 import com.wex.common.utils.ClassUtils;
 import com.wex.transaction.model.RateExchange;
+import com.wex.transaction.model.Transaction;
 import com.wex.transaction.repository.RateExchangeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -55,6 +57,15 @@ public class RateExchangeServiceImpl implements RateExchangeService {
      */
     @Override
     @Cacheable
+    public Optional<RateExchange> findByCurrency(String currency) {
+        return repository.findByCurrency(currency);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @Cacheable
     public List<RateExchange> findAll() {
         return repository.findAll();
     }
@@ -67,6 +78,17 @@ public class RateExchangeServiceImpl implements RateExchangeService {
     public List<RateExchange> findAll(Pageable pageable) {
         Page<RateExchange> rateExchanges = repository.findAll(pageable);
         return rateExchanges.getContent();
+    }
+
+    /**
+     * Convert a transaction amount with exchange rate passed in argument.
+     *
+     * @param transaction Transaction to convert
+     * @param rateExchange exchange rate
+     * @return Transaction amount converted with new exchange rate
+     */
+    public BigDecimal convertToCurrency(Transaction transaction, RateExchange rateExchange) {
+        return transaction.getAmount().multiply(rateExchange.getRate());
     }
 
     /**

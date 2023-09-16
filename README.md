@@ -31,7 +31,7 @@ Alternatively, you could also use the bootRun gradle task to run the application
 The endpoints to retrieve the transaction summary in json format will be available at the following URLs:
 
 ```
-GET http://localhost:8081/transaction-summary/all
+GET http://localhost:8081/transactions/all
 ```
 
 Invoking the above endpoint should give you the following transaction summary:

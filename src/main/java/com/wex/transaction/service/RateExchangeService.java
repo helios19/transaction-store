@@ -1,9 +1,12 @@
 package com.wex.transaction.service;
 
 import com.wex.transaction.model.RateExchange;
+import com.wex.transaction.model.Transaction;
 import com.wex.transaction.repository.RateExchangeRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Pageable;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,6 +33,9 @@ public interface RateExchangeService {
      */
     Optional<RateExchange> findById(Long id);
 
+    @Cacheable
+    Optional<RateExchange> findByCurrency(String currency);
+
     /**
      * Returns a list of all {@link RateExchange}.
      *
@@ -44,6 +50,15 @@ public interface RateExchangeService {
      * @return List of transactions found
      */
     List<RateExchange> findAll(Pageable pageable);
+
+    /**
+     * Convert a transaction amount with exchange rate passed in argument.
+     *
+     * @param transaction Transaction to convert
+     * @param rateExchange exchange rate
+     * @return Transaction amount converted with new exchange rate
+     */
+    BigDecimal convertToCurrency(Transaction transaction, RateExchange rateExchange);
 
     /**
      * Sets a {@link RateExchangeRepository} instance.
