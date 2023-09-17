@@ -20,7 +20,7 @@ given the list of third party dependencies, the build process might vary from
 Then, to run the application, simply type:
 
 ```
-java -jar <SOURCE_FOLDER>/build/libs/transaction-store-1.0.jar
+java -jar <SOURCE_FOLDER>/build/libs/transaction-store.jar
 ```
 
 Alternatively, you could also use the bootRun gradle task to run the application (skipping the jar packaging altogether):
