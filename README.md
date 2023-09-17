@@ -10,11 +10,12 @@ in a terminal, at the root of the source folder to generate the runnable fat jar
 ./gradlew clean build
 ```
 
-NB: This command will run unit and integration tests before packaging
+> **_NOTE:_**  This command will run unit and integration tests before packaging
 the fat jar. If you wish to speed up the build and discard them,
 simply add this `-x test` option to the above command. Also, take note that,
 given the list of third party dependencies, the build process might vary from
 1 to 4 mins depending on your local gradle repository and your network bandwidth.
+
 
 Then, to run the application, simply type:
 
@@ -28,22 +29,27 @@ Alternatively, you could also use the bootRun gradle task to run the application
 ./gradlew bootRun
 ```
 
-The endpoints to retrieve the transaction summary in json format will be available at the following URLs:
+The endpoints to retrieve the list of transactions in json format will be available at the following URLs:
 
 ```
-GET http://localhost:8081/transactions/all
+GET http://localhost:8081/transactions/
 ```
 
-Invoking the above endpoint should give you the following transaction summary:
+Invoking the above endpoint should give you the following transaction kind of response (if there is any transaction available in database):
 ```
-[{"clientInformation":"CL432100020001","productInformation":"SGXFUNK20100910","totalTransactionAmount":46.0,"date":"2010-08-19T14:00:00.000+00:00"},{"clientInformation":"CL432100030001","productInformation":"CMEFUN120100910","totalTransactionAmount":-79.0,"date":"2010-08-18T14:00:00.000+00:00"},{"clientInformation":"CL123400020001","productInformation":"SGXFUNK20100910","totalTransactionAmount":-52.0,"date":"2010-08-19T14:00:00.000+00:00"},{"clientInformation":"CL123400030001","productInformation":"CMEFUNK.20100910","totalTransactionAmount":-215.0,"date":"2010-08-18T14:00:00.000+00:00"},{"clientInformation":"CL123400030001","productInformation":"CMEFUN120100910","totalTransactionAmount":285.0,"date":"2010-08-18T14:00:00.000+00:00"}]
+[{"id":727,"description":"test","country":"United States","transactionDate":"2023-10-23","amount":"25.00","originalAmount":null}]
 ```
 
-Similarly, the endpoint to retrieve the transaction summary in csv format will be available at the following URLs:
+Similarly, the endpoint to retrieve the exchange rates will be available at the following URLs:
 
 ```
-GET http://localhost:8081/transaction-summary/export-csv
+GET http://localhost:8081/rate-exchanges/
 ```
+
+**UI**
+
+Once the application has started, to access the UI, just open your favorite browser and enter `http://localhost:8081`. Make sure port `8081`
+is not used by another process. Then you should be able to access the Transaction Store main page, where you will be able to add new transactions and convert the currency of the existing ones.
 
 **Docker**
 
@@ -68,12 +74,6 @@ To run the application, just type in a terminal the following docker command:
 docker run wex/transaction-store
 ```
 
-
-**UI**
-
-Once the application has started, to access the UI, just open your favorite browser and enter `http://localhost:8081`. Make sure port `8081`
-is not used by another process. Then you should be able to access the Transaction Summary Report main page.
-> **_NOTE:_**  The UI part of the application might not fully work yet.
 
 ***
 
