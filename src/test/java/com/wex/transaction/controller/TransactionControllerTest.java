@@ -5,6 +5,7 @@ import com.wex.ratexchg.service.RateExchangeService;
 import com.wex.ratexchg.service.RateExchangeServiceImpl;
 import com.wex.transaction.dto.TransactionDto;
 import com.wex.transaction.exception.TransactionNotFoundException;
+import com.wex.transaction.model.Transaction;
 import com.wex.transaction.service.TransactionService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -59,13 +60,29 @@ public class TransactionControllerTest {
     }
 
     @Test
+    public void shouldSaveTransaction() {
+
+        // Given
+        when(transactionService.save(any(Transaction.class)))
+                .thenReturn(TRANSACTION_SAMPLE);
+
+        // When
+        ResponseEntity<TransactionDto> response = controller.save(TRANSACTION_SAMPLE);
+
+        // Then
+        assertThat(response).isNotNull();
+        verify(transactionService, times(1)).save(TRANSACTION_SAMPLE);
+        verifyNoMoreInteractions(transactionService);
+    }
+
+    @Test
     public void shouldReturnTransactionAmountConverted() {
 
         // Given
         when(transactionService.findById(any()))
                 .thenReturn(Optional.of(TRANSACTION_SAMPLE));
 
-        doReturn(Optional.of(RATEEXCHANGE_SAMPLE)).when(rateExchangeService).findByCountry(any());
+        doReturn(Optional.of(RATEEXCHANGE_SAMPLE)).when(rateExchangeService).findByCountry(any(), any());
 
         // When
         ResponseEntity<TransactionDto> transactionConverted = controller.convertTransactionAmount(1, "Australia");
@@ -75,12 +92,12 @@ public class TransactionControllerTest {
         // Then
         assertThat(transactionConverted).isNotNull();
         assertThat(transactionConverted.getBody().getDescription()).isEqualTo("transaction 1");
-        assertThat(transactionConverted.getBody().getTransactionDate()).isEqualTo("2010-09-10");
+        assertThat(transactionConverted.getBody().getTransactionDate()).isEqualTo("2023-09-10");
         assertThat(transactionConverted.getBody().getCountry()).isEqualTo("Australia");
         assertThat(transactionConverted.getBody().getAmount()).isEqualTo("13819.50");
         verify(transactionService, times(1)).findById(any());
         verifyNoMoreInteractions(transactionService);
-        verify(rateExchangeService, times(1)).findByCountry(any());
+        verify(rateExchangeService, times(1)).findByCountry(any(), any());
         verify(rateExchangeService, times(1)).convertAmount(any(), any());
         verifyNoMoreInteractions(rateExchangeService);
 
@@ -94,16 +111,6 @@ public class TransactionControllerTest {
 
         // When
         TransactionNotFoundException thrown = assertThrows(
-                TransactionNotFoundException.class,
-                () -> controller.getAllTransactions(),
-                "Expected getAllTransactionSummaryReport() to throw, but it didn't"
-        );
-
-        // Then
-        assertTrue(thrown.getMessage().contains("No transaction found in database."));
-
-        // When
-        thrown = assertThrows(
                 TransactionNotFoundException.class,
                 () -> controller.getAllTransactions(),
                 "Expected getAllTransactionSummaryReport() to throw, but it didn't"

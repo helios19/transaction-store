@@ -13,7 +13,7 @@ public class ClassTestUtils {
             .id(1L)
             .description("transaction 1")
             .country("United States")
-            .transactionDate(ClassUtils.toDate("2010-09-10"))
+            .transactionDate(ClassUtils.toDate("2023-09-10"))
             .amount(new BigDecimal("000092500000000").divide(ClassUtils.TEN_MILLIONS))
             .build();
 
@@ -21,6 +21,15 @@ public class ClassTestUtils {
             .builder()
             .id(2L)
             .description("transaction 2")
+            .country("United States")
+            .transactionDate(ClassUtils.toDate("2023-09-11"))
+            .amount(new BigDecimal("000099800000000").divide(ClassUtils.TEN_MILLIONS))
+            .build();
+
+    public static final Transaction TRANSACTION_SAMPLE_3 = Transaction
+            .builder()
+            .id(2L)
+            .description("transaction 3")
             .country("United States")
             .transactionDate(ClassUtils.toDate("2010-09-11"))
             .amount(new BigDecimal("000099800000000").divide(ClassUtils.TEN_MILLIONS))

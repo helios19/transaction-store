@@ -6,6 +6,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Pageable;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,7 +34,7 @@ public interface RateExchangeService {
     Optional<RateExchange> findById(Long id);
 
     @Cacheable
-    Optional<RateExchange> findByCountry(String country);
+    Optional<RateExchange> findByCountry(String country, Date recordDate);
 
     /**
      * Returns a list of all {@link RateExchange}.

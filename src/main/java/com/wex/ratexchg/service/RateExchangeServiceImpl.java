@@ -15,6 +15,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,8 +63,17 @@ public class RateExchangeServiceImpl implements RateExchangeService {
      */
     @Override
     @Cacheable
-    public Optional<RateExchange> findByCountry(String country) {
-        List<RateExchange> rateExchanges = repository.findByCountryOrderByRecordDateDesc(country);
+    public Optional<RateExchange> findByCountry(String country, Date recordDate) {
+
+        LocalDate startLocalDate = recordDate.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate().minusMonths(6);
+
+        Date startDate = Date.from(startLocalDate.atStartOfDay()
+                .atZone(ZoneId.systemDefault())
+                .toInstant());
+
+        List<RateExchange> rateExchanges = repository.findByCountryAndRecordDateBetweenOrderByRecordDateDesc(country, startDate, recordDate);
 
         if (CollectionUtils.isEmpty(rateExchanges)) {
             return Optional.empty();

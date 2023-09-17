@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -31,17 +32,16 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotNull
+    @NotBlank(message = "Description is mandatory")
     private String description;
 
-    @NotNull
     private String country;
 
-    @NotNull
+    @NotNull(message = "TransactionDate is mandatory")
     @JsonFormat(pattern = ClassUtils.DATE_FORMAT_PATTERN)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private Date transactionDate;
 
-    @NotNull
+    @NotNull(message = "Amount is mandatory")
     private BigDecimal amount;
 }

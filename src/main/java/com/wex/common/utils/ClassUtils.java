@@ -3,7 +3,6 @@ package com.wex.common.utils;
 import com.wex.ratexchg.dto.RateExchangeDto;
 import com.wex.ratexchg.model.RateExchange;
 import com.wex.transaction.dto.TransactionDto;
-import com.wex.transaction.exception.InvalidTransactionException;
 import com.wex.transaction.model.Transaction;
 import org.modelmapper.AbstractConverter;
 import org.modelmapper.ModelMapper;
@@ -30,25 +29,15 @@ public class ClassUtils {
     public static final ModelMapper MODEL_MAPPER = new ModelMapper();
     public static BigDecimal HUNDRED = new BigDecimal("100");
     public static BigDecimal TEN_MILLIONS = new BigDecimal("10000000");
-    public static final String MEDIATYPE_TEXT_HTML = "text/csv";
+    public static final String DEFAULT_COUNTRY = "United States";
+
+    public static final RateExchange DEFAULT_RATE_EXCHANGE = RateExchange.builder()
+            .country(DEFAULT_COUNTRY)
+            .currency("Dollar")
+            .rate(BigDecimal.valueOf(1))
+            .build();;
 
     private ClassUtils() {
-    }
-
-    /**
-     * Validates transaction fields.
-     *
-     * @param transaction Transaction instance to validate
-     * @throws InvalidTransactionException in case one of the transaction fields is invalid
-     */
-    public static void validateTransaction(Transaction transaction) {
-
-        // validate transaction
-
-//        if (transaction == null || transaction.getClientNum() == null) {
-//            throw new InvalidTransactionException(transaction);
-//        }
-
     }
 
     /**
@@ -105,16 +94,4 @@ public class ClassUtils {
     public static RateExchangeDto convertToDto(RateExchange rateExchange) {
         return MODEL_MAPPER.map(rateExchange, RateExchangeDto.class);
     }
-
-    /**
-     * Returns the total balance given the list of transactions passed as argument.
-     *
-     * @param transactions List of transactions
-     * @return Total transaction amount
-     */
-//    public static double getTotalTransactionAmount(List<Transaction> transactions) {
-//        return BigDecimal.valueOf(transactions.stream().mapToDouble(t -> (t.getQttyLong().subtract(t.getQttyShort()).doubleValue())).sum())
-//                .setScale(2, RoundingMode.CEILING)
-//                .doubleValue();
-//    }
 }

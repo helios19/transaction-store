@@ -11,15 +11,11 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.core.io.Resource;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.resource.PathResourceResolver;
-
-import java.io.IOException;
 
 
 /**
@@ -33,47 +29,21 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
     private WebProperties resourceProperties = new WebProperties();
-
+    private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
+            "classpath:/META-INF/resources/", "classpath:/resources/",
+            "classpath:/static/", "classpath:/public/" };
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         Integer cachePeriod = 3600;//resourceProperties.getCachePeriod();
 
-        final String[] staticLocations = resourceProperties.getResources().getStaticLocations();
-        final String[] indexLocations = new String[staticLocations.length];
-        for (int i = 0; i < staticLocations.length; i++) {
-            indexLocations[i] = staticLocations[i] + "index.html";
+        if (!registry.hasMappingForPattern("/webjars/**")) {
+            registry.addResourceHandler("/webjars/**").addResourceLocations(
+                    "classpath:/META-INF/resources/webjars/").setCachePeriod(cachePeriod);;
         }
-        registry.addResourceHandler(
-                "/**.css",
-                "/**.html",
-                "/**.js",
-                "/**.json",
-                "/**.bmp",
-                "/**.jpeg",
-                "/**.jpg",
-                "/**.png",
-                "/**.ttf",
-                "/**.eot",
-                "/**.svg",
-                "/**.woff",
-                "/**.woff2"
-        )
-                .addResourceLocations(staticLocations)
-                .addResourceLocations("/webjars/", "/resources/", "classpath:/META-INF/resources/webjars/")
-                .setCachePeriod(cachePeriod);
-
-        registry.addResourceHandler("/**")
-                .addResourceLocations(indexLocations)
-                .setCachePeriod(cachePeriod)
-                .resourceChain(true)
-                .addResolver(new PathResourceResolver() {
-                    @Override
-                    protected Resource getResource(String resourcePath,
-                                                   Resource location) throws IOException {
-                        return location.exists() && location.isReadable() ? location
-                                : null;
-                    }
-                });
+        if (!registry.hasMappingForPattern("/**")) {
+            registry.addResourceHandler("/**").addResourceLocations(
+                    CLASSPATH_RESOURCE_LOCATIONS).setCachePeriod(cachePeriod);;
+        }
     }
 
     @Override

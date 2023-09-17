@@ -45,7 +45,7 @@ public class TransactionRepositoryTest {
         Transaction transaction = repository.save(TRANSACTION_SAMPLE);
         assertThat(transaction).hasFieldOrPropertyWithValue("description", "transaction 1");
         assertThat(transaction).hasFieldOrPropertyWithValue("country", "United States");
-        assertThat(transaction).hasFieldOrPropertyWithValue("transactionDate", ClassUtils.toDate("2010-09-10"));
+        assertThat(transaction).hasFieldOrPropertyWithValue("transactionDate", ClassUtils.toDate("2023-09-10"));
         assertThat(transaction).hasFieldOrPropertyWithValue("amount", new BigDecimal("000092500000000").divide(ClassUtils.TEN_MILLIONS));
     }
 

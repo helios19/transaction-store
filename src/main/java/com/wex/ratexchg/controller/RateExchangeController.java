@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.wex.common.utils.ClassUtils.DEFAULT_RATE_EXCHANGE;
+
 /**
  * Rate exchange controller class defining the HTTP operations available for the {@link RateExchange} resource. This controller
  * is mainly used to return the existing list of rate exchanges.
@@ -57,6 +59,34 @@ public class RateExchangeController {
                 .ok()
                 .body(rateExchanges.stream()
                         .map(ClassUtils::convertToDto)
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * Returns the total transaction summary report.
+     *
+     * @return The whole transaction summary report
+     * @throws TransactionNotFoundException if no transaction found in database
+     */
+    @RequestMapping(value = "/countries", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<String>> getRateExchangeCountries() {
+        log.info("loading rate exchange countries");
+
+        List<RateExchange> rateExchanges = rateExchangeService.findAll();
+
+        if (CollectionUtils.isEmpty(rateExchanges)) {
+            throw new RateExchangeNotFoundException();
+        }
+
+        // add default US rate exchange
+        rateExchanges.add(DEFAULT_RATE_EXCHANGE);
+
+        return ResponseEntity
+                .ok()
+                .body(rateExchanges.stream()
+                        .map(rateExchange -> rateExchange.getCountry())
+                        .distinct()
+                        .sorted()
                         .collect(Collectors.toList()));
     }
 

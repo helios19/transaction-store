@@ -75,7 +75,7 @@ public class Application {
                             .collect(Collectors.toList())
             );
         } finally {
-            log.info("end of exchange rate loading...");
+            log.info("exchange rates loaded...");
         }
     }
 

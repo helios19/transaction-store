@@ -21,14 +21,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.math.RoundingMode;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.wex.common.utils.ClassUtils.DEFAULT_COUNTRY;
+import static com.wex.common.utils.ClassUtils.DEFAULT_RATE_EXCHANGE;
 import static com.wex.common.utils.ClassUtils.convertToDto;
 
 /**
@@ -63,11 +65,11 @@ public class TransactionController {
      */
     @RequestMapping(value = "/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<TransactionDto> save(@RequestBody Transaction transaction) {
+    public ResponseEntity<TransactionDto> save(@Valid @RequestBody Transaction transaction) {
+        log.info("saving transaction");
 
-        if (transaction == null || transaction.getAmount() == null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, " 'amount' is required");
-        }
+        // set default country
+        transaction.setCountry(DEFAULT_COUNTRY);
 
         return ResponseEntity
                 .ok()
@@ -82,6 +84,7 @@ public class TransactionController {
      */
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<TransactionDto>> getAllTransactions() {
+        log.info("loading all transactions");
 
         List<Transaction> transactions = transactionService.findAll();
 
@@ -106,17 +109,19 @@ public class TransactionController {
     @Validated
     public ResponseEntity<TransactionDto> convertTransactionAmount(@PathVariable @Min(0) Integer transactionId,
                                                                    @PathVariable @NotBlank String country) {
+        log.info("converting transaction amount");
 
         Transaction transaction = transactionService.findById(Long.valueOf(transactionId))
                 .orElseThrow(TransactionNotFoundException::new);
 
-        RateExchange rateExchange = rateExchangeService.findByCountry(country)
-                .orElseThrow(RateExchangeNotFoundException::new);
+        RateExchange rateExchange = !DEFAULT_COUNTRY.equals(country) ? rateExchangeService.findByCountry(country, transaction.getTransactionDate())
+                .orElseThrow(RateExchangeNotFoundException::new) : DEFAULT_RATE_EXCHANGE;
 
         TransactionDto transactionDto = convertToDto(transaction);
         transactionDto.setCountry(country);
         transactionDto.setAmount(rateExchangeService
                 .convertAmount(rateExchange, transaction.getAmount()) .setScale(2, RoundingMode.CEILING).toString());
+        transactionDto.setOriginalAmount(transaction.getAmount().setScale(2, RoundingMode.CEILING).toString());
 
         return ResponseEntity
                 .ok()

@@ -21,6 +21,7 @@ public class TransactionDto {
     private String country;
     private String transactionDate;
     private String amount;
+    private String originalAmount;
 }
 
 

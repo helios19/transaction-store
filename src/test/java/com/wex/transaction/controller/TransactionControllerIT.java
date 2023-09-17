@@ -23,7 +23,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import static com.wex.common.ClassTestUtils.TRANSACTION_SAMPLE;
-import static com.wex.common.ClassTestUtils.TRANSACTION_SAMPLE_2;
+import static com.wex.common.ClassTestUtils.TRANSACTION_SAMPLE_3;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
@@ -44,7 +44,7 @@ public class TransactionControllerIT {
     @BeforeEach
     public void setUp() throws Exception {
         transactionRepository.deleteAll();
-        transactionRepository.saveAll(Arrays.asList(TRANSACTION_SAMPLE, TRANSACTION_SAMPLE_2));
+        transactionRepository.saveAll(Arrays.asList(TRANSACTION_SAMPLE, TRANSACTION_SAMPLE_3));
     }
 
     @AfterEach
@@ -67,12 +67,13 @@ public class TransactionControllerIT {
         LinkedHashMap transactionDto = response.getBody();
 
         // Then
-        assertEquals(response.getStatusCode(), HttpStatus.OK);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(MediaType.APPLICATION_JSON, response.getHeaders().getContentType());
         assertEquals(transactionDto.get("description"), "transaction 1");
         assertEquals(transactionDto.get("country"), "Australia");
-        assertEquals(transactionDto.get("transactionDate"), "2010-09-10");
+        assertEquals(transactionDto.get("transactionDate"), "2023-09-10");
         assertEquals(transactionDto.get("amount"), "13967.50");
+        assertEquals(transactionDto.get("originalAmount"), "9250.00");
     }
 
     @Test
@@ -93,12 +94,27 @@ public class TransactionControllerIT {
         assertEquals(transactionDtos.size(), 2);
         assertEquals(transactionDtos.get(0).get("description"), "transaction 1");
         assertEquals(transactionDtos.get(0).get("country"), "United States");
-        assertEquals(transactionDtos.get(0).get("transactionDate"), "2010-09-10");
+        assertEquals(transactionDtos.get(0).get("transactionDate"), "2023-09-10");
         assertEquals(transactionDtos.get(0).get("amount"), "9250.00");
-        assertEquals(transactionDtos.get(1).get("description"), "transaction 2");
+        assertEquals(transactionDtos.get(1).get("description"), "transaction 3");
         assertEquals(transactionDtos.get(1).get("country"), "United States");
         assertEquals(transactionDtos.get(1).get("transactionDate"), "2010-09-11");
         assertEquals(transactionDtos.get(1).get("amount"), "9980.00");
+    }
+
+    @Test
+    @Order(3)
+    void shouldFailToConvertTransactionAmountWhenDateIsOutOfRateExchangeDateRange() {
+        // Given
+        String url = "http://localhost:" + port + "/transactions/728/Australia";
+
+        // When
+        ResponseEntity<LinkedHashMap> response = testRestTemplate.getForEntity(url, LinkedHashMap.class);
+        LinkedHashMap transactionDto = response.getBody();
+
+        // Then
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
+        assertEquals(MediaType.APPLICATION_JSON, response.getHeaders().getContentType());
     }
 
 }
