@@ -18,7 +18,7 @@ import lombok.ToString;
 public class TransactionDto {
     private Long id;
     private String description;
-    private String currency;
+    private String country;
     private String transactionDate;
     private String amount;
 }

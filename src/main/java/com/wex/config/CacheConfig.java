@@ -40,6 +40,6 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     @Bean
     public CacheManager cacheManager() {
-        return new ConcurrentMapCacheManager(ClassUtils.TRANSACTIONS_COLLECTION_NAME);
+        return new ConcurrentMapCacheManager(ClassUtils.TRANSACTIONS_COLLECTION_NAME, ClassUtils.RATE_EXCHANGE_COLLECTION_NAME);
     }
 }

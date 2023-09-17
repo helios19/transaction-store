@@ -53,10 +53,12 @@ jar {
 
 repositories {
     mavenCentral()
+    // Spock snapshots are available from the Sonatype OSS snapshot repository
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
-sourceCompatibility = 12
-targetCompatibility = 12
+sourceCompatibility = 17
+targetCompatibility = 17
 
 configurations {
     compile.exclude module: 'spring-boot-starter-tomcat'
@@ -155,6 +157,31 @@ dependencies {
     testCompileOnly "org.codehaus.groovy:groovy:2.5.13"
     testImplementation platform("org.spockframework:spock-bom:2.0-M3-groovy-2.5")
     testImplementation "org.spockframework:spock-core"
+
+//    implementation 'org.codehaus.groovy:groovy:3.0.5'
+//    testImplementation('org.spockframework:spock-core:2.0-M3-groovy-3.0')
+//    testImplementation('org.spockframework:spock-spring:2.0-M3-groovy-3.0')
+
+
+//    implementation 'org.codehaus.groovy:groovy-all:2.4.7'
+//    testImplementation 'org.spockframework:spock-core:1.1-groovy-2.4'
+//    testImplementation 'org.spockframework:spock-spring:1.1-groovy-2.4'
+
+
+//    testCompileOnly "org.codehaus.groovy:groovy:2.5.13"
+//    testImplementation platform("org.spockframework:spock-bom:2.0-M3-groovy-2.5")
+//    testImplementation "org.spockframework:spock-core"
+
+//    testCompileOnly "org.codehaus.groovy:groovy-all:3.0.13"
+//    testImplementation platform("org.spockframework:spock-bom:2.0-M3-groovy-3.0")
+//    testImplementation "org.spockframework:spock-core"
+
+//    // mandatory dependencies for using Spock
+//    implementation platform('org.apache.groovy:groovy-bom:4.0.15')
+//    implementation 'org.apache.groovy:groovy'
+//    testImplementation platform("org.spockframework:spock-bom:2.3-groovy-4.0")
+//    testImplementation "org.spockframework:spock-core"
+
 }
 
 test {
@@ -171,7 +198,7 @@ bootJar {
 }
 
 wrapper {
-    gradleVersion = '7.3'
+    gradleVersion = '7.5'
 }
 
 docker {

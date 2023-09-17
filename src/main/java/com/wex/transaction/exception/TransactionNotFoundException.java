@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class TransactionNotFoundException extends RuntimeException {
-    public TransactionNotFoundException(String customerId) {
-        super("No transaction found in database for customer id:" + customerId);
+    public TransactionNotFoundException(String transactionId) {
+        super("No transaction found in database for transaction id:" + transactionId);
     }
 
     public TransactionNotFoundException() {

@@ -2,10 +2,8 @@ package com.wex.transaction.controller;
 
 import com.wex.Application;
 import com.wex.transaction.repository.TransactionRepository;
-import com.wex.common.utils.ClassUtils;
 import org.json.JSONException;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -54,11 +52,11 @@ public class TransactionControllerIT {
     }
 
     @Test
-    void shouldReturnAllTransactionSummary() throws JSONException {
+    void shouldReturnAllTransactions() throws JSONException {
 
         // Given
-        String url = "http://localhost:" + port + "/transactions/all";
-        String expected = "[{\"clientInformation\":\"CL432100020001\",\"productInformation\":\"SGXFUNK20100910\",\"totalTransactionAmount\":4.0,\"date\":\"2010-08-19T14:00:00.000+00:00\"}]";
+        String url = "http://localhost:" + port + "/transactions/";
+        String expected = "[{\"id\":727,\"description\":\"transaction 1\",\"country\":\"United States\",\"transactionDate\":\"2010-09-10\",\"amount\":\"9250.00\"},{\"id\":728,\"description\":\"transaction 2\",\"country\":\"United State\",\"transactionDate\":\"2010-09-11\",\"amount\":\"9980.00\"}]";
 
         // When
         ResponseEntity<String> response = testRestTemplate.getForEntity(url, String.class);
@@ -70,18 +68,19 @@ public class TransactionControllerIT {
     }
 
     @Test
-    void shouldReturnCsvTransactionSummary() {
+    void shouldReturnConvertTransactionAmount() {
         // Given
-        String url = "http://localhost:" + port + "/transactions/export-csv";
-        String expected = "Client Information,Production Information,Date,Total Transaction Amount\n" +
-                "CL432100020001,SGXFUNK20100910,2010-08-20 00:00:00.0,4.0";
+        String url = "http://localhost:" + port + "/transactions/727/Australia";
+        String expected = "{\"id\":727,\"description\":\"transaction 1\",\"country\":\"Australia\",\"transactionDate\":\"2010-09-10\",\"amount\":\"13967.50\"}";
 
         // When
         ResponseEntity<String> response = testRestTemplate.getForEntity(url, String.class);
 
+        System.out.println("response.getBody() : " + response.getBody());
+
         // Then
         assertEquals(response.getStatusCode(), HttpStatus.OK);
-        Assertions.assertEquals(ClassUtils.MEDIATYPE_TEXT_HTML, response.getHeaders().getContentType().toString());
+        assertEquals(MediaType.APPLICATION_JSON, response.getHeaders().getContentType());
         assertEquals(expected.replaceAll("\\n|\\r\\n", System.getProperty("line.separator")).trim(),
                 response.getBody().replaceAll("\\n|\\r\\n", System.getProperty("line.separator")).trim());
     }

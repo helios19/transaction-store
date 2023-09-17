@@ -1,13 +1,10 @@
-package com.wex.transaction.controller;
+package com.wex.ratexchg.controller;
 
 import com.wex.common.utils.ClassUtils;
-import com.wex.transaction.dto.RateExchangeDto;
-import com.wex.transaction.dto.TransactionSummary;
+import com.wex.ratexchg.dto.RateExchangeDto;
+import com.wex.ratexchg.model.RateExchange;
+import com.wex.ratexchg.service.RateExchangeService;
 import com.wex.transaction.exception.TransactionNotFoundException;
-import com.wex.transaction.model.RateExchange;
-import com.wex.transaction.model.Transaction;
-import com.wex.transaction.service.RateExchangeService;
-import com.wex.transaction.service.TransactionSummaryService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +21,7 @@ import java.util.stream.Collectors;
  * Rate exchange controller class defining the HTTP operations available for the {@link RateExchange} resource. This controller
  * is mainly used to return the existing list of rate exchanges.
  *
- * @see Transaction
- * @see TransactionSummary
- * @see TransactionSummaryService
+ * @see RateExchange
  * @see RestController
  */
 @RestController

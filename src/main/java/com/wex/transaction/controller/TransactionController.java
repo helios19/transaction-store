@@ -1,14 +1,13 @@
 package com.wex.transaction.controller;
 
 import com.wex.common.utils.ClassUtils;
+import com.wex.ratexchg.exception.RateExchangeNotFoundException;
+import com.wex.ratexchg.model.RateExchange;
+import com.wex.ratexchg.service.RateExchangeService;
 import com.wex.transaction.dto.TransactionDto;
-import com.wex.transaction.exception.RateExchangeNotFoundException;
 import com.wex.transaction.exception.TransactionNotFoundException;
-import com.wex.transaction.model.RateExchange;
 import com.wex.transaction.model.Transaction;
-import com.wex.transaction.service.RateExchangeService;
 import com.wex.transaction.service.TransactionService;
-import com.wex.transaction.service.TransactionSummaryService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +25,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,7 +36,7 @@ import static com.wex.common.utils.ClassUtils.convertToDto;
  * is mainly used to return transaction summary reports.
  *
  * @see Transaction
- * @see TransactionSummaryService
+ * @see TransactionService
  * @see RestController
  */
 @RestController
@@ -81,7 +81,7 @@ public class TransactionController {
      * @throws TransactionNotFoundException if no transaction found in database
      */
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<TransactionDto>> getTransactions() {
+    public ResponseEntity<List<TransactionDto>> getAllTransactions() {
 
         List<Transaction> transactions = transactionService.findAll();
 
@@ -102,20 +102,21 @@ public class TransactionController {
      * @return The whole transaction summary report
      * @throws TransactionNotFoundException if no transaction found in database
      */
-    @RequestMapping(value = "/transaction/{transactionId}/{currency}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/{transactionId}/{country}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @Validated
-    public ResponseEntity<TransactionDto> getConvertedTransactionAmount(@PathVariable @Min(0) Integer transactionId,
-                                                                        @PathVariable @NotBlank String currency) {
+    public ResponseEntity<TransactionDto> convertTransactionAmount(@PathVariable @Min(0) Integer transactionId,
+                                                                   @PathVariable @NotBlank String country) {
 
         Transaction transaction = transactionService.findById(Long.valueOf(transactionId))
                 .orElseThrow(TransactionNotFoundException::new);
 
-        RateExchange rateExchange = rateExchangeService.findByCurrency(currency)
+        RateExchange rateExchange = rateExchangeService.findByCountry(country)
                 .orElseThrow(RateExchangeNotFoundException::new);
 
         TransactionDto transactionDto = convertToDto(transaction);
+        transactionDto.setCountry(country);
         transactionDto.setAmount(rateExchangeService
-                .convertToCurrency(transaction, rateExchange).toString());
+                .convertAmount(rateExchange, transaction.getAmount()) .setScale(2, RoundingMode.CEILING).toString());
 
         return ResponseEntity
                 .ok()

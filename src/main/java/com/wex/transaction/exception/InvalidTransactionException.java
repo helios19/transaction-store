@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * Exception thrown when an {@link Transaction} instance contains invalid field values
- * (e.g {@link Transaction#acctNum} is null, invalid amount, etc.)
+ * (e.g {@link Transaction#id} is null, invalid amount, etc.)
  *
  * @see Transaction
  * @see HttpStatus

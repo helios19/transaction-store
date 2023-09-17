@@ -1,4 +1,4 @@
-package com.wex.transaction.repository;
+package com.wex.ratexchg.repository;
 
 import com.wex.transaction.model.Transaction;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,6 @@ import javax.persistence.PersistenceContext;
 @Repository
 @Slf4j
 public class RateExchangeRepositoryImpl implements RateExchangeRepositoryCustom {
-
     @PersistenceContext
     private EntityManager entityManager;
 

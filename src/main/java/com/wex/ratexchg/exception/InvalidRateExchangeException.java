@@ -1,6 +1,6 @@
-package com.wex.transaction.exception;
+package com.wex.ratexchg.exception;
 
-import com.wex.transaction.model.RateExchange;
+import com.wex.ratexchg.model.RateExchange;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

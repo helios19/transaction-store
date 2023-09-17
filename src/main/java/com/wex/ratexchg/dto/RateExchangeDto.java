@@ -1,4 +1,4 @@
-package com.wex.transaction.dto;
+package com.wex.ratexchg.dto;
 
 
 import lombok.AllArgsConstructor;

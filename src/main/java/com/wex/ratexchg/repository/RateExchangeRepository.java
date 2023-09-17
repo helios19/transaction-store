@@ -1,15 +1,13 @@
-package com.wex.transaction.repository;
+package com.wex.ratexchg.repository;
 
-import com.wex.transaction.model.RateExchange;
+import com.wex.ratexchg.model.RateExchange;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
 public interface RateExchangeRepository extends JpaRepository<RateExchange, Long>, RateExchangeRepositoryCustom {
-
-    Optional<RateExchange> findByCurrency(String currency);
-
+    List<RateExchange> findByCountryOrderByRecordDateDesc(String country);
 }
 

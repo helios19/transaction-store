@@ -1,13 +1,15 @@
 package com.wex.common.utils;
 
-import com.wex.transaction.dto.RateExchangeDto;
+import com.wex.ratexchg.dto.RateExchangeDto;
+import com.wex.ratexchg.model.RateExchange;
 import com.wex.transaction.dto.TransactionDto;
 import com.wex.transaction.exception.InvalidTransactionException;
-import com.wex.transaction.model.RateExchange;
 import com.wex.transaction.model.Transaction;
+import org.modelmapper.AbstractConverter;
 import org.modelmapper.ModelMapper;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -27,6 +29,7 @@ public class ClassUtils {
     public static final int DEFAULT_PAGE_SIZE = 50;
     public static final ModelMapper MODEL_MAPPER = new ModelMapper();
     public static BigDecimal HUNDRED = new BigDecimal("100");
+    public static BigDecimal TEN_MILLIONS = new BigDecimal("10000000");
     public static final String MEDIATYPE_TEXT_HTML = "text/csv";
 
     private ClassUtils() {
@@ -78,6 +81,18 @@ public class ClassUtils {
      * @return TransactionDto
      */
     public static TransactionDto convertToDto(Transaction transaction) {
+
+        MODEL_MAPPER.addConverter(new AbstractConverter<Date, String>() {
+                                      @Override
+                                      protected String convert(Date source) {
+                                         return ClassUtils.fromDate(source);
+                                      }});
+        MODEL_MAPPER.addConverter(new AbstractConverter<BigDecimal, String>() {
+            @Override
+            protected String convert(BigDecimal source) {
+                return source .setScale(2, RoundingMode.CEILING).toString();
+            }});
+
         return MODEL_MAPPER.map(transaction, TransactionDto.class);
     }
 

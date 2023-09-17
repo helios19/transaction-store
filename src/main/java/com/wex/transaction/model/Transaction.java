@@ -35,7 +35,7 @@ public class Transaction {
     private String description;
 
     @NotNull
-    private String currency;
+    private String country;
 
     @NotNull
     @JsonFormat(pattern = ClassUtils.DATE_FORMAT_PATTERN)

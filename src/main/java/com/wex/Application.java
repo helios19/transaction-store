@@ -1,8 +1,8 @@
 package com.wex;
 
 import com.google.common.base.Strings;
-import com.wex.transaction.model.RateExchange;
-import com.wex.transaction.repository.RateExchangeRepository;
+import com.wex.ratexchg.model.RateExchange;
+import com.wex.ratexchg.repository.RateExchangeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,8 +23,8 @@ import static com.wex.common.utils.ClassUtils.toDate;
  * Main Spring Boot Application class. Note that a {@link CommandLineRunner} is created
  * to initialize the H2 database with a set of transactions.
  */
-@EntityScan("com.wex.transaction.model")
-@EnableJpaRepositories("com.wex.transaction.repository")
+@EntityScan({"com.wex.transaction.model", "com.wex.ratexchg.model"})
+@EnableJpaRepositories({"com.wex.transaction.repository", "com.wex.ratexchg.repository"})
 @SpringBootApplication
 @Slf4j
 public class Application {
@@ -50,7 +50,7 @@ public class Application {
                             new InputStreamReader(ResourceUtils.getURL("classpath:RprtRateXchg_20220701_20230630.csv").openStream()))
                             .lines()
                             .skip(1)
-                            .filter(s -> !Strings.isNullOrEmpty(s))
+                            .filter(s -> !Strings.isNullOrEmpty(s) && s.split(",").length == 13)
                             .map(s -> {
 
                                 String[] cols = s.split(",");

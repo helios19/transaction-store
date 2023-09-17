@@ -36,7 +36,7 @@ spring:
 
   # Jackson properties
   jackson:
-    date-format: yyyyMMdd
+    date-format: yyyy-MM-dd
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
 
@@ -45,7 +45,7 @@ spring:
     type: guava
     guava:
       spec: expireAfterAccess=600s
-    cache-names: transactions
+    cache-names: transactions,rateExchanges
 
 ---
 spring:

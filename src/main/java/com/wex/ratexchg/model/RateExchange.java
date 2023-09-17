@@ -1,4 +1,4 @@
-package com.wex.transaction.model;
+package com.wex.ratexchg.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.wex.common.utils.ClassUtils;
