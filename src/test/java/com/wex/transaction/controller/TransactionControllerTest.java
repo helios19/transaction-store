@@ -65,12 +65,7 @@ public class TransactionControllerTest {
         when(transactionService.findById(any()))
                 .thenReturn(Optional.of(TRANSACTION_SAMPLE));
 
-//        when(rateExchangeService.findByCountry(any()))
-//                .thenReturn(Optional.of(RATEEXCHANGE_SAMPLE));
-
         doReturn(Optional.of(RATEEXCHANGE_SAMPLE)).when(rateExchangeService).findByCountry(any());
-
-
 
         // When
         ResponseEntity<TransactionDto> transactionConverted = controller.convertTransactionAmount(1, "Australia");

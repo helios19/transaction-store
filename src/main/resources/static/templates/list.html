@@ -3,7 +3,7 @@
         <!-- Default panel contents -->
 
         <div class="panel-heading">
-            <span class="lead">Transaction Summary Report</span>
+            <span class="lead">Transaction Panel</span>
         </div>
 
         <div class="panel-body">
@@ -14,36 +14,27 @@
                     <input type="hidden" ng-model="ctrl.transaction.id" />
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-label" for="customerid">Customer ID</label>
+                            <label class="col-md-2 control-label" for="description">Description</label>
                             <div class="col-md-7">
-                                <input type="text" ng-model="ctrl.transaction.customerid" id="customerid" class="transactionname form-control input-sm" placeholder="Enter customer identifier" required ng-pattern="ctrl.onlyIntegers"/>
+                                <input type="text" ng-model="ctrl.transaction.description" id="description" class="transactionname form-control input-sm" placeholder="Enter transaction description" required/>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-label" for="month">Month</label>
+                            <label class="col-md-2 control-label" for="amount">Amount</label>
                             <div class="col-md-7">
-                                <input type="text" ng-model="ctrl.transaction.month" id="month" class="form-control input-sm" placeholder="Enter the classification month." required ng-pattern="ctrl.onlyIntegers"/>
+                                <input type="text" ng-model="ctrl.transaction.amount" id="amount" class="form-control input-sm" placeholder="Enter the transaction amount." required ng-pattern="ctrl.onlyNumbers"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-label" for="date">Date</label>
+                            <label class="col-md-2 control-label" for="date">Effective Date</label>
                             <div class="col-md-7">
-                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row" ng-if="ctrl.classification">
-                        <div class="form-group col-md-12">
-                            <label class="col-md-2 control-label">Classification</label>
-                            <div class="col-md-7">
-                                <p class="mark text-left" ng-if="ctrl.classification">{{ctrl.classification}}</p>
+                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" required/>
                             </div>
                         </div>
                     </div>
@@ -60,26 +51,28 @@
     </div>
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><span class="lead">List of Transactions</span></div>
+        <div class="panel-heading"><span class="lead">Transactions List</span></div>
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>CLIENT INFORMATION</th>
-                        <th>PRODUCT INFORMATION</th>
-                        <th>TOTAL TRANSACTION AMOUNT</th>
+                        <th>IDENTIFIER</th>
+                        <th>DESCRIPTION</th>
+                        <th>COUNTRY</th>
+                        <th>TRANSACTION AMOUNT</th>
                         <th>DATE</th>
                         <th width="20"></th>
-                        <th width="180"><p class="mark text-right" ng-if="ctrl.currentBalance"></p></th>
+                        <th width="180"></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ng-repeat="u in ctrl.transactions">
-                        <td>{{u.clientInformation}}</td>
-                        <td>{{u.productInformation}}</td>
-                        <td>{{u.totalTransactionAmount}}</td>
-                        <td>{{u.date}}</td>
+                        <td>{{u.id}}</td>
+                        <td>{{u.description}}</td>
+                        <td>{{u.country}}</td>
+                        <td>{{u.amount}}</td>
+                        <td>{{u.transactionDate}}</td>
                     </tr>
                     </tbody>
                 </table>

@@ -1,7 +1,7 @@
 {
   "name": "transactionStore",
   "version": "1.0.0",
-  "description": "Product Analytics app",
+  "description": "Transaction Store app",
   "scripts": {
     "init-test": "karma init",
     "test-unit": "karma start test/unit/conf/karma.js"

@@ -12,12 +12,12 @@ angular.module('transactionStore').factory('TransactionService',
             return factory;
 
              function loadCustomerTransactions() {
-                console.log('Fetching all transaction summaries');
+                console.log('Fetching all transactions');
                 var deferred = $q.defer();
-                $http.get(urls.TRANSACTION_SERVICE_API + '/all')
+                $http.get(urls.TRANSACTION_SERVICE_API + '/')
                     .then(
                         function (response) {
-                            console.log('Fetched successfully client product transactions');
+                            console.log('Fetched transactions successfully');
                             $localStorage.transactions = response.data;
                             deferred.resolve(response);
                         },

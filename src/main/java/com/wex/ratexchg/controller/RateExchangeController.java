@@ -2,6 +2,7 @@ package com.wex.ratexchg.controller;
 
 import com.wex.common.utils.ClassUtils;
 import com.wex.ratexchg.dto.RateExchangeDto;
+import com.wex.ratexchg.exception.RateExchangeNotFoundException;
 import com.wex.ratexchg.model.RateExchange;
 import com.wex.ratexchg.service.RateExchangeService;
 import com.wex.transaction.exception.TransactionNotFoundException;
@@ -49,7 +50,7 @@ public class RateExchangeController {
         List<RateExchange> rateExchanges = rateExchangeService.findAll();
 
         if (CollectionUtils.isEmpty(rateExchanges)) {
-            throw new TransactionNotFoundException();
+            throw new RateExchangeNotFoundException();
         }
 
         return ResponseEntity

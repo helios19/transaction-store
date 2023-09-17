@@ -13,12 +13,13 @@ angular.module('transactionStore').controller('TransactionController',
         self.successMessage = '';
         self.errorMessage = '';
         self.done = false;
- 
+
+        self.maxLength = 1000;
         self.onlyIntegers = /^\d+$/;
         self.onlyNumbers = /^\d+([,.]\d+)?$/;
  
         function submit() {
-            console.log('Loading transaction summary report');
+            console.log('Loading transaction list');
 
             TransactionService.loadCustomerTransactions()
                 .then(

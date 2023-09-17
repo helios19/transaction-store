@@ -17,6 +17,6 @@ public class RateExchangeNotFoundException extends RuntimeException {
     }
 
     public RateExchangeNotFoundException() {
-        super("No rateExchange found in database.");
+        super("No rate exchange found in database.");
     }
 }

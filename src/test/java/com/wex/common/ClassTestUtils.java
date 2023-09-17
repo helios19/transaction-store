@@ -21,7 +21,7 @@ public class ClassTestUtils {
             .builder()
             .id(2L)
             .description("transaction 2")
-            .country("United State")
+            .country("United States")
             .transactionDate(ClassUtils.toDate("2010-09-11"))
             .amount(new BigDecimal("000099800000000").divide(ClassUtils.TEN_MILLIONS))
             .build();
@@ -42,5 +42,23 @@ public class ClassTestUtils {
             .calendarQuarterNum(1)
             .calendarMonthNum(3)
             .calendarDayNum(31)
+            .build();
+
+    public static final RateExchange RATEEXCHANGE_SAMPLE_2 = RateExchange
+            .builder()
+            .id(2L)
+            .recordDate(ClassUtils.toDate("2023-06-30"))
+            .country("Argentina")
+            .currency("Peso")
+            .description("Argentina-Peso")
+            .rate(new BigDecimal(365.5))
+            .effectiveDate(ClassUtils.toDate("2023-08-15"))
+            .sourceLineNum(7)
+            .fiscalYear(2023)
+            .fiscalQuarterNum(3)
+            .calendarYear(2023)
+            .calendarQuarterNum(2)
+            .calendarMonthNum(6)
+            .calendarDayNum(30)
             .build();
 }

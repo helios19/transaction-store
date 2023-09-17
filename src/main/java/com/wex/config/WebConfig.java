@@ -1,11 +1,11 @@
 package com.wex.config;
 
-import com.wex.common.security.XssFilter;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.wex.common.security.XssFilter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -28,35 +28,35 @@ import java.io.IOException;
  */
 @EnableSpringDataWebSupport
 @Configuration
-@EnableConfigurationProperties({ResourceProperties.class})
+@EnableConfigurationProperties({WebProperties.class})
 public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
-    private ResourceProperties resourceProperties = new ResourceProperties();
+    private WebProperties resourceProperties = new WebProperties();
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         Integer cachePeriod = 3600;//resourceProperties.getCachePeriod();
 
-        final String[] staticLocations = resourceProperties.getStaticLocations();
+        final String[] staticLocations = resourceProperties.getResources().getStaticLocations();
         final String[] indexLocations = new String[staticLocations.length];
         for (int i = 0; i < staticLocations.length; i++) {
             indexLocations[i] = staticLocations[i] + "index.html";
         }
         registry.addResourceHandler(
-                "/**/*.css",
-                "/**/*.html",
-                "/**/*.js",
-                "/**/*.json",
-                "/**/*.bmp",
-                "/**/*.jpeg",
-                "/**/*.jpg",
-                "/**/*.png",
-                "/**/*.ttf",
-                "/**/*.eot",
-                "/**/*.svg",
-                "/**/*.woff",
-                "/**/*.woff2"
+                "/**.css",
+                "/**.html",
+                "/**.js",
+                "/**.json",
+                "/**.bmp",
+                "/**.jpeg",
+                "/**.jpg",
+                "/**.png",
+                "/**.ttf",
+                "/**.eot",
+                "/**.svg",
+                "/**.woff",
+                "/**.woff2"
         )
                 .addResourceLocations(staticLocations)
                 .addResourceLocations("/webjars/", "/resources/", "classpath:/META-INF/resources/webjars/")
