@@ -103,6 +103,8 @@ even though only one fat jar (dedicated to the transaction resource and related 
 This type of architecture provides to the application several benefits among, being loosely coupled
 with other services, stateless, scalable and resilent to failures.
 
+Note also that the rate exchanges have been downloaded from the Treasury website and statically stored in the `RprtRateXchg_20220701_20230630.csv` file. 
+
 Hereafter is a shortlist of the other technical aspects characterizing the application:
 
 **Microservice using Spring Boot**
